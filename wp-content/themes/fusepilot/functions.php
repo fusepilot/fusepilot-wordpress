@@ -59,6 +59,9 @@
     // add_theme_support( 'post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'audio', 'chat', 'video')); // Add 3.1 post format theme support.
 
     add_image_size( "gallery", 700, 394, true );
+    add_image_size( "masonry-triple", 700, 160, true );
+    add_image_size( "masonry-double", 466, 160, true );
+    add_image_size( "masonry-single", 233, 160, true );
     
     function show_pagination() {
     	global $wp_query;
@@ -68,7 +71,7 @@
     //show project with posts in taxonomy
     add_filter( 'pre_get_posts', 'my_get_posts' );
     function my_get_posts( $query ) {
-        if ( is_home() || is_archive() || is_category())
+        if ( is_category() )
           $query->set( 'post_type', array( 'post', 'project') );
         return $query;
     }

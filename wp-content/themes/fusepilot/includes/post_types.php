@@ -9,8 +9,7 @@ function create_post_type() {
                 'singular_name' => __( 'Project' )
             ),
         'public' => true,
-        'has_archive' => true,
-        'rewrite' => array('slug' => 'work', 'with_front' => false),
+        'rewrite' => array('slug' => 'works', 'with_front' => false),
         'menu_position' => 5,
         'taxonomies' => array('category', 'post_tag')
         )
