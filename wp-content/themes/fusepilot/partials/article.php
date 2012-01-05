@@ -10,12 +10,13 @@
     <h1 class="entry-title"><?php the_title(); ?></h1>
     <?php include (TEMPLATEPATH . '/partials/meta.php' ); ?>
     <?php the_field('client'); ?>
+    <?php the_category(', '); ?>
+    <?php the_tags( 'Tags: ', ', ', ''); ?>
   </header>
 
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>				
-		<?php the_tags( 'Tags: ', ', ', ''); ?>
 		<!-- <?php edit_post_link('Edit this entry','','.'); ?> -->
 	</div>
 	

@@ -3,29 +3,24 @@
     require_once("includes/shortcodes.php");
     require_once("includes/post_types.php");
 
-        // Translations can be filed in the /languages/ directory
-        load_theme_textdomain( 'html5reset', TEMPLATEPATH . '/languages' );
- 
-        $locale = get_locale();
-        $locale_file = TEMPLATEPATH . "/languages/$locale.php";
-        if ( is_readable($locale_file) )
-            require_once($locale_file);
+  // Translations can be filed in the /languages/ directory
+  load_theme_textdomain( 'html5reset', TEMPLATEPATH . '/languages' );
+
+  $locale = get_locale();
+  $locale_file = TEMPLATEPATH . "/languages/$locale.php";
+  if ( is_readable($locale_file) )
+      require_once($locale_file);
 	
 	// Add RSS links to <head> section
-	automatic_feed_links();
+	add_theme_support( 'automatic-feed-links' );
 	
-	// Load jQuery
-	if ( !function_exists(core_mods) ) {
-		function core_mods() {
-			if ( !is_admin() ) {
-				wp_deregister_script('jquery');
-				wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"), false);
-				wp_enqueue_script('jquery');
-			}
-		}
-		core_mods();
+	function fusepilot_enqueue_scripts() {
+	  wp_enqueue_script('jquery');
+	  wp_deregister_script('jquery');
+		wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"), false);
 	}
-
+  add_action('wp_enqueue_scripts', 'fusepilot_enqueue_scripts');
+  
 	// Clean up the <head>
 	function removeHeadLinks() {
     	remove_action('wp_head', 'rsd_link');
@@ -46,24 +41,6 @@
     	));
     }
     
-    // add_theme_support( 'post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'audio', 'chat', 'video')); // Add 3.1 post format theme support.
-
-    add_image_size( "gallery", 700, 394, true );
-    
-    function show_pagination() {
-    	global $wp_query;
-    	return ($wp_query->max_num_pages > 1);
-    }
-    
-    //show project with posts in taxonomy
-    add_filter( 'pre_get_posts', 'my_get_posts' );
-    function my_get_posts( $query ) {
-        if ( is_home() && false == $query->query_vars['suppress_filters'] )
-          $query->set( 'post_type', array( 'post', 'project') );
-        return $query;
-    }
-    
-    
     function remove_dashboard_widgets() {
     	global $wp_meta_boxes;
 
@@ -79,4 +56,20 @@
     }
     add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
     
+    // add_theme_support( 'post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'audio', 'chat', 'video')); // Add 3.1 post format theme support.
+
+    add_image_size( "gallery", 700, 394, true );
+    
+    function show_pagination() {
+    	global $wp_query;
+    	return ($wp_query->max_num_pages > 1);
+    }
+    
+    //show project with posts in taxonomy
+    add_filter( 'pre_get_posts', 'my_get_posts' );
+    function my_get_posts( $query ) {
+        if ( is_home() || is_archive() || is_category())
+          $query->set( 'post_type', array( 'post', 'project') );
+        return $query;
+    }
 ?>

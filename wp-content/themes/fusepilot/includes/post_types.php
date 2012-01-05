@@ -10,7 +10,7 @@ function create_post_type() {
             ),
         'public' => true,
         'has_archive' => true,
-        'rewrite' => array('slug' => 'projects', 'with_front' => false),
+        'rewrite' => array('slug' => 'work', 'with_front' => false),
         'menu_position' => 5,
         'taxonomies' => array('category', 'post_tag')
         )

@@ -21,13 +21,15 @@ Template Name: Blog
     <?php include (TEMPLATEPATH . '/partials/article_teaser.php' ); ?>
 	<?php endwhile; ?>
   
-	<?php include (TEMPLATEPATH . '/partials/nav.php' ); ?>
+	<?php include (TEMPLATEPATH . '/partials/pagination.php' ); ?>
 
 	<?php else : ?>
 
 		<h2>Not Found</h2>
 
 	<?php endif; ?>
+	
+	<?php wp_reset_query(); ?>
   
   <div class="filler"></div>
 </div>

@@ -29,15 +29,13 @@
 			
 			<?php } ?>
 
-			<?php include (TEMPLATEPATH . '/partials/nav.php' ); ?>
-
 			<?php while (have_posts()) : the_post(); ?>
 			
 				<?php include (TEMPLATEPATH . '/partials/article_teaser.php' ); ?>
 
 			<?php endwhile; ?>
 
-			<?php include (TEMPLATEPATH . '/partials/nav.php' ); ?>
+			<?php include (TEMPLATEPATH . '/partials/pagination.php' ); ?>
 			
 	<?php else : ?>
 

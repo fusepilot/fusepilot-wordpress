@@ -10,7 +10,7 @@
 
     	<?php get_search_form(); ?>
     
-    	<?php wp_list_pages('title_li=<h2>Pages</h2>' ); ?>
+    	<?php wp_list_pages(); ?>
     
     	<h2>Archives</h2>
     	<ul>
