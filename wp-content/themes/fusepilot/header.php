@@ -97,6 +97,10 @@
 	<!-- all our JS is at the bottom of the page, except for Modernizr. -->
 	<script src="<?php bloginfo('template_directory'); ?>/_/js/modernizr-1.7.min.js"></script>
 	
+	<script src="<?php bloginfo('template_directory'); ?>/_/js/cufon-yui.js"></script>
+	
+	<script src="<?php bloginfo('template_directory'); ?>/_/js/forza_325.font.js"></script>
+	
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>

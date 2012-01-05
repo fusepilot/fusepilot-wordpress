@@ -19,7 +19,7 @@
 		function core_mods() {
 			if ( !is_admin() ) {
 				wp_deregister_script('jquery');
-				wp_register_script('jquery', ("//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"), false);
+				wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"), false);
 				wp_enqueue_script('jquery');
 			}
 		}
@@ -49,4 +49,34 @@
     // add_theme_support( 'post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'audio', 'chat', 'video')); // Add 3.1 post format theme support.
 
     add_image_size( "gallery", 700, 394, true );
+    
+    function show_pagination() {
+    	global $wp_query;
+    	return ($wp_query->max_num_pages > 1);
+    }
+    
+    //show project with posts in taxonomy
+    add_filter( 'pre_get_posts', 'my_get_posts' );
+    function my_get_posts( $query ) {
+        if ( is_home() && false == $query->query_vars['suppress_filters'] )
+          $query->set( 'post_type', array( 'post', 'project') );
+        return $query;
+    }
+    
+    
+    function remove_dashboard_widgets() {
+    	global $wp_meta_boxes;
+
+    	//unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press']);
+    	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links']);
+    	//unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_right_now']);
+    	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins']);
+    	//unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_drafts']);
+    	//unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_comments']);
+    	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);
+    	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);
+
+    }
+    add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
+    
 ?>

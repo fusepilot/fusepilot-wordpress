@@ -1,0 +1,235 @@
+/*   
+ *Theme Name: The HTML5 Reset Theme
+ *Theme URI: http://html5reset.org
+ *Description: A style-free theme to get you started on an HTML5-based Wordpress theme of your own.
+ *Author: Monkey Do!
+ *Author URI: http://monkeydo.biz
+ *Version: 1 */
+ 
+@import 'blueprint/grid'
+@import 'reset'
+$blueprint-grid-columns: 16
+$blueprint-grid-width: 40px
+$blueprint-grid-margin: 20px
+
+
+$highlight: #BDDF56
+$text_color: #C2C2C2
+$dark_text_color: #323232
+$dark_background_color: rgba(13,13,13, .93)
+$margin: 20px
+$padding: 20px
+$box_margin: 1px
+$p_size: 10px
+
+$site_width: 1000px
+
+@mixin box_container($scheme)
+  padding: $padding
+  @if $scheme == dark
+    background-color: $dark_background_color
+  @else if $scheme == light
+    background: url("images/light_box_bg.png")
+
+  @else if $scheme == highlight
+    background: url("images/highlight_box_bg.gif")
+    
+  margin-bottom: $box_margin
+
+html, body
+  background: url("images/background.jpg") center top repeat-x
+  background-color: #181818 
+
+  font-family: Verdana
+  color: $text_color
+  line-height: 1em
+
+/* using local fonts? make sure to read up on Paul Irish's 
+ *  Bulletproof @font-face syntax: http://mky.be/font-face/bulletproof/ */
+
+/* we like off-black for text */
+
+h1 
+  font-size: $p_size * 3
+  text-transform: uppercase
+  color: $highlight
+  
+h2 
+  font-size: $p_size * 2.5
+  text-transform: uppercase
+  color: $highlight
+  
+h3
+  font-size: $p_size * 2
+  text-transform: uppercase
+  
+h4
+  font-size: $p_size * 1.5
+  text-transform: uppercase
+  
+h5
+  font-size: $p_size * 1.0
+  text-transform: uppercase
+    
+h6
+  font-size: $p_size * 1.0
+  text-transform: uppercase
+
+p
+  font-size: $p_size * 1.0
+  margin-bottom: $margin
+  
+  &:last-child
+    margin-bottom: 0
+
+a
+  color: $text_color
+  text-decoration: none
+  
+  &:hover
+    color: $highlight
+    
+  &:link
+    -webkit-tap-highlight-color: #fcd700
+    
+
+select, input, textarea
+  color: #333
+
+/* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
+
+/*  j.mp/webkit-tap-highlight-color */
+
+ins
+  background-color: #fcd700
+  color: #000
+  text-decoration: none
+
+mark
+  background-color: #fcd700
+  color: #000
+  font-style: italic
+  font-weight: bold
+
+/* And here begins the Wordpress fun.
+ *------------------------------------------------------------------------------- */
+
+#logo a
+  display: block
+  text-indent: 9000px
+  background: url("images/logo.png") no-repeat center
+  padding: 20px
+  background-color: rgba(13, 13, 13, 0.93)
+  margin-bottom: 1px
+  height: 80px
+  &:hover
+    background: url("images/logo_highlight.png") no-repeat center
+    padding: 20px
+    background-color: rgba(13, 13, 13, 0.93)
+    margin-bottom: 1px
+
+#page-wrap
+  +container
+  margin: 0 auto
+  height: 100%
+  
+  #sidebar
+    position: fixed
+    height: 100%
+    +column(4)
+    text-align: right
+    
+    header
+      text-index: -9000px
+    
+    footer
+      height: 100%
+    
+    header, h2, form, nav, footer, ul
+      +box_container(dark)
+    
+  #content
+    margin-left: span(4) + $blueprint-grid-margin
+    +column(12, true)
+    height: 100%
+    
+    .filler
+      height: 100%
+    
+    
+    header, .entry-content, #respond, .filler, .comment, &> h2, .navigation
+      +box_container(light)
+      
+    &.index
+      .entry, h2
+        +box_container(light)
+      
+    
+
+.post, .entry-content a:hover, #meta, .postmetadata, #sidebar, .navgation, .next-posts, .prev-posts, #searchform, #s, #searchsubmt
+
+ol.commentlist
+  list-style: none
+  li
+    &.alt, &.bypostauthor, &.byuser, &.comment-author-admin
+    &.comment
+      border-bottom: 1px dotted #666
+      padding: 10px
+      div
+        &.comment-author
+        &.vcard
+          cite.fn
+            font-style: normal
+            a.url
+          img
+            &.avatar
+              float: right
+              margin: 0 0 10px 10px
+            &.avatar-32, &.photo
+          span.says
+        &.commentmetadata
+        &.comment-meta
+          font-size: 10px
+          a
+            color: #ccc
+      p, ul
+      div.reply
+        font-size: 11px
+        a
+          font-weight: bold
+      ul.children
+        list-style: none
+        margin: 10px 0 0
+        li
+          &.alt, &.bypostauthor, &.byuser, &.comment, &.comment-author-admin
+          &.depth-2
+            border-left: 5px solid #555
+            margin: 0 0 10px 10px
+          &.depth-3
+            border-left: 5px solid #999
+            margin: 0 0 10px 10px
+          &.depth-4
+            border-left: 5px solid #bbb
+            margin: 0 0 10px 10px
+          &.depth-5, &.odd
+    &.even
+      background: #fff
+    &.odd
+      background: #f6f6f6
+    &.parent
+      border-left: 5px solid #111
+    &.thread-alt, &.thread-even, &.thread-odd
+
+/* Print styles!
+ *------------------------------------------------------------------------------- */
+@media print
+
+/* Media queries!
+ *------------------------------------------------------------------------------- */
+
+/* Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
+@media screen and (max-device-width: 480px)
+
+@media all and (orientation: portrait)
+
+@media all and (orientation: landscape)

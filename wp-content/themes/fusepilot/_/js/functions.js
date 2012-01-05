@@ -5,7 +5,10 @@
 /* trigger when page is ready */
 $(document).ready(function (){
 
-	// your functions go here
+	Cufon.replace('h1, h2, h3, h4, nav, #content .links, .pagination', {
+    hover: true,
+    fontStyle: "italic",
+  });
 
 });
 
