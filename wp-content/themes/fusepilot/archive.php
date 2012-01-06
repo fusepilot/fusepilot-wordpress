@@ -42,6 +42,7 @@
 		<h2>Nothing found</h2>
 
 	<?php endif; ?>
+	<div class="filler"></div>
 </section>
 
 <?php get_footer(); ?>

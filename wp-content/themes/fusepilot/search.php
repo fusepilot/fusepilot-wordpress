@@ -21,6 +21,8 @@
 		<h2>No posts found.</h2>
 
 	<?php endif; ?>
+	
+	<div class="filler"></div>
 <section>
 
 

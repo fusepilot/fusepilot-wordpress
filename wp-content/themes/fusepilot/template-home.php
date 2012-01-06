@@ -1,8 +1,20 @@
+<?php
+/*
+Template Name: Home
+*/
+?>
+
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
 
-<div id="content" class="index">
- <?php echo do_shortcode('[vimeo id='.$settings['front_page_vimeo_id'].']');?>
+<div id="content" class="front">
+  <div class="video">
+    <?php echo do_shortcode('[vimeo id='.$settings['front_page_vimeo_id'].']');?>
+  </div>
+  
+  <div class="entry">
+    <?php the_content(); ?>
+  </div>
   
  <?php
 	//query posts

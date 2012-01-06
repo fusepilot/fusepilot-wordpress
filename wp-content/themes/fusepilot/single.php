@@ -5,6 +5,8 @@
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <?php include (TEMPLATEPATH . '/partials/article.php' ); ?>
   <?php endwhile; endif; ?>
+  
+  <div class="filler"></div>
 </section>
 
 <?php get_footer(); ?>

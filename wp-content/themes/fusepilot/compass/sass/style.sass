@@ -1,10 +1,10 @@
 /*   
- *Theme Name: The HTML5 Reset Theme
- *Theme URI: http://html5reset.org
+ *Theme Name: Fusepilot
+ *Theme URI: http://www.fusepilot.com
  *Description: A style-free theme to get you started on an HTML5-based Wordpress theme of your own.
- *Author: Monkey Do!
+ *Author: Michael Delaney
  *Author URI: http://monkeydo.biz
- *Version: 1 */
+ *Version: 1.0 */
  
 @import 'blueprint/grid'
 @import 'reset'
@@ -121,18 +121,15 @@ mark
 #page-wrap
   +container
   margin: 0 auto
-  height: 100%
   
   #sidebar
-    position: fixed
-    height: 100%
     +column(4)
     text-align: right
     
     footer
-      height: 100%
+      overflow: hidden
     
-    header, h2, form, nav, footer, ul
+    header, h2, form, nav, footer, ul, .filler
       +box_container(dark)
       
   #sidebar
@@ -165,9 +162,8 @@ mark
       margin-bottom: 0
     
   #content
-    margin-left: span(4) + $blueprint-grid-margin
- 
-    height: 100%
+    +column(12)
+    +last
     
     .details p
       text-transform: uppercase
@@ -175,17 +171,29 @@ mark
       margin-bottom: 0
     
     .filler
-      height: 100%
+      clear: both
+      overflow: hidden
+      
+    .pagination
+      text-transform: uppercase
       
     #gallery
       margin-bottom: $box_margin
     
-    &.page, header, .entry-content, #respond, .filler, .comment, &> h2, .navigation
+    &.page, header, .entry-content, #respond, .filler, .comment, &> h2, .pagination
       +box_container(light)
       
     &.index
       .entry, h2
         +box_container(light)
+        
+    &.front
+      .entry
+        +box_container(light)
+        
+        h2 
+          text-transform: none
+          margin-bottom: $margin * .5
         
     #masonry
       margin-bottom: 1px
@@ -214,11 +222,13 @@ mark
 
 #sidebar
   input
+    background: url("images/sidebar_form_bg.png")
     width: 100%
     
 #content
   input
     &[type="text"], &[type="email"], &[type="password"]
+      background: url("images/form_bg.png")
       width: span(4)
 
 #sidebar, #content
@@ -257,7 +267,6 @@ mark
     
     input
       &[type="text"], &[type="email"], &[type="password"]
-        background: url("images/form_bg.png")
         margin-right: $margin * .25
         border: none
         padding: 10px

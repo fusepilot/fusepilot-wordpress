@@ -140,6 +140,7 @@ if(isset($_POST['submitted'])) {
 	<?php endif; ?>
 <?php } ?>
 
+  <div class="filler"></div>
 </section>
 
 <?php get_footer(); ?>

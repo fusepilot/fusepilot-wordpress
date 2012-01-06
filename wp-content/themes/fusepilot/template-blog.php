@@ -22,7 +22,8 @@ Template Name: Blog
 	<?php endwhile; ?>
   
 	<?php include (TEMPLATEPATH . '/partials/pagination.php' ); ?>
-
+  
+  
 	<?php else : ?>
 
 		<h2>Not Found</h2>
@@ -30,6 +31,8 @@ Template Name: Blog
 	<?php endif; ?>
 	
 	<?php wp_reset_query(); ?>
+	
+	<div class="filler"></div>
 </section>
 
 <?php get_footer(); ?>

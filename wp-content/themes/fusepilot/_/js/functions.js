@@ -1,5 +1,5 @@
-
-
+$content = $("#content");
+$filler = $("<div class='filler'></div>");
 
 /* trigger when page is ready */
 $(document).ready(function (){
@@ -12,7 +12,7 @@ $(document).ready(function (){
     });
   });
 
-	Cufon.replace('h1, h2, h3, h4, nav, #content .links, .pagination, #menu, .submit_button', {
+	Cufon.replace('h1, h2, h3, h4, nav, #content .links, .pagination a, #menu, .submit_button', {
     hover: true,
     fontStyle: "italic",
   });
@@ -46,19 +46,55 @@ $(document).ready(function (){
       $controls.append($(this));
     });
   });
-
+  
 });
 
+// $(window).load(function() {
+//   placeFiller();
+// });
+// 
+$(window).resize(function() {
+  //$('.filler').height( $(window).height() - ($('body').innerHeight() - $('.filler').outerHeight()) );
+  //$('.filler').text($(window).height() - $('body').innerHeight() - 27);
+  //$('.filler').height(($(window).height() - $('body').innerHeight() - 27) + ($(window).height() - $('.filler').offset().top - $('.filler').outerHeight(true)));
+  //$('.filler').text($(window).height() - $('.filler').offset().top + $('.filler').outerHeight(true));
+  //$('.filler').height(($(window).height() - $('.filler').height()) - $('.filler').offset().top - $('.filler').outerHeight(true));
+  
+  // if($(window).height() > $('body').innerHeight()) {
+  //   $('.filler').text('over');
+  // } else {
+  //   $('.filler').text('under');
+  //   delta = $(window).height() - $(".filler").offset().top
+  //   $('.filler').height(delta);
+  // }
+  
+  placeFiller();
+  
+});
+
+$(window).scroll(function() {
+  placeFiller();
+});
+
+function placeFiller() {
+  $('.filler').each(function() {
+    $filler = $(this);
+    padding = parseInt($filler.css('padding-top'));
+    margin = parseInt($filler.css('margin-bottom'));
+    $filler.height($(window).height() - $filler.offset().top + $(window).scrollTop() - ((padding * 2) + margin));
+  })
+}
+// 
+// function placeFiller() {
+//   delta = $(window).height() - $('.filler').position().top;
+//   $('.filler').css('height', delta);
+// }
 
 
 /* optional triggers
 
-$(window).load(function() {
-	
-});
 
-$(window).resize(function() {
-	
-});
+
+
 
 */

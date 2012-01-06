@@ -1,8 +1,13 @@
 <?php
     
-    require_once("includes/shortcodes.php");
-    require_once("includes/post_types.php");
-
+  require_once("includes/shortcodes.php");
+  require_once("includes/post_types.php");
+  
+  require_once("includes/theme_options.php");
+  
+  global $settings;
+  $settings = get_option( 'fusepilot_theme_options' );
+  
   // Translations can be filed in the /languages/ directory
   load_theme_textdomain( 'html5reset', TEMPLATEPATH . '/languages' );
 

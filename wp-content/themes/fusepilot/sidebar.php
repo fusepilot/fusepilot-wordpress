@@ -14,4 +14,6 @@
     <footer id="footer" class="source-org vcard copyright">
         <p>&copy;2011-<?php echo date("Y"); echo " "; bloginfo('name'); ?></p>
     </footer>
+    
+    <div class="filler"></div>
 </section>

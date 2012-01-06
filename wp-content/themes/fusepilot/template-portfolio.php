@@ -35,6 +35,8 @@ Template Name: Portfolio
 	?>
 	
 	<?php wp_reset_query(); ?>
+	
+	<div class="filler"></div>
 </section>
 
 <?php get_footer(); ?>
