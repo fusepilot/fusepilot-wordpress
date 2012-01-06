@@ -93,6 +93,13 @@ a
     
   &:link
     -webkit-tap-highlight-color: #fcd700
+  
+.details
+  text-transform: uppercase
+  
+  p
+    font-size: $p_size * 0.8
+    margin-bottom: 0
     
 
 select, input, textarea
@@ -157,6 +164,9 @@ mark
     
     .filler
       height: 100%
+      
+    #gallery
+      margin-bottom: $box_margin
     
     &.page, header, .entry-content, #respond, .filler, .comment, &> h2, .navigation
       +box_container(light)
@@ -185,6 +195,7 @@ mark
           -ms-box-sizing: border-box
           -o-box-sizing: border-box
           box-sizing: border-box
+          color: black
           a
             color: black
             opacity: 1

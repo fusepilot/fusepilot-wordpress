@@ -12,7 +12,7 @@
 
 <?php if ( have_comments() ) : ?>
 	
-	<h2 id="comments"><?php comments_number('No Responses', 'One Response', '% Responses' );?></h2>
+	<h2 id="comments"><?php comments_number('No Comments', '1 Comment', '% Comments' );?></h2>
 
 	<div class="navigation">
 		<div class="next-posts"><?php previous_comments_link() ?></div>

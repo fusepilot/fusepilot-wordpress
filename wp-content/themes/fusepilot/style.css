@@ -502,21 +502,31 @@ a:link {
   -webkit-tap-highlight-color: #fcd700;
 }
 
-/* line 98, compass/sass/style.sass */
+/* line 97, compass/sass/style.sass */
+.details {
+  text-transform: uppercase;
+}
+/* line 100, compass/sass/style.sass */
+.details p {
+  font-size: 8px;
+  margin-bottom: 0;
+}
+
+/* line 105, compass/sass/style.sass */
 select, input, textarea {
   color: #333333;
 }
 
 /* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
 /*  j.mp/webkit-tap-highlight-color */
-/* line 105, compass/sass/style.sass */
+/* line 112, compass/sass/style.sass */
 ins {
   background-color: #fcd700;
   color: black;
   text-decoration: none;
 }
 
-/* line 110, compass/sass/style.sass */
+/* line 117, compass/sass/style.sass */
 mark {
   background-color: #fcd700;
   color: black;
@@ -526,7 +536,7 @@ mark {
 
 /* And here begins the Wordpress fun.
  *------------------------------------------------------------------------------- */
-/* line 119, compass/sass/style.sass */
+/* line 126, compass/sass/style.sass */
 #logo a {
   display: block;
   text-indent: 9000px;
@@ -536,7 +546,7 @@ mark {
   margin-bottom: 1px;
   height: 80px;
 }
-/* line 127, compass/sass/style.sass */
+/* line 134, compass/sass/style.sass */
 #logo a:hover {
   background: url("images/logo_highlight.png") no-repeat center;
   padding: 20px;
@@ -544,7 +554,7 @@ mark {
   margin-bottom: 1px;
 }
 
-/* line 133, compass/sass/style.sass */
+/* line 140, compass/sass/style.sass */
 #page-wrap {
   width: 950px;
   margin: 0 auto;
@@ -553,7 +563,7 @@ mark {
   margin: 0 auto;
   height: 100%;
 }
-/* line 138, compass/sass/style.sass */
+/* line 145, compass/sass/style.sass */
 #page-wrap #sidebar {
   position: fixed;
   height: 100%;
@@ -567,21 +577,21 @@ mark {
 * html #page-wrap #sidebar {
   overflow-x: hidden;
 }
-/* line 144, compass/sass/style.sass */
+/* line 151, compass/sass/style.sass */
 #page-wrap #sidebar header {
   text-index: -9000px;
 }
-/* line 147, compass/sass/style.sass */
+/* line 154, compass/sass/style.sass */
 #page-wrap #sidebar footer {
   height: 100%;
 }
-/* line 150, compass/sass/style.sass */
+/* line 157, compass/sass/style.sass */
 #page-wrap #sidebar header, #page-wrap #sidebar h2, #page-wrap #sidebar form, #page-wrap #sidebar nav, #page-wrap #sidebar footer, #page-wrap #sidebar ul {
   padding: 20px;
   background-color: rgba(13, 13, 13, 0.93);
   margin-bottom: 1px;
 }
-/* line 153, compass/sass/style.sass */
+/* line 160, compass/sass/style.sass */
 #page-wrap #content {
   margin-left: 240px;
   display: inline;
@@ -594,40 +604,44 @@ mark {
 * html #page-wrap #content {
   overflow-x: hidden;
 }
-/* line 158, compass/sass/style.sass */
+/* line 165, compass/sass/style.sass */
 #page-wrap #content .filler {
   height: 100%;
 }
-/* line 161, compass/sass/style.sass */
+/* line 168, compass/sass/style.sass */
+#page-wrap #content #gallery {
+  margin-bottom: 1px;
+}
+/* line 171, compass/sass/style.sass */
 #page-wrap #content.page, #page-wrap #content header, #page-wrap #content .entry-content, #page-wrap #content #respond, #page-wrap #content .filler, #page-wrap #content .comment, #page-wrap #content > h2, #page-wrap #content .navigation {
   padding: 20px;
   background: url("images/light_box_bg.png");
   margin-bottom: 1px;
 }
-/* line 165, compass/sass/style.sass */
+/* line 175, compass/sass/style.sass */
 #page-wrap #content.index .entry, #page-wrap #content.index h2 {
   padding: 20px;
   background: url("images/light_box_bg.png");
   margin-bottom: 1px;
 }
-/* line 168, compass/sass/style.sass */
+/* line 178, compass/sass/style.sass */
 #page-wrap #content #masonry {
   margin-bottom: 1px;
 }
-/* line 170, compass/sass/style.sass */
+/* line 180, compass/sass/style.sass */
 #page-wrap #content #masonry li {
   margin-right: 1px;
   float: left;
 }
-/* line 173, compass/sass/style.sass */
+/* line 183, compass/sass/style.sass */
 #page-wrap #content #masonry li:last-child {
   margin-right: 0;
 }
-/* line 175, compass/sass/style.sass */
+/* line 185, compass/sass/style.sass */
 #page-wrap #content #masonry .masonry_row .masonry_col {
   position: relative;
 }
-/* line 177, compass/sass/style.sass */
+/* line 187, compass/sass/style.sass */
 #page-wrap #content #masonry .masonry_row .masonry_col .masonry_col_overlay {
   position: absolute;
   padding: 20px;
@@ -639,76 +653,77 @@ mark {
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
+  color: black;
 }
-/* line 188, compass/sass/style.sass */
+/* line 199, compass/sass/style.sass */
 #page-wrap #content #masonry .masonry_row .masonry_col .masonry_col_overlay a {
   color: black;
   opacity: 1;
 }
 
-/* line 196, compass/sass/style.sass */
+/* line 207, compass/sass/style.sass */
 ol.commentlist {
   list-style: none;
 }
-/* line 200, compass/sass/style.sass */
+/* line 211, compass/sass/style.sass */
 ol.commentlist li.comment {
   border-bottom: 1px dotted #666666;
   padding: 10px;
 }
-/* line 206, compass/sass/style.sass */
+/* line 217, compass/sass/style.sass */
 ol.commentlist li.comment div.vcard cite.fn {
   font-style: normal;
 }
-/* line 210, compass/sass/style.sass */
+/* line 221, compass/sass/style.sass */
 ol.commentlist li.comment div.vcard img.avatar {
   float: right;
   margin: 0 0 10px 10px;
 }
-/* line 216, compass/sass/style.sass */
+/* line 227, compass/sass/style.sass */
 ol.commentlist li.comment div.comment-meta {
   font-size: 10px;
 }
-/* line 218, compass/sass/style.sass */
+/* line 229, compass/sass/style.sass */
 ol.commentlist li.comment div.comment-meta a {
   color: #cccccc;
 }
-/* line 221, compass/sass/style.sass */
+/* line 232, compass/sass/style.sass */
 ol.commentlist li.comment div.reply {
   font-size: 11px;
 }
-/* line 223, compass/sass/style.sass */
+/* line 234, compass/sass/style.sass */
 ol.commentlist li.comment div.reply a {
   font-weight: bold;
 }
-/* line 225, compass/sass/style.sass */
+/* line 236, compass/sass/style.sass */
 ol.commentlist li.comment ul.children {
   list-style: none;
   margin: 10px 0 0;
 }
-/* line 230, compass/sass/style.sass */
+/* line 241, compass/sass/style.sass */
 ol.commentlist li.comment ul.children li.depth-2 {
   border-left: 5px solid #555555;
   margin: 0 0 10px 10px;
 }
-/* line 233, compass/sass/style.sass */
+/* line 244, compass/sass/style.sass */
 ol.commentlist li.comment ul.children li.depth-3 {
   border-left: 5px solid #999999;
   margin: 0 0 10px 10px;
 }
-/* line 236, compass/sass/style.sass */
+/* line 247, compass/sass/style.sass */
 ol.commentlist li.comment ul.children li.depth-4 {
   border-left: 5px solid #bbbbbb;
   margin: 0 0 10px 10px;
 }
-/* line 240, compass/sass/style.sass */
+/* line 251, compass/sass/style.sass */
 ol.commentlist li.even {
   background: white;
 }
-/* line 242, compass/sass/style.sass */
+/* line 253, compass/sass/style.sass */
 ol.commentlist li.odd {
   background: #f6f6f6;
 }
-/* line 244, compass/sass/style.sass */
+/* line 255, compass/sass/style.sass */
 ol.commentlist li.parent {
   border-left: 5px solid #111111;
 }
