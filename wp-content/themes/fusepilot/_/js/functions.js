@@ -3,8 +3,16 @@
 
 /* trigger when page is ready */
 $(document).ready(function (){
+  
+  $('input[type="submit"]', '#sidebar, #content').each(function(){
+    $(this).after(unescape('<a class="submit_button"></a>'));
+    $(this).hide();
+    $(this).next('a.submit_button').text($(this).val()).click(function(){
+        $(this).prev('input[type="submit"]').click();
+    });
+  });
 
-	Cufon.replace('h1, h2, h3, h4, nav, #content .links, .pagination, #menu', {
+	Cufon.replace('h1, h2, h3, h4, nav, #content .links, .pagination, #menu, .submit_button', {
     hover: true,
     fontStyle: "italic",
   });
@@ -34,8 +42,8 @@ $(document).ready(function (){
       "class": 'nivo-controls'
     });
     $slider.append($controls);
-    return $(".nivo-directionNav, .nivo-controlNav", $slider).each(function() {
-      return $controls.append($(this));
+    $(".nivo-directionNav, .nivo-controlNav", $slider).each(function() {
+      $controls.append($(this));
     });
   });
 
