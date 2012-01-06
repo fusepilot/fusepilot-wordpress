@@ -1,3 +1,3 @@
-<div id="menu">
+<nav id="menu">
   <?php wp_nav_menu(); ?> 
-</div>
+</nav>

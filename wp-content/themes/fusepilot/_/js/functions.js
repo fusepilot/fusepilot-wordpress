@@ -1,6 +1,3 @@
-$content = $("#content");
-$filler = $("<div class='filler'></div>");
-
 /* trigger when page is ready */
 $(document).ready(function (){
   
@@ -45,26 +42,5 @@ $(document).ready(function (){
     $(".nivo-directionNav, .nivo-controlNav", $slider).each(function() {
       $controls.append($(this));
     });
-  });
-  
-  //placeFiller();  
+  });  
 });
-
-
-$(window).resize(function() {
-  //placeFiller();
-  
-});
-
-$(window).scroll(function() {
-  //placeFiller();
-});
-
-function placeFiller() {
-  $('.filler').each(function() {
-    $filler = $(this);
-    padding = parseInt($filler.css('padding-top'));
-    margin = parseInt($filler.css('margin-bottom'));
-    $filler.height($(window).height() - $filler.offset().top + $(window).scrollTop() - ((padding * 2) + margin));
-  })
-}

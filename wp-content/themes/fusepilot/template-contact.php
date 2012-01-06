@@ -139,8 +139,8 @@ if(isset($_POST['submitted'])) {
 		<?php endwhile; ?>
 	<?php endif; ?>
 <?php } ?>
-
-  <div class="filler"></div>
+  
+  <?php include (TEMPLATEPATH . '/partials/content_footer.php' );?>
 </section>
 
 <?php get_footer(); ?>

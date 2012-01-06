@@ -12,7 +12,7 @@ Template Name: Home
     <?php echo do_shortcode('[vimeo id='.$settings['front_page_vimeo_id'].']');?>
   </div>
   
-  <div class="entry">
+  <div class="entry-content">
     <?php the_content(); ?>
   </div>
   

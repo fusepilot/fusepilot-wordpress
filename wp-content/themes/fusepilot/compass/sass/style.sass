@@ -118,21 +118,22 @@ mark
 /* And here begins the Wordpress fun.
  *------------------------------------------------------------------------------- */
 
-
-
 #page-wrap
   +container
   margin: 0 auto
   
   #sidebar
+    +box-sizing(border-box)
+    background-color: $dark_background_color
     +column(4)
     text-align: right
     
     footer
       overflow: hidden
     
-    header, h2, form, nav, footer, ul, .filler
-      +box_container(dark)
+    header, h2, form, footer, ul, .filler
+      border-bottom: 1px dotted rgba(33,33,33,1)
+      padding: $margin
       
   #sidebar
     text-transform: uppercase
@@ -165,7 +166,12 @@ mark
     
   #content
     +column(12, true)
+    +box-sizing(border-box)
+    background: url("images/light_box_bg.png")
     
+    .divider
+      width: span(12)
+      
     .details p
       text-transform: uppercase
       font-size: $p_size * 0.8
@@ -181,14 +187,22 @@ mark
         width: span(6) + $padding * .5
         display: inline
         float: left
+        +box-sizing(border-box)
         margin-right: $box_margin
-        +box_container(light)
+        border-right: 1px dotted black
+        
+        section
+          padding: $padding
+        
+          &:not(:last-child)
+            border-bottom: 1px dotted black
         
       .right
+        padding: $padding
+        +box-sizing(border-box)
         width: span(6) + $padding * .5 - 1
         display: inline
         float: left
-        +box_container(light)
       
     .pagination
       text-transform: uppercase
@@ -196,28 +210,20 @@ mark
     #gallery
       margin-bottom: $box_margin
     
-    &.page, header, .entry-content, #respond, .filler, .comment, &> h2, .pagination
-      +box_container(light)
+    &.page, header, .entry-content, #respond, .filler, .comment, article > h2, &> h2, .pagination
+      border-bottom: 1px dotted black
+      padding: $margin
+      +box-sizing(border-box)
       
-    &.index
-      .entry, h2
-        +box_container(light)
-        
-    &.front
-      .entry
-        +box_container(light)
-        
-        h2 
-          text-transform: none
-          margin-bottom: $margin * .5
+    .video, #masonry, .gallery
+      border-bottom: 1px dotted black
+      +box-sizing(border-box)
         
     #masonry
       margin-bottom: 1px
-      li
+      li:not(:last-child)
         margin-right: 1px
         float: left
-        &:last-child
-          margin-right: 0
       .masonry_row .masonry_col
         position: relative
         .masonry_col_overlay

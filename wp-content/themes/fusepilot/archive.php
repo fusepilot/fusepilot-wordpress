@@ -42,7 +42,7 @@
 		<h2>Nothing found</h2>
 
 	<?php endif; ?>
-	<div class="filler"></div>
+	<?php include (TEMPLATEPATH . '/partials/content_footer.php' );?>
 </section>
 
 <?php get_footer(); ?>

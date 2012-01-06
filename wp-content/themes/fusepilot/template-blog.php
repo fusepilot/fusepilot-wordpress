@@ -32,7 +32,7 @@ Template Name: Blog
 	
 	<?php wp_reset_query(); ?>
 	
-	<div class="filler"></div>
+	<?php include (TEMPLATEPATH . '/partials/content_footer.php' );?>
 </section>
 
 <?php get_footer(); ?>

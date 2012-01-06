@@ -1,4 +1,4 @@
-<div id="recent">
+<section id="recent">
   
   <h2>Recent</h2>
   
@@ -17,4 +17,4 @@
     <?php wp_reset_query(); ?>
   </ul>
   
-</div>
+</section>

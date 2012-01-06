@@ -6,7 +6,7 @@
     <?php include (TEMPLATEPATH . '/partials/article.php' ); ?>
   <?php endwhile; endif; ?>
   
-  <div class="filler"></div>
+  <?php include (TEMPLATEPATH . '/partials/content_footer.php' );?>
 </section>
 
 <?php get_footer(); ?>

@@ -24,7 +24,7 @@
 
 		<?php endwhile; endif; ?>
 		
-		<div class="filler"></div>
+		<?php include (TEMPLATEPATH . '/partials/content_footer.php' );?>
 </section>
 
 <?php get_footer(); ?>

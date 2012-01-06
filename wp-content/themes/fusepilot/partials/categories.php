@@ -1,6 +1,6 @@
-<div id="categories">
+<section id="categories">
   <h2>Categories</h2>
-
+  
   <?php 
     $args=array(
       'orderby' => 'count',
@@ -16,4 +16,4 @@
     </li>
     <?php endforeach; ?>    
   </ul>
-</div>
+</section>
