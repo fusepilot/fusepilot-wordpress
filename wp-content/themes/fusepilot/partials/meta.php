@@ -1,6 +1,6 @@
 <div class="details">
   <p>
-  <time datetime="<?php echo date(DATE_W3C); ?>" pubdate class="updated"><?php the_time('F jS, Y') ?></time>
+  <time datetime="<?php echo date(DATE_W3C); ?>" pubdate class="updated"><?php the_time("F jS, Y") ?></time>
   <span class="byline author vcard">
   	<i>by</i> <span class="fn"><?php the_author() ?></span>
   </span>

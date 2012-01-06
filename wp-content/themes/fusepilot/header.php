@@ -94,12 +94,15 @@
 	<!-- CSS: screen, mobile & print are all in the same file -->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	
+	<script src="<?php bloginfo('template_directory'); ?>/_/js/jquery-1.7.1.min.js"></script>
 	<!-- all our JS is at the bottom of the page, except for Modernizr. -->
 	<script src="<?php bloginfo('template_directory'); ?>/_/js/modernizr-1.7.min.js"></script>
 	
 	<script src="<?php bloginfo('template_directory'); ?>/_/js/cufon-yui.js"></script>
 	
 	<script src="<?php bloginfo('template_directory'); ?>/_/js/forza_325.font.js"></script>
+	
+	<script src="<?php bloginfo('template_directory'); ?>/_/js/jquery.nivo.slider.pack.js"></script>
 	
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 

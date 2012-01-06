@@ -1,10 +1,13 @@
 <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-  <div id="gallery">
-		<?php while(the_repeater_field('gallery')): 
-			$thumbnails_id = get_sub_field('image'); 
-			echo wp_get_attachment_image($thumbnails_id, 'gallery');	 
-		endwhile; ?>
-	</div>
+
+  <?php if(the_repeater_field('gallery')): ?>
+    <div id="gallery">
+  		<?php while(the_repeater_field('gallery')): 
+  			$thumbnails_id = get_sub_field('image'); 
+  			echo wp_get_attachment_image($thumbnails_id, 'gallery');	 
+  		endwhile; ?>
+    </div>
+	<?php endif; ?>
   
   <header>
     <h1 class="entry-title"><?php the_title(); ?></h1>

@@ -4,7 +4,7 @@
  *Author: Monkey Do!
  *Author URI: http://monkeydo.biz
  *Version: 1 */
-/* line 1, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 1, compass/sass/reset.sass */
 html {
   margin: 0;
   padding: 0;
@@ -15,7 +15,7 @@ html {
   background: transparent;
 }
 
-/* line 10, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 10, compass/sass/reset.sass */
 body {
   margin: 0;
   padding: 0;
@@ -25,7 +25,7 @@ body {
   vertical-align: baseline;
   background: transparent;
 }
-/* line 18, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 18, compass/sass/reset.sass */
 body div {
   margin: 0;
   padding: 0;
@@ -36,7 +36,7 @@ body div {
   background: transparent;
 }
 
-/* line 27, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 27, compass/sass/reset.sass */
 span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -47,7 +47,7 @@ span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address,
   background: transparent;
 }
 
-/* line 36, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 36, compass/sass/reset.sass */
 article, aside, figure, footer, header, hgroup, nav, section {
   display: block;
 }
@@ -55,42 +55,42 @@ article, aside, figure, footer, header, hgroup, nav, section {
 /* Responsive images and other embedded objects
  * Note: keeping IMG here will cause problems if you're using foreground images as sprites, like, say for Google Maps custom placemarkers. 
  * There has been a report of problems with standard Google maps as well, but we haven't been able to duplicate or diagnose the issue. */
-/* line 43, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 43, compass/sass/reset.sass */
 img, object, embed {
   max-width: 100%;
 }
 
 /* force a vertical scrollbar to prevent a jumpy page */
-/* line 48, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 48, compass/sass/reset.sass */
 html {
   overflow-y: scroll;
 }
 
 /* we use a lot of ULs that aren't bulleted.
  *	don't forget to restore the bullets within content. */
-/* line 54, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 54, compass/sass/reset.sass */
 ul {
   list-style: none;
 }
 
-/* line 57, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 57, compass/sass/reset.sass */
 blockquote, q {
   quotes: none;
 }
 
-/* line 61, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 61, compass/sass/reset.sass */
 blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 66, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 66, compass/sass/reset.sass */
 q:before, q:after {
   content: "";
   content: none;
 }
 
-/* line 70, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 70, compass/sass/reset.sass */
 a {
   margin: 0;
   padding: 0;
@@ -99,37 +99,37 @@ a {
   background: transparent;
 }
 
-/* line 77, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 77, compass/sass/reset.sass */
 del {
   text-decoration: line-through;
 }
 
-/* line 80, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 80, compass/sass/reset.sass */
 abbr[title], dfn[title] {
   border-bottom: 1px dotted black;
   cursor: help;
 }
 
 /* tables still need cellspacing="0" in the markup */
-/* line 86, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 86, compass/sass/reset.sass */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 90, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 90, compass/sass/reset.sass */
 th {
   font-weight: bold;
   vertical-align: bottom;
 }
 
-/* line 94, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 94, compass/sass/reset.sass */
 td {
   font-weight: normal;
   vertical-align: top;
 }
 
-/* line 98, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 98, compass/sass/reset.sass */
 hr {
   display: block;
   height: 1px;
@@ -139,12 +139,12 @@ hr {
   padding: 0;
 }
 
-/* line 106, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 106, compass/sass/reset.sass */
 input, select {
   vertical-align: middle;
 }
 
-/* line 109, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 109, compass/sass/reset.sass */
 pre {
   white-space: pre;
   /* CSS2 */
@@ -156,22 +156,22 @@ pre {
   /* IE */
 }
 
-/* line 120, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 120, compass/sass/reset.sass */
 input[type="radio"] {
   vertical-align: text-bottom;
 }
-/* line 122, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 122, compass/sass/reset.sass */
 input[type="checkbox"] {
   vertical-align: bottom;
   *vertical-align: baseline;
 }
 
-/* line 126, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 126, compass/sass/reset.sass */
 .ie6 input {
   vertical-align: text-bottom;
 }
 
-/* line 129, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 129, compass/sass/reset.sass */
 table {
   font-size: inherit;
   font: 100%;
@@ -179,40 +179,40 @@ table {
 
 /* Accessible focus treatment*/
  *	people.opera.com/patrickl/experiments/keyboard/test */
-/* line 137, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 137, compass/sass/reset.sass */
 a:hover, a:active {
   outline: none;
 }
 
-/* line 140, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 140, compass/sass/reset.sass */
 small {
   font-size: 85%;
 }
 
-/* line 143, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 143, compass/sass/reset.sass */
 strong, th {
   font-weight: bold;
 }
 
-/* line 146, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 146, compass/sass/reset.sass */
 td {
   vertical-align: top;
 }
-/* line 148, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 148, compass/sass/reset.sass */
 td img {
   vertical-align: top;
 }
 
 /* Make sure sup and sub don't screw with your line-heights
  *	gist.github.com/413930 */
-/* line 154, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 154, compass/sass/reset.sass */
 sub {
   font-size: 75%;
   line-height: 0;
   position: relative;
 }
 
-/* line 159, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 159, compass/sass/reset.sass */
 sup {
   font-size: 75%;
   line-height: 0;
@@ -220,72 +220,72 @@ sup {
   top: -0.5em;
 }
 
-/* line 165, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 165, compass/sass/reset.sass */
 sub {
   bottom: -0.25em;
 }
 
 /* standardize any monospaced elements */
-/* line 170, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 170, compass/sass/reset.sass */
 pre, code, kbd, samp {
   font-family: monospace, sans-serif;
 }
 
 /* hand cursor on clickable elements */
-/* line 175, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 175, compass/sass/reset.sass */
 .clickable, label {
   cursor: pointer;
 }
 
-/* line 179, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 179, compass/sass/reset.sass */
 input[type=button], input[type=submit] {
   cursor: pointer;
 }
 
-/* line 182, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 182, compass/sass/reset.sass */
 button {
   cursor: pointer;
   margin: 0;
 }
 
 /* Webkit browsers add a 2px margin outside the chrome of form elements */
-/* line 188, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 188, compass/sass/reset.sass */
 input, select, textarea {
   margin: 0;
 }
 
 /* make buttons play nice in IE */
-/* line 193, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 193, compass/sass/reset.sass */
 button {
   width: auto;
   overflow: visible;
 }
 
 /* scale images in IE7 more attractively */
-/* line 199, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 199, compass/sass/reset.sass */
 .ie7 img {
   -ms-interpolation-mode: bicubic;
 }
 
 /* prevent BG image flicker upon hover */
-/* line 204, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 204, compass/sass/reset.sass */
 .ie6 html {
   filter: expression(document.execCommand("BackgroundImageCache", false, true));
 }
 
 /* let's clear some floats */
-/* line 209, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 209, compass/sass/reset.sass */
 .clearfix {
   zoom: 1;
 }
-/* line 210, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 210, compass/sass/reset.sass */
 .clearfix:before {
   content: "\0020";
   display: block;
   height: 0;
   overflow: hidden;
 }
-/* line 215, /Applications/MAMP/htdocs/fusepilot_wordpress/wp-content/themes/fusepilot/compass/sass/reset.sass */
+/* line 215, compass/sass/reset.sass */
 .clearfix:after {
   content: "\0020";
   display: block;
@@ -294,7 +294,141 @@ button {
   clear: both;
 }
 
-/* line 39, compass/sass/style.sass */
+/* jQuery Nivo Slider v2.7.1
+ * http://nivo.dev7studios.com
+ *
+ * Copyright 2011, Gilbert Pellegrom
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ * 
+ * March 2010 */
+/* The Nivo Slider styles  */
+/* line 12, compass/sass/nivo.sass */
+.nivoSlider {
+  position: relative;
+  height: 393px;
+}
+/* line 15, compass/sass/nivo.sass */
+.nivoSlider img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+/* line 19, compass/sass/nivo.sass */
+.nivoSlider a.nivo-imageLink {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  z-index: 6;
+  display: none;
+}
+
+/* line 31, compass/sass/nivo.sass */
+.nivo-slice {
+  display: block;
+  position: absolute;
+  z-index: 5;
+  height: 100%;
+}
+
+/* line 37, compass/sass/nivo.sass */
+.nivo-box {
+  display: block;
+  position: absolute;
+  z-index: 5;
+}
+
+/* line 42, compass/sass/nivo.sass */
+.nivo-caption {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  background: black;
+  color: white;
+  opacity: 0.8;
+  width: 100%;
+  z-index: 8;
+}
+/* line 51, compass/sass/nivo.sass */
+.nivo-caption p {
+  padding: 5px;
+  margin: 0;
+}
+/* line 54, compass/sass/nivo.sass */
+.nivo-caption a {
+  display: inline !important;
+}
+
+/* line 57, compass/sass/nivo.sass */
+.nivo-html-caption {
+  display: none;
+}
+
+/* line 60, compass/sass/nivo.sass */
+.nivo-controls {
+  left: 20px;
+  padding: 8px 10px 5px;
+  background: rgba(13, 13, 13, 0.93);
+  position: absolute;
+  bottom: 0;
+  z-index: 9;
+}
+/* line 68, compass/sass/nivo.sass */
+.nivo-controls .nivo-directionNav {
+  cursor: pointer;
+  display: inline;
+}
+/* line 71, compass/sass/nivo.sass */
+.nivo-controls .nivo-directionNav a {
+  display: inline-block;
+  height: 10px;
+  color: transparent;
+  text-indent: -9000px;
+}
+/* line 76, compass/sass/nivo.sass */
+.nivo-controls .nivo-directionNav a.nivo-prevNav {
+  width: 10px;
+  background: url("images/gallery_controls.png") no-repeat -12px 0px;
+}
+/* line 79, compass/sass/nivo.sass */
+.nivo-controls .nivo-directionNav a.nivo-prevNav:hover {
+  background: url("images/gallery_controls.png") no-repeat -12px -10px;
+}
+/* line 81, compass/sass/nivo.sass */
+.nivo-controls .nivo-directionNav a.nivo-nextNav {
+  width: 12px;
+  background: url("images/gallery_controls.png") no-repeat 0px 0px;
+  margin-right: 10px;
+}
+/* line 85, compass/sass/nivo.sass */
+.nivo-controls .nivo-directionNav a.nivo-nextNav:hover {
+  background: url("images/gallery_controls.png") no-repeat 0px -10px;
+}
+/* line 87, compass/sass/nivo.sass */
+.nivo-controls .nivo-controlNav {
+  display: inline;
+  cursor: pointer;
+}
+/* line 90, compass/sass/nivo.sass */
+.nivo-controls .nivo-controlNav a {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  color: transparent;
+  text-indent: -9000px;
+  background: url("images/gallery_controls.png") no-repeat -22px 1px;
+}
+/* line 97, compass/sass/nivo.sass */
+.nivo-controls .nivo-controlNav a.active, .nivo-controls .nivo-controlNav a:hover {
+  background: url("images/gallery_controls.png") no-repeat -22px -9px;
+}
+
+/* line 41, compass/sass/style.sass */
 html, body {
   background: url("images/background.jpg") center top repeat-x;
   background-color: #181818;
@@ -306,83 +440,83 @@ html, body {
 /* using local fonts? make sure to read up on Paul Irish's
  *  Bulletproof @font-face syntax: http://mky.be/font-face/bulletproof/ */
 /* we like off-black for text */
-/* line 52, compass/sass/style.sass */
+/* line 54, compass/sass/style.sass */
 h1 {
   font-size: 30px;
   text-transform: uppercase;
   color: #bddf56;
 }
 
-/* line 57, compass/sass/style.sass */
+/* line 59, compass/sass/style.sass */
 h2 {
   font-size: 25px;
   text-transform: uppercase;
   color: #bddf56;
 }
 
-/* line 62, compass/sass/style.sass */
+/* line 64, compass/sass/style.sass */
 h3 {
   font-size: 20px;
   text-transform: uppercase;
 }
 
-/* line 66, compass/sass/style.sass */
+/* line 68, compass/sass/style.sass */
 h4 {
   font-size: 15px;
   text-transform: uppercase;
 }
 
-/* line 70, compass/sass/style.sass */
+/* line 72, compass/sass/style.sass */
 h5 {
   font-size: 10px;
   text-transform: uppercase;
 }
 
-/* line 74, compass/sass/style.sass */
+/* line 76, compass/sass/style.sass */
 h6 {
   font-size: 10px;
   text-transform: uppercase;
 }
 
-/* line 78, compass/sass/style.sass */
+/* line 80, compass/sass/style.sass */
 p {
   font-size: 10px;
   margin-bottom: 20px;
 }
-/* line 82, compass/sass/style.sass */
+/* line 84, compass/sass/style.sass */
 p:last-child {
   margin-bottom: 0;
 }
 
-/* line 85, compass/sass/style.sass */
+/* line 87, compass/sass/style.sass */
 a {
   color: #c2c2c2;
   text-decoration: none;
 }
-/* line 89, compass/sass/style.sass */
+/* line 91, compass/sass/style.sass */
 a:hover {
   color: #bddf56;
 }
-/* line 92, compass/sass/style.sass */
+/* line 94, compass/sass/style.sass */
 a:link {
   -webkit-tap-highlight-color: #fcd700;
 }
 
-/* line 96, compass/sass/style.sass */
+/* line 98, compass/sass/style.sass */
 select, input, textarea {
   color: #333333;
 }
 
 /* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
 /*  j.mp/webkit-tap-highlight-color */
-/* line 103, compass/sass/style.sass */
+/* line 105, compass/sass/style.sass */
 ins {
   background-color: #fcd700;
   color: black;
   text-decoration: none;
 }
 
-/* line 108, compass/sass/style.sass */
+/* line 110, compass/sass/style.sass */
 mark {
   background-color: #fcd700;
   color: black;
@@ -392,7 +526,7 @@ mark {
 
 /* And here begins the Wordpress fun.
  *------------------------------------------------------------------------------- */
-/* line 117, compass/sass/style.sass */
+/* line 119, compass/sass/style.sass */
 #logo a {
   display: block;
   text-indent: 9000px;
@@ -402,7 +536,7 @@ mark {
   margin-bottom: 1px;
   height: 80px;
 }
-/* line 125, compass/sass/style.sass */
+/* line 127, compass/sass/style.sass */
 #logo a:hover {
   background: url("images/logo_highlight.png") no-repeat center;
   padding: 20px;
@@ -410,7 +544,7 @@ mark {
   margin-bottom: 1px;
 }
 
-/* line 131, compass/sass/style.sass */
+/* line 133, compass/sass/style.sass */
 #page-wrap {
   width: 950px;
   margin: 0 auto;
@@ -419,7 +553,7 @@ mark {
   margin: 0 auto;
   height: 100%;
 }
-/* line 136, compass/sass/style.sass */
+/* line 138, compass/sass/style.sass */
 #page-wrap #sidebar {
   position: fixed;
   height: 100%;
@@ -429,25 +563,25 @@ mark {
   width: 220px;
   text-align: right;
 }
-/* line 147, /Users/michaeldelaney/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.11.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+/* line 147, ../../../../../../../Users/michaeldelaney/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.11.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #page-wrap #sidebar {
   overflow-x: hidden;
 }
-/* line 142, compass/sass/style.sass */
+/* line 144, compass/sass/style.sass */
 #page-wrap #sidebar header {
   text-index: -9000px;
 }
-/* line 145, compass/sass/style.sass */
+/* line 147, compass/sass/style.sass */
 #page-wrap #sidebar footer {
   height: 100%;
 }
-/* line 148, compass/sass/style.sass */
+/* line 150, compass/sass/style.sass */
 #page-wrap #sidebar header, #page-wrap #sidebar h2, #page-wrap #sidebar form, #page-wrap #sidebar nav, #page-wrap #sidebar footer, #page-wrap #sidebar ul {
   padding: 20px;
   background-color: rgba(13, 13, 13, 0.93);
   margin-bottom: 1px;
 }
-/* line 151, compass/sass/style.sass */
+/* line 153, compass/sass/style.sass */
 #page-wrap #content {
   margin-left: 240px;
   display: inline;
@@ -456,90 +590,125 @@ mark {
   width: 700px;
   height: 100%;
 }
-/* line 147, /Users/michaeldelaney/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.11.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+/* line 147, ../../../../../../../Users/michaeldelaney/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.11.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #page-wrap #content {
   overflow-x: hidden;
 }
-/* line 156, compass/sass/style.sass */
+/* line 158, compass/sass/style.sass */
 #page-wrap #content .filler {
   height: 100%;
 }
-/* line 159, compass/sass/style.sass */
+/* line 161, compass/sass/style.sass */
 #page-wrap #content.page, #page-wrap #content header, #page-wrap #content .entry-content, #page-wrap #content #respond, #page-wrap #content .filler, #page-wrap #content .comment, #page-wrap #content > h2, #page-wrap #content .navigation {
   padding: 20px;
   background: url("images/light_box_bg.png");
   margin-bottom: 1px;
 }
-/* line 163, compass/sass/style.sass */
+/* line 165, compass/sass/style.sass */
 #page-wrap #content.index .entry, #page-wrap #content.index h2 {
   padding: 20px;
   background: url("images/light_box_bg.png");
   margin-bottom: 1px;
 }
-
+/* line 168, compass/sass/style.sass */
+#page-wrap #content #masonry {
+  margin-bottom: 1px;
+}
 /* line 170, compass/sass/style.sass */
+#page-wrap #content #masonry li {
+  margin-right: 1px;
+  float: left;
+}
+/* line 173, compass/sass/style.sass */
+#page-wrap #content #masonry li:last-child {
+  margin-right: 0;
+}
+/* line 175, compass/sass/style.sass */
+#page-wrap #content #masonry .masonry_row .masonry_col {
+  position: relative;
+}
+/* line 177, compass/sass/style.sass */
+#page-wrap #content #masonry .masonry_row .masonry_col .masonry_col_overlay {
+  position: absolute;
+  padding: 20px;
+  background: url("images/highlight_box_bg.gif");
+  display: none;
+  opacity: 0.75;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 188, compass/sass/style.sass */
+#page-wrap #content #masonry .masonry_row .masonry_col .masonry_col_overlay a {
+  color: black;
+  opacity: 1;
+}
+
+/* line 196, compass/sass/style.sass */
 ol.commentlist {
   list-style: none;
 }
-/* line 174, compass/sass/style.sass */
+/* line 200, compass/sass/style.sass */
 ol.commentlist li.comment {
   border-bottom: 1px dotted #666666;
   padding: 10px;
 }
-/* line 180, compass/sass/style.sass */
+/* line 206, compass/sass/style.sass */
 ol.commentlist li.comment div.vcard cite.fn {
   font-style: normal;
 }
-/* line 184, compass/sass/style.sass */
+/* line 210, compass/sass/style.sass */
 ol.commentlist li.comment div.vcard img.avatar {
   float: right;
   margin: 0 0 10px 10px;
 }
-/* line 190, compass/sass/style.sass */
+/* line 216, compass/sass/style.sass */
 ol.commentlist li.comment div.comment-meta {
   font-size: 10px;
 }
-/* line 192, compass/sass/style.sass */
+/* line 218, compass/sass/style.sass */
 ol.commentlist li.comment div.comment-meta a {
   color: #cccccc;
 }
-/* line 195, compass/sass/style.sass */
+/* line 221, compass/sass/style.sass */
 ol.commentlist li.comment div.reply {
   font-size: 11px;
 }
-/* line 197, compass/sass/style.sass */
+/* line 223, compass/sass/style.sass */
 ol.commentlist li.comment div.reply a {
   font-weight: bold;
 }
-/* line 199, compass/sass/style.sass */
+/* line 225, compass/sass/style.sass */
 ol.commentlist li.comment ul.children {
   list-style: none;
   margin: 10px 0 0;
 }
-/* line 204, compass/sass/style.sass */
+/* line 230, compass/sass/style.sass */
 ol.commentlist li.comment ul.children li.depth-2 {
   border-left: 5px solid #555555;
   margin: 0 0 10px 10px;
 }
-/* line 207, compass/sass/style.sass */
+/* line 233, compass/sass/style.sass */
 ol.commentlist li.comment ul.children li.depth-3 {
   border-left: 5px solid #999999;
   margin: 0 0 10px 10px;
 }
-/* line 210, compass/sass/style.sass */
+/* line 236, compass/sass/style.sass */
 ol.commentlist li.comment ul.children li.depth-4 {
   border-left: 5px solid #bbbbbb;
   margin: 0 0 10px 10px;
 }
-/* line 214, compass/sass/style.sass */
+/* line 240, compass/sass/style.sass */
 ol.commentlist li.even {
   background: white;
 }
-/* line 216, compass/sass/style.sass */
+/* line 242, compass/sass/style.sass */
 ol.commentlist li.odd {
   background: #f6f6f6;
 }
-/* line 218, compass/sass/style.sass */
+/* line 244, compass/sass/style.sass */
 ol.commentlist li.parent {
   border-left: 5px solid #111111;
 }

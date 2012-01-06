@@ -30,8 +30,6 @@ Template Name: Blog
 	<?php endif; ?>
 	
 	<?php wp_reset_query(); ?>
-  
-  <div class="filler"></div>
 </div>
 
 <?php get_footer(); ?>

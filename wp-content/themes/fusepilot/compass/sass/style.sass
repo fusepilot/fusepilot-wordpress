@@ -8,6 +8,8 @@
  
 @import 'blueprint/grid'
 @import 'reset'
+@import 'nivo'
+
 $blueprint-grid-columns: 16
 $blueprint-grid-width: 40px
 $blueprint-grid-margin: 20px
@@ -162,7 +164,31 @@ mark
     &.index
       .entry, h2
         +box_container(light)
-      
+        
+    #masonry
+      margin-bottom: 1px
+      li
+        margin-right: 1px
+        float: left
+        &:last-child
+          margin-right: 0
+      .masonry_row .masonry_col
+        position: relative
+        .masonry_col_overlay
+          position: absolute
+          padding: 20px
+          background: url("images/highlight_box_bg.gif")
+          display: none
+          opacity: .75
+          -webkit-box-sizing: border-box
+          -moz-box-sizing: border-box
+          -ms-box-sizing: border-box
+          -o-box-sizing: border-box
+          box-sizing: border-box
+          a
+            color: black
+            opacity: 1
+  
     
 
 .post, .entry-content a:hover, #meta, .postmetadata, #sidebar, .navgation, .next-posts, .prev-posts, #searchform, #s, #searchsubmt

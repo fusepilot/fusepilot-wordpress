@@ -1,0 +1,133 @@
+/* jQuery Nivo Slider v2.7.1
+ * http://nivo.dev7studios.com
+ *
+ * Copyright 2011, Gilbert Pellegrom
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ * 
+ * March 2010 */
+/* The Nivo Slider styles  */
+/* line 12, compass/sass/nivo.sass */
+.nivoSlider {
+  position: relative;
+  height: 393px;
+}
+/* line 15, compass/sass/nivo.sass */
+.nivoSlider img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+/* line 19, compass/sass/nivo.sass */
+.nivoSlider a.nivo-imageLink {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  z-index: 6;
+  display: none;
+}
+
+/* line 31, compass/sass/nivo.sass */
+.nivo-slice {
+  display: block;
+  position: absolute;
+  z-index: 5;
+  height: 100%;
+}
+
+/* line 37, compass/sass/nivo.sass */
+.nivo-box {
+  display: block;
+  position: absolute;
+  z-index: 5;
+}
+
+/* line 42, compass/sass/nivo.sass */
+.nivo-caption {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  background: black;
+  color: white;
+  opacity: 0.8;
+  width: 100%;
+  z-index: 8;
+}
+/* line 51, compass/sass/nivo.sass */
+.nivo-caption p {
+  padding: 5px;
+  margin: 0;
+}
+/* line 54, compass/sass/nivo.sass */
+.nivo-caption a {
+  display: inline !important;
+}
+
+/* line 57, compass/sass/nivo.sass */
+.nivo-html-caption {
+  display: none;
+}
+
+/* line 60, compass/sass/nivo.sass */
+.nivo-controls {
+  left: 20px;
+  padding: 8px 10px 5px;
+  background: rgba(13, 13, 13, 0.93);
+  position: absolute;
+  bottom: 0;
+  z-index: 9;
+}
+/* line 68, compass/sass/nivo.sass */
+.nivo-controls .nivo-directionNav {
+  cursor: pointer;
+  display: inline;
+}
+/* line 71, compass/sass/nivo.sass */
+.nivo-controls .nivo-directionNav a {
+  display: inline-block;
+  height: 10px;
+  color: transparent;
+  text-indent: -9000px;
+}
+/* line 76, compass/sass/nivo.sass */
+.nivo-controls .nivo-directionNav a.nivo-prevNav {
+  width: 10px;
+  background: url("images/gallery_controls.png") no-repeat -12px 0px;
+}
+/* line 79, compass/sass/nivo.sass */
+.nivo-controls .nivo-directionNav a.nivo-prevNav:hover {
+  background: url("images/gallery_controls.png") no-repeat -12px -10px;
+}
+/* line 81, compass/sass/nivo.sass */
+.nivo-controls .nivo-directionNav a.nivo-nextNav {
+  width: 12px;
+  background: url("images/gallery_controls.png") no-repeat 0px 0px;
+  margin-right: 10px;
+}
+/* line 85, compass/sass/nivo.sass */
+.nivo-controls .nivo-directionNav a.nivo-nextNav:hover {
+  background: url("images/gallery_controls.png") no-repeat 0px -10px;
+}
+/* line 87, compass/sass/nivo.sass */
+.nivo-controls .nivo-controlNav {
+  display: inline;
+  cursor: pointer;
+}
+/* line 90, compass/sass/nivo.sass */
+.nivo-controls .nivo-controlNav a {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  color: transparent;
+  text-indent: -9000px;
+  background: url("images/gallery_controls.png") no-repeat -22px 1px;
+}
+/* line 97, compass/sass/nivo.sass */
+.nivo-controls .nivo-controlNav a.active, .nivo-controls .nivo-controlNav a:hover {
+  background: url("images/gallery_controls.png") no-repeat -22px -9px;
+}
