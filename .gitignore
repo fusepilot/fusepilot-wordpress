@@ -16,6 +16,7 @@
 !.gitignore
 !wp-content/
 .DS_Store
+wp-content/themes/fusepilot/compass/.sass-cache
 
 # Ignore everything in the "wp-content" directory, except the "plugins"
 # and "themes" directories.

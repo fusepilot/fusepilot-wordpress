@@ -47,33 +47,17 @@ $(document).ready(function (){
     });
   });
   
+  //placeFiller();  
 });
 
-// $(window).load(function() {
-//   placeFiller();
-// });
-// 
+
 $(window).resize(function() {
-  //$('.filler').height( $(window).height() - ($('body').innerHeight() - $('.filler').outerHeight()) );
-  //$('.filler').text($(window).height() - $('body').innerHeight() - 27);
-  //$('.filler').height(($(window).height() - $('body').innerHeight() - 27) + ($(window).height() - $('.filler').offset().top - $('.filler').outerHeight(true)));
-  //$('.filler').text($(window).height() - $('.filler').offset().top + $('.filler').outerHeight(true));
-  //$('.filler').height(($(window).height() - $('.filler').height()) - $('.filler').offset().top - $('.filler').outerHeight(true));
-  
-  // if($(window).height() > $('body').innerHeight()) {
-  //   $('.filler').text('over');
-  // } else {
-  //   $('.filler').text('under');
-  //   delta = $(window).height() - $(".filler").offset().top
-  //   $('.filler').height(delta);
-  // }
-  
-  placeFiller();
+  //placeFiller();
   
 });
 
 $(window).scroll(function() {
-  placeFiller();
+  //placeFiller();
 });
 
 function placeFiller() {
@@ -84,17 +68,3 @@ function placeFiller() {
     $filler.height($(window).height() - $filler.offset().top + $(window).scrollTop() - ((padding * 2) + margin));
   })
 }
-// 
-// function placeFiller() {
-//   delta = $(window).height() - $('.filler').position().top;
-//   $('.filler').css('height', delta);
-// }
-
-
-/* optional triggers
-
-
-
-
-
-*/

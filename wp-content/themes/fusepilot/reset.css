@@ -171,42 +171,40 @@ table {
   font: 100%;
 }
 
-/* Accessible focus treatment*/
- *	people.opera.com/patrickl/experiments/keyboard/test */
-/* line 137, compass/sass/reset.sass */
+/* line 135, compass/sass/reset.sass */
 a:hover, a:active {
   outline: none;
 }
 
-/* line 140, compass/sass/reset.sass */
+/* line 138, compass/sass/reset.sass */
 small {
   font-size: 85%;
 }
 
-/* line 143, compass/sass/reset.sass */
+/* line 141, compass/sass/reset.sass */
 strong, th {
   font-weight: bold;
 }
 
-/* line 146, compass/sass/reset.sass */
+/* line 144, compass/sass/reset.sass */
 td {
   vertical-align: top;
 }
-/* line 148, compass/sass/reset.sass */
+/* line 146, compass/sass/reset.sass */
 td img {
   vertical-align: top;
 }
 
 /* Make sure sup and sub don't screw with your line-heights
  *	gist.github.com/413930 */
-/* line 154, compass/sass/reset.sass */
+/* line 152, compass/sass/reset.sass */
 sub {
   font-size: 75%;
   line-height: 0;
   position: relative;
 }
 
-/* line 159, compass/sass/reset.sass */
+/* line 157, compass/sass/reset.sass */
 sup {
   font-size: 75%;
   line-height: 0;
@@ -214,72 +212,72 @@ sup {
   top: -0.5em;
 }
 
-/* line 165, compass/sass/reset.sass */
+/* line 163, compass/sass/reset.sass */
 sub {
   bottom: -0.25em;
 }
 
 /* standardize any monospaced elements */
-/* line 170, compass/sass/reset.sass */
+/* line 168, compass/sass/reset.sass */
 pre, code, kbd, samp {
   font-family: monospace, sans-serif;
 }
 
 /* hand cursor on clickable elements */
-/* line 175, compass/sass/reset.sass */
+/* line 173, compass/sass/reset.sass */
 .clickable, label {
   cursor: pointer;
 }
 
-/* line 179, compass/sass/reset.sass */
+/* line 177, compass/sass/reset.sass */
 input[type=button], input[type=submit] {
   cursor: pointer;
 }
 
-/* line 182, compass/sass/reset.sass */
+/* line 180, compass/sass/reset.sass */
 button {
   cursor: pointer;
   margin: 0;
 }
 
 /* Webkit browsers add a 2px margin outside the chrome of form elements */
-/* line 188, compass/sass/reset.sass */
+/* line 186, compass/sass/reset.sass */
 input, select, textarea {
   margin: 0;
 }
 
 /* make buttons play nice in IE */
-/* line 193, compass/sass/reset.sass */
+/* line 191, compass/sass/reset.sass */
 button {
   width: auto;
   overflow: visible;
 }
 
 /* scale images in IE7 more attractively */
-/* line 199, compass/sass/reset.sass */
+/* line 197, compass/sass/reset.sass */
 .ie7 img {
   -ms-interpolation-mode: bicubic;
 }
 
 /* prevent BG image flicker upon hover */
-/* line 204, compass/sass/reset.sass */
+/* line 202, compass/sass/reset.sass */
 .ie6 html {
   filter: expression(document.execCommand("BackgroundImageCache", false, true));
 }
 
 /* let's clear some floats */
-/* line 209, compass/sass/reset.sass */
+/* line 207, compass/sass/reset.sass */
 .clearfix {
   zoom: 1;
 }
-/* line 210, compass/sass/reset.sass */
+/* line 208, compass/sass/reset.sass */
 .clearfix:before {
   content: "\0020";
   display: block;
   height: 0;
   overflow: hidden;
 }
-/* line 215, compass/sass/reset.sass */
+/* line 213, compass/sass/reset.sass */
 .clearfix:after {
   content: "\0020";
   display: block;
