@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
 
-<div id="content" class="page">
+<section id="content" class="page">
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			
 		<article class="post" id="post-<?php the_ID(); ?>">
@@ -23,6 +23,6 @@
 		</article>
 
 		<?php endwhile; endif; ?>
-</div>
+</section>
 
 <?php get_footer(); ?>

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
 
-<div id="content" class="single">
+<section id="content" class="single">
 	<?php if (have_posts()) : ?>
 
 		<h2>Search Results For: <?php the_search_query(); ?></h2>
@@ -21,7 +21,7 @@
 		<h2>No posts found.</h2>
 
 	<?php endif; ?>
-<div>
+<section>
 
 
 

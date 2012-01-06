@@ -7,7 +7,7 @@ Template Name: Portfolio
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
 
-<div id="content" class="index">
+<section id="content" class="index">
   
   <?php
 	//query posts
@@ -35,6 +35,6 @@ Template Name: Portfolio
 	?>
 	
 	<?php wp_reset_query(); ?>
-</div>
+</section>
 
 <?php get_footer(); ?>

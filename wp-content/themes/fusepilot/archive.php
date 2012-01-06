@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
 
-<div id="content" class="archive">
+<section id="content" class="archive">
 		<?php if (have_posts()) : ?>
 
  			<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
@@ -42,6 +42,6 @@
 		<h2>Nothing found</h2>
 
 	<?php endif; ?>
-</div>
+</section>
 
 <?php get_footer(); ?>

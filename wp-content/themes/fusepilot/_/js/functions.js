@@ -4,7 +4,7 @@
 /* trigger when page is ready */
 $(document).ready(function (){
 
-	Cufon.replace('h1, h2, h3, h4, nav, #content .links, .pagination', {
+	Cufon.replace('h1, h2, h3, h4, nav, #content .links, .pagination, #menu', {
     hover: true,
     fontStyle: "italic",
   });

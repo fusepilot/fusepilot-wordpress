@@ -7,7 +7,7 @@ Template Name: Blog
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
 
-<div id="content" class="index">
+<section id="content" class="index">
   <?php
 	//query posts
 	query_posts(
@@ -30,6 +30,6 @@ Template Name: Blog
 	<?php endif; ?>
 	
 	<?php wp_reset_query(); ?>
-</div>
+</section>
 
 <?php get_footer(); ?>

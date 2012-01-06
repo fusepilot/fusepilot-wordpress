@@ -93,13 +93,6 @@ a
     
   &:link
     -webkit-tap-highlight-color: #fcd700
-  
-.details
-  text-transform: uppercase
-  
-  p
-    font-size: $p_size * 0.8
-    margin-bottom: 0
     
 
 select, input, textarea
@@ -123,19 +116,7 @@ mark
 /* And here begins the Wordpress fun.
  *------------------------------------------------------------------------------- */
 
-#logo a
-  display: block
-  text-indent: 9000px
-  background: url("images/logo.png") no-repeat center
-  padding: 20px
-  background-color: rgba(13, 13, 13, 0.93)
-  margin-bottom: 1px
-  height: 80px
-  &:hover
-    background: url("images/logo_highlight.png") no-repeat center
-    padding: 20px
-    background-color: rgba(13, 13, 13, 0.93)
-    margin-bottom: 1px
+
 
 #page-wrap
   +container
@@ -148,19 +129,49 @@ mark
     +column(4)
     text-align: right
     
-    header
-      text-index: -9000px
-    
     footer
       height: 100%
     
     header, h2, form, nav, footer, ul
       +box_container(dark)
+      
+  #sidebar
+    text-transform: uppercase
+    a
+      font-size: $p_size
+    
+    #menu a
+      font-size: 1.8em
+      
+    #logo a
+      display: block
+      text-indent: 9000px
+      background: url("images/logo.png") no-repeat center
+      padding: 20px
+      background-color: rgba(13, 13, 13, 0.93)
+      margin-bottom: 1px
+      height: 80px
+      &:hover
+        background: url("images/logo_highlight.png") no-repeat center
+        padding: 20px
+        background-color: rgba(13, 13, 13, 0.93)
+        margin-bottom: 1px
+        
+    .details p
+      text-transform: uppercase
+      color: $dark_text_color
+      font-size: $p_size * 0.8
+      margin-bottom: 0
     
   #content
     margin-left: span(4) + $blueprint-grid-margin
     +column(12, true)
     height: 100%
+    
+    .details p
+      text-transform: uppercase
+      font-size: $p_size * 0.8
+      margin-bottom: 0
     
     .filler
       height: 100%
@@ -199,73 +210,3 @@ mark
           a
             color: black
             opacity: 1
-  
-    
-
-.post, .entry-content a:hover, #meta, .postmetadata, #sidebar, .navgation, .next-posts, .prev-posts, #searchform, #s, #searchsubmt
-
-ol.commentlist
-  list-style: none
-  li
-    &.alt, &.bypostauthor, &.byuser, &.comment-author-admin
-    &.comment
-      border-bottom: 1px dotted #666
-      padding: 10px
-      div
-        &.comment-author
-        &.vcard
-          cite.fn
-            font-style: normal
-            a.url
-          img
-            &.avatar
-              float: right
-              margin: 0 0 10px 10px
-            &.avatar-32, &.photo
-          span.says
-        &.commentmetadata
-        &.comment-meta
-          font-size: 10px
-          a
-            color: #ccc
-      p, ul
-      div.reply
-        font-size: 11px
-        a
-          font-weight: bold
-      ul.children
-        list-style: none
-        margin: 10px 0 0
-        li
-          &.alt, &.bypostauthor, &.byuser, &.comment, &.comment-author-admin
-          &.depth-2
-            border-left: 5px solid #555
-            margin: 0 0 10px 10px
-          &.depth-3
-            border-left: 5px solid #999
-            margin: 0 0 10px 10px
-          &.depth-4
-            border-left: 5px solid #bbb
-            margin: 0 0 10px 10px
-          &.depth-5, &.odd
-    &.even
-      background: #fff
-    &.odd
-      background: #f6f6f6
-    &.parent
-      border-left: 5px solid #111
-    &.thread-alt, &.thread-even, &.thread-odd
-
-/* Print styles!
- *------------------------------------------------------------------------------- */
-@media print
-
-/* Media queries!
- *------------------------------------------------------------------------------- */
-
-/* Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
-@media screen and (max-device-width: 480px)
-
-@media all and (orientation: portrait)
-
-@media all and (orientation: landscape)
