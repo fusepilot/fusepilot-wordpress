@@ -36,3 +36,5 @@
 
 <?php endif; ?>
 </div>
+
+<div class="clear"></div>

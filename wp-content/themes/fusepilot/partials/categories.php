@@ -1,5 +1,5 @@
 <section id="categories">
-  <h2>Categories</h2>
+  <h3>Categories</h3>
   
   <?php 
     $args=array(

@@ -4,7 +4,7 @@
 <section id="content" class="single">
 	<?php if (have_posts()) : ?>
 
-		<h2>Search Results For: <?php the_search_query(); ?></h2>
+		<h3>Search Results For: <?php the_search_query(); ?></h3>
 
 		<?php include (TEMPLATEPATH . '/_/inc/nav.php' ); ?>
 
@@ -18,7 +18,7 @@
 
 	<?php else : ?>
 
-		<h2>No posts found.</h2>
+		<h3>No posts found.</h3>
 
 	<?php endif; ?>
 	

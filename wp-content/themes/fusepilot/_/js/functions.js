@@ -1,4 +1,5 @@
 /* trigger when page is ready */
+
 $(document).ready(function (){
   
   $('input[type="submit"]', '#sidebar, #content').each(function(){
@@ -42,5 +43,20 @@ $(document).ready(function (){
     $(".nivo-directionNav, .nivo-controlNav", $slider).each(function() {
       $controls.append($(this));
     });
-  });  
+  });
+  
+  placeFooter();
 });
+
+$(window).load(function() {
+  placeFooter();
+});
+
+$(window).resize(function() {
+  placeFooter();
+});
+
+function placeFooter() {
+  footer_height = $('#content_footer').outerHeight();
+  $('.fill').height(footer_height);
+}

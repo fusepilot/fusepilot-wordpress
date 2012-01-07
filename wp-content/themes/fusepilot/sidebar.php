@@ -11,4 +11,9 @@
     
     <?php include (TEMPLATEPATH . '/partials/search_form.php' ); ?>
     
+    
+    
+    <div class="copyright">
+      <p>&copy;2011-<?php echo date("Y"); echo " "; bloginfo('name'); ?></p>
+    </div>
 </section>

@@ -1,6 +1,6 @@
 <section id="recent">
   
-  <h2>Recent</h2>
+  <h3>Recent</h3>
   
   <ul>
     <?php query_posts('showposts=5'); ?>

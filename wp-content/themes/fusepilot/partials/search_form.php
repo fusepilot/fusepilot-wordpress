@@ -1,5 +1,5 @@
 <section id="search">
-  <h2>Search</h2>
+  <!-- <h3>Search</h3> -->
   
   <?php get_search_form(); ?>
 </section>
