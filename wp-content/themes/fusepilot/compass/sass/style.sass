@@ -8,6 +8,8 @@
  
 @import 'blueprint/grid'
 @import 'compass/css3/box-sizing'
+@import 'compass/utilities/general/clearfix'
+@import 'compass/css3/box-shadow'
 @import 'reset'
 @import 'nivo'
 
@@ -28,8 +30,6 @@ $p_size: 10px
 $site_width: 1000px
 
 @mixin box_container($scheme)
-  padding: $padding
-  +box-sizing(border-box)
   @if $scheme == dark
     background-color: $dark_background_color
   @else if $scheme == light
@@ -38,12 +38,32 @@ $site_width: 1000px
   @else if $scheme == highlight
     background: url("images/highlight_box_bg.gif")
     
+  padding: $padding
+  +box-sizing(border-box)
   margin-bottom: $box_margin
+  
+@mixin half($side)
+  @if $side == left
+    width: span(6) + $padding * .5
+    border-right: 1px dotted black
+  @else if $side == right
+    width: span(6) + $padding * .5 - 1
+    
+  +box-sizing(border-box)
+  display: inline
+  float: left
+  
+  section
+    padding: $padding
+  
+    &:not(:last-child)
+      border-bottom: 1px dotted black
+      
 
 html, body
+  height: 100%
   background: url("images/background.jpg") center top repeat-x
   background-color: #181818 
-
   font-family: Verdana
   color: $text_color
   line-height: 1em
@@ -119,12 +139,13 @@ mark
  *------------------------------------------------------------------------------- */
 
 #page-wrap
+  background: url("images/column_bg.png") repeat-y
   +container
   margin: 0 auto
+  height: 100%
   
   #sidebar
     +box-sizing(border-box)
-    background-color: $dark_background_color
     +column(4)
     text-align: right
     
@@ -135,7 +156,6 @@ mark
       border-bottom: 1px dotted rgba(33,33,33,1)
       padding: $margin
       
-  #sidebar
     text-transform: uppercase
     
     a
@@ -167,63 +187,70 @@ mark
   #content
     +column(12, true)
     +box-sizing(border-box)
-    background: url("images/light_box_bg.png")
+    //background: url("images/light_box_bg.png")
     
     .divider
       width: span(12)
       
-    .details p
-      text-transform: uppercase
-      font-size: $p_size * 0.8
-      margin-bottom: 0
+    .details
+    
+      p
+        text-transform: uppercase
+        font-size: $p_size * 0.8
+        margin-bottom: 0
+      
+      .left
+        +half(left)
+        
+      .right
+        +half(right)
     
     .filler
       clear: both
       
+  
+      
     #content_footer
       +clearfix
+      color: rgba(8,8,8, 1)
+      background: rgba(255,255,255,.5)
+      
+      h3
+        color: white
       
       .left
-        width: span(6) + $padding * .5
-        display: inline
-        float: left
-        +box-sizing(border-box)
-        margin-right: $box_margin
-        border-right: 1px dotted black
-        
-        section
-          padding: $padding
-        
-          &:not(:last-child)
-            border-bottom: 1px dotted black
+        +half(left)
         
       .right
-        padding: $padding
-        +box-sizing(border-box)
-        width: span(6) + $padding * .5 - 1
-        display: inline
-        float: left
+        +half(right)
       
     .pagination
       text-transform: uppercase
       
     #gallery
       margin-bottom: $box_margin
+      
+    article footer
+      +clearfix
+      +box-sizing(border-box)
+      border-bottom: 1px dotted black
     
-    &.page, header, .entry-content, #respond, .filler, .comment, article > h2, &> h2, .pagination
+    &.page, header, .entry-content, #respond, .filler, .comment, article > h3, &> h3, .pagination, .copyright
       border-bottom: 1px dotted black
       padding: $margin
+      +clearfix
+      clear: both
       +box-sizing(border-box)
       
     .video, #masonry, .gallery
       border-bottom: 1px dotted black
       +box-sizing(border-box)
-        
+    
     #masonry
       margin-bottom: 1px
       li:not(:last-child)
         margin-right: 1px
-        float: left
+        +float-left
       .masonry_row .masonry_col
         position: relative
         .masonry_col_overlay
@@ -277,6 +304,8 @@ mark
       border: none
       padding: 10px
       color: #c2c2c2
+      min-height: 35px
+      resize: vertical
       +box-sizing(border-box)
     
     input

@@ -18,8 +18,11 @@
 		<?php the_content(); ?>
 		<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>				
 		<!-- <?php edit_post_link('Edit this entry','','.'); ?> -->
-		<?php the_tags( 'Tags: ', ', ', ''); ?>
 	</div>
+	
+	<footer>
+	  <?php include (TEMPLATEPATH . '/partials/expanded_meta.php' ); ?>
+	</footer>
 	
 	<?php if(comments_open()): ?>
 	  <?php comments_template(); ?>

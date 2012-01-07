@@ -426,8 +426,9 @@ button {
   background: url("images/gallery_controls.png") no-repeat -22px -9px;
 }
 
-/* line 43, compass/sass/style.sass */
+/* line 63, compass/sass/style.sass */
 html, body {
+  height: 100%;
   background: url("images/background.jpg") center top repeat-x;
   background-color: #181818;
   font-family: Verdana;
@@ -438,83 +439,83 @@ html, body {
 /* using local fonts? make sure to read up on Paul Irish's
  *  Bulletproof @font-face syntax: http://mky.be/font-face/bulletproof/ */
 /* we like off-black for text */
-/* line 56, compass/sass/style.sass */
+/* line 76, compass/sass/style.sass */
 h1 {
   font-size: 30px;
   text-transform: uppercase;
   color: #bddf56;
 }
 
-/* line 61, compass/sass/style.sass */
+/* line 81, compass/sass/style.sass */
 h2 {
   font-size: 25px;
   text-transform: uppercase;
   color: #bddf56;
 }
 
-/* line 66, compass/sass/style.sass */
+/* line 86, compass/sass/style.sass */
 h3 {
   font-size: 20px;
   text-transform: uppercase;
 }
 
-/* line 70, compass/sass/style.sass */
+/* line 90, compass/sass/style.sass */
 h4 {
   font-size: 15px;
   text-transform: uppercase;
 }
 
-/* line 74, compass/sass/style.sass */
+/* line 94, compass/sass/style.sass */
 h5 {
   font-size: 10px;
   text-transform: uppercase;
 }
 
-/* line 78, compass/sass/style.sass */
+/* line 98, compass/sass/style.sass */
 h6 {
   font-size: 10px;
   text-transform: uppercase;
 }
 
-/* line 82, compass/sass/style.sass */
+/* line 102, compass/sass/style.sass */
 p {
   font-size: 10px;
   margin-bottom: 20px;
 }
-/* line 86, compass/sass/style.sass */
+/* line 106, compass/sass/style.sass */
 p:last-child {
   margin-bottom: 0;
 }
 
-/* line 89, compass/sass/style.sass */
+/* line 109, compass/sass/style.sass */
 a {
   color: #c2c2c2;
   text-decoration: none;
 }
-/* line 93, compass/sass/style.sass */
+/* line 113, compass/sass/style.sass */
 a:hover {
   color: #bddf56;
 }
-/* line 96, compass/sass/style.sass */
+/* line 116, compass/sass/style.sass */
 a:link {
   -webkit-tap-highlight-color: #fcd700;
 }
 
-/* line 100, compass/sass/style.sass */
+/* line 120, compass/sass/style.sass */
 select, input, textarea {
   color: #333333;
 }
 
 /* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
 /*  j.mp/webkit-tap-highlight-color */
-/* line 107, compass/sass/style.sass */
+/* line 127, compass/sass/style.sass */
 ins {
   background-color: #fcd700;
   color: black;
   text-decoration: none;
 }
 
-/* line 112, compass/sass/style.sass */
+/* line 132, compass/sass/style.sass */
 mark {
   background-color: #fcd700;
   color: black;
@@ -524,53 +525,51 @@ mark {
 
 /* And here begins the Wordpress fun.
  *------------------------------------------------------------------------------- */
-/* line 121, compass/sass/style.sass */
+/* line 141, compass/sass/style.sass */
 #page-wrap {
+  background: url("images/column_bg.png") repeat-y;
   width: 950px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
   margin: 0 auto;
+  height: 100%;
 }
-/* line 125, compass/sass/style.sass */
+/* line 147, compass/sass/style.sass */
 #page-wrap #sidebar {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-  background-color: rgba(13, 13, 13, 0.93);
   display: inline;
   float: left;
   margin-right: 20px;
   width: 220px;
   text-align: right;
+  text-transform: uppercase;
 }
 /* line 147, ../../../../../../../Users/michaeldelaney/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.11.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #page-wrap #sidebar {
   overflow-x: hidden;
 }
-/* line 131, compass/sass/style.sass */
+/* line 152, compass/sass/style.sass */
 #page-wrap #sidebar footer {
   overflow: hidden;
 }
-/* line 134, compass/sass/style.sass */
+/* line 155, compass/sass/style.sass */
 #page-wrap #sidebar header, #page-wrap #sidebar h2, #page-wrap #sidebar form, #page-wrap #sidebar footer, #page-wrap #sidebar ul, #page-wrap #sidebar .filler {
   border-bottom: 1px dotted #212121;
   padding: 20px;
 }
-/* line 138, compass/sass/style.sass */
-#page-wrap #sidebar {
-  text-transform: uppercase;
-}
-/* line 141, compass/sass/style.sass */
+/* line 161, compass/sass/style.sass */
 #page-wrap #sidebar a {
   font-size: 10px;
 }
-/* line 144, compass/sass/style.sass */
+/* line 164, compass/sass/style.sass */
 #page-wrap #sidebar #menu a {
   font-size: 1.8em;
 }
-/* line 147, compass/sass/style.sass */
+/* line 167, compass/sass/style.sass */
 #page-wrap #sidebar #logo a {
   display: block;
   text-indent: 9000px;
@@ -580,21 +579,21 @@ mark {
   margin-bottom: 1px;
   height: 80px;
 }
-/* line 155, compass/sass/style.sass */
+/* line 175, compass/sass/style.sass */
 #page-wrap #sidebar #logo a:hover {
   background: url("images/logo_highlight.png") no-repeat center;
   padding: 20px;
   background-color: rgba(13, 13, 13, 0.93);
   margin-bottom: 1px;
 }
-/* line 161, compass/sass/style.sass */
+/* line 181, compass/sass/style.sass */
 #page-wrap #sidebar .details p {
   text-transform: uppercase;
   color: #323232;
   font-size: 8px;
   margin-bottom: 0;
 }
-/* line 167, compass/sass/style.sass */
+/* line 187, compass/sass/style.sass */
 #page-wrap #content {
   display: inline;
   float: left;
@@ -604,80 +603,141 @@ mark {
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-  background: url("images/light_box_bg.png");
 }
 /* line 147, ../../../../../../../Users/michaeldelaney/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.11.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #page-wrap #content {
   overflow-x: hidden;
 }
-/* line 172, compass/sass/style.sass */
+/* line 192, compass/sass/style.sass */
 #page-wrap #content .divider {
   width: 700px;
 }
-/* line 175, compass/sass/style.sass */
+/* line 197, compass/sass/style.sass */
 #page-wrap #content .details p {
   text-transform: uppercase;
   font-size: 8px;
   margin-bottom: 0;
 }
-/* line 180, compass/sass/style.sass */
+/* line 202, compass/sass/style.sass */
+#page-wrap #content .details .left {
+  width: 350px;
+  border-right: 1px dotted black;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+}
+/* line 56, compass/sass/style.sass */
+#page-wrap #content .details .left section {
+  padding: 20px;
+}
+/* line 59, compass/sass/style.sass */
+#page-wrap #content .details .left section:not(:last-child) {
+  border-bottom: 1px dotted black;
+}
+/* line 205, compass/sass/style.sass */
+#page-wrap #content .details .right {
+  width: 349px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+}
+/* line 56, compass/sass/style.sass */
+#page-wrap #content .details .right section {
+  padding: 20px;
+}
+/* line 59, compass/sass/style.sass */
+#page-wrap #content .details .right section:not(:last-child) {
+  border-bottom: 1px dotted black;
+}
+/* line 208, compass/sass/style.sass */
 #page-wrap #content .filler {
   clear: both;
 }
-/* line 183, compass/sass/style.sass */
+/* line 213, compass/sass/style.sass */
 #page-wrap #content #content_footer {
   overflow: hidden;
   *zoom: 1;
+  color: #080808;
+  background: rgba(255, 255, 255, 0.5);
 }
-/* line 186, compass/sass/style.sass */
+/* line 218, compass/sass/style.sass */
+#page-wrap #content #content_footer h3 {
+  color: white;
+}
+/* line 221, compass/sass/style.sass */
 #page-wrap #content #content_footer .left {
   width: 350px;
-  display: inline;
-  float: left;
+  border-right: 1px dotted black;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-  margin-right: 1px;
-  border-right: 1px dotted black;
+  display: inline;
+  float: left;
 }
-/* line 194, compass/sass/style.sass */
+/* line 56, compass/sass/style.sass */
 #page-wrap #content #content_footer .left section {
   padding: 20px;
 }
-/* line 197, compass/sass/style.sass */
+/* line 59, compass/sass/style.sass */
 #page-wrap #content #content_footer .left section:not(:last-child) {
   border-bottom: 1px dotted black;
 }
-/* line 200, compass/sass/style.sass */
+/* line 224, compass/sass/style.sass */
 #page-wrap #content #content_footer .right {
-  padding: 20px;
+  width: 349px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-  width: 349px;
   display: inline;
   float: left;
 }
-/* line 207, compass/sass/style.sass */
+/* line 56, compass/sass/style.sass */
+#page-wrap #content #content_footer .right section {
+  padding: 20px;
+}
+/* line 59, compass/sass/style.sass */
+#page-wrap #content #content_footer .right section:not(:last-child) {
+  border-bottom: 1px dotted black;
+}
+/* line 227, compass/sass/style.sass */
 #page-wrap #content .pagination {
   text-transform: uppercase;
 }
-/* line 210, compass/sass/style.sass */
+/* line 230, compass/sass/style.sass */
 #page-wrap #content #gallery {
   margin-bottom: 1px;
 }
-/* line 213, compass/sass/style.sass */
-#page-wrap #content.page, #page-wrap #content header, #page-wrap #content .entry-content, #page-wrap #content #respond, #page-wrap #content .filler, #page-wrap #content .comment, #page-wrap #content article > h2, #page-wrap #content > h2, #page-wrap #content .pagination {
+/* line 233, compass/sass/style.sass */
+#page-wrap #content article footer {
+  overflow: hidden;
+  *zoom: 1;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 1px dotted black;
+}
+/* line 238, compass/sass/style.sass */
+#page-wrap #content.page, #page-wrap #content header, #page-wrap #content .entry-content, #page-wrap #content #respond, #page-wrap #content .filler, #page-wrap #content .comment, #page-wrap #content article > h3, #page-wrap #content > h3, #page-wrap #content .pagination, #page-wrap #content .copyright {
   border-bottom: 1px dotted black;
   padding: 20px;
+  overflow: hidden;
+  *zoom: 1;
+  clear: both;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 218, compass/sass/style.sass */
+/* line 245, compass/sass/style.sass */
 #page-wrap #content .video, #page-wrap #content #masonry, #page-wrap #content .gallery {
   border-bottom: 1px dotted black;
   -moz-box-sizing: border-box;
@@ -685,20 +745,21 @@ mark {
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 222, compass/sass/style.sass */
+/* line 249, compass/sass/style.sass */
 #page-wrap #content #masonry {
   margin-bottom: 1px;
 }
-/* line 224, compass/sass/style.sass */
+/* line 251, compass/sass/style.sass */
 #page-wrap #content #masonry li:not(:last-child) {
   margin-right: 1px;
+  display: inline;
   float: left;
 }
-/* line 227, compass/sass/style.sass */
+/* line 254, compass/sass/style.sass */
 #page-wrap #content #masonry .masonry_row .masonry_col {
   position: relative;
 }
-/* line 229, compass/sass/style.sass */
+/* line 256, compass/sass/style.sass */
 #page-wrap #content #masonry .masonry_row .masonry_col .masonry_col_overlay {
   position: absolute;
   padding: 20px;
@@ -711,38 +772,38 @@ mark {
   box-sizing: border-box;
   color: black;
 }
-/* line 237, compass/sass/style.sass */
+/* line 264, compass/sass/style.sass */
 #page-wrap #content #masonry .masonry_row .masonry_col .masonry_col_overlay a {
   color: black;
   opacity: 1;
 }
 
-/* line 242, compass/sass/style.sass */
+/* line 269, compass/sass/style.sass */
 #sidebar input {
   background: url("images/sidebar_form_bg.png");
   width: 100%;
 }
 
-/* line 248, compass/sass/style.sass */
+/* line 275, compass/sass/style.sass */
 #content input[type=text], #content input[type=email], #content input[type=password] {
   background: url("images/form_bg.png");
   width: 220px;
 }
 
-/* line 254, compass/sass/style.sass */
+/* line 281, compass/sass/style.sass */
 #sidebar form label, #content form label {
   text-transform: uppercase;
   font-size: 10px;
 }
-/* line 258, compass/sass/style.sass */
+/* line 285, compass/sass/style.sass */
 #sidebar form div, #content form div {
   margin-bottom: 10px;
 }
-/* line 261, compass/sass/style.sass */
+/* line 288, compass/sass/style.sass */
 #sidebar form div:last-child, #content form div:last-child {
   margin-bottom: 0;
 }
-/* line 264, compass/sass/style.sass */
+/* line 291, compass/sass/style.sass */
 #sidebar form .submit_button, #content form .submit_button {
   display: block;
   margin-top: 10px;
@@ -750,23 +811,25 @@ mark {
   text-transform: uppercase;
   cursor: pointer;
 }
-/* line 271, compass/sass/style.sass */
+/* line 298, compass/sass/style.sass */
 #sidebar form .submit_button:hover, #content form .submit_button:hover {
   color: #bddf56;
 }
-/* line 274, compass/sass/style.sass */
+/* line 301, compass/sass/style.sass */
 #sidebar form textarea, #content form textarea {
   width: 100%;
   background: url("images/form_bg.png");
   border: none;
   padding: 10px;
   color: #c2c2c2;
+  min-height: 35px;
+  resize: vertical;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 283, compass/sass/style.sass */
+/* line 312, compass/sass/style.sass */
 #sidebar form input[type=text], #sidebar form input[type=email], #sidebar form input[type=password], #content form input[type=text], #content form input[type=email], #content form input[type=password] {
   margin-right: 5px;
   border: none;
@@ -777,15 +840,15 @@ mark {
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 290, compass/sass/style.sass */
+/* line 319, compass/sass/style.sass */
 #sidebar form input[type=checkbox], #content form input[type=checkbox] {
   margin-right: 10px;
 }
-/* line 293, compass/sass/style.sass */
+/* line 322, compass/sass/style.sass */
 #sidebar form input[type=hidden], #content form input[type=hidden] {
   display: none;
 }
-/* line 296, compass/sass/style.sass */
+/* line 325, compass/sass/style.sass */
 #sidebar form textarea, #content form textarea {
   height: 150px;
 }
