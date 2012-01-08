@@ -104,6 +104,14 @@
 	
 	<script src="<?php bloginfo('template_directory'); ?>/_/js/jquery.nivo.slider.pack.js"></script>
 	
+	<script src="<?php bloginfo('template_directory'); ?>/_/js/highlight.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/_/js/highlight.jquery.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/_/js/languages/ruby.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/_/js/languages/python.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/_/js/languages/javascript.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/_/js/languages/cpp.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/_/js/languages/php.js"></script>
+	
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>

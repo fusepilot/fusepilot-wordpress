@@ -4,6 +4,111 @@
  *Author: Michael Delaney
  *Author URI: http://monkeydo.biz
  *Version: 1.0 */
+/* Name: Dark
+ * Description: Dark style from softwaremaniacs.org
+ * Author: Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+ */
+/* line 11, compass/sass/dark.sass */
+pre code {
+  font-family: monospace;
+  display: block;
+  padding: 0.5em;
+  background: #444444;
+}
+/* line 17, compass/sass/dark.sass */
+pre .keyword,
+pre .literal,
+pre .change,
+pre .winutils,
+pre .flow,
+pre .lisp .title,
+pre .tex .special {
+  color: #c2c2c2;
+}
+/* line 26, compass/sass/dark.sass */
+pre code,
+pre .ruby .subst {
+  color: #dddddd;
+}
+/* line 30, compass/sass/dark.sass */
+pre .string,
+pre .function .title,
+pre .class .title,
+pre .haskell .label,
+pre .ini .title,
+pre .tag .value,
+pre .css .rules .value,
+pre .preprocessor,
+pre .ruby .symbol,
+pre .ruby .symbol .string,
+pre .ruby .symbol .keyword,
+pre .ruby .symbol .keymethods,
+pre .ruby .instancevar,
+pre .ruby .class .parent,
+pre .built_in,
+pre .sql .aggregate,
+pre .django .template_tag,
+pre .django .variable,
+pre .smalltalk .class,
+pre .javadoc,
+pre .ruby .string,
+pre .django .filter .argument,
+pre .smalltalk .localvars,
+pre .smalltalk .array,
+pre .attr_selector,
+pre .pseudo,
+pre .addition,
+pre .stream,
+pre .envvar,
+pre .apache .tag,
+pre .apache .cbracket,
+pre .tex .command,
+pre .input_number {
+  color: #bddf56;
+}
+/* line 66, compass/sass/dark.sass */
+pre .comment,
+pre .java .annotation,
+pre .python .decorator,
+pre .template_comment,
+pre .pi,
+pre .doctype,
+pre .deletion,
+pre .shebang,
+pre .apache .sqbracket,
+pre .tex .formula {
+  color: #464646;
+}
+/* line 78, compass/sass/dark.sass */
+pre .keyword,
+pre .literal,
+pre .css .id,
+pre .phpdoc,
+pre .function .title,
+pre .class .title,
+pre .haskell .label,
+pre .vbscript .built_in,
+pre .sql .aggregate,
+pre .rsl .built_in,
+pre .smalltalk .class,
+pre .xml .tag .title,
+pre .diff .header,
+pre .chunk,
+pre .winutils,
+pre .bash .variable,
+pre .lisp .title,
+pre .apache .tag,
+pre .tex .special {
+  font-weight: bold;
+}
+/* line 99, compass/sass/dark.sass */
+pre .xml .css,
+pre .xml .javascript,
+pre .xml .vbscript,
+pre .tex .formula {
+  opacity: 0.5;
+}
+
 /* line 1, compass/sass/reset.sass */
 html {
   margin: 0;
@@ -426,7 +531,7 @@ button {
   background: url("images/gallery_controls.png") no-repeat -22px -9px;
 }
 
-/* line 100, compass/sass/style.sass */
+/* line 22, compass/sass/style.sass */
 html, body {
   height: 100%;
   background: url("images/background.jpg") center top repeat-x;
@@ -439,83 +544,83 @@ html, body {
 /* using local fonts? make sure to read up on Paul Irish's
  *  Bulletproof @font-face syntax: http://mky.be/font-face/bulletproof/ */
 /* we like off-black for text */
-/* line 113, compass/sass/style.sass */
+/* line 35, compass/sass/style.sass */
 h1 {
   font-size: 30px;
   text-transform: uppercase;
   color: #bddf56;
 }
 
-/* line 118, compass/sass/style.sass */
+/* line 40, compass/sass/style.sass */
 h2 {
   font-size: 25px;
   text-transform: uppercase;
   color: #bddf56;
 }
 
-/* line 123, compass/sass/style.sass */
+/* line 45, compass/sass/style.sass */
 h3 {
   font-size: 20px;
   text-transform: uppercase;
 }
 
-/* line 127, compass/sass/style.sass */
+/* line 49, compass/sass/style.sass */
 h4 {
   font-size: 15px;
   text-transform: uppercase;
 }
 
-/* line 131, compass/sass/style.sass */
+/* line 53, compass/sass/style.sass */
 h5 {
   font-size: 10px;
   text-transform: uppercase;
 }
 
-/* line 135, compass/sass/style.sass */
+/* line 57, compass/sass/style.sass */
 h6 {
   font-size: 10px;
   text-transform: uppercase;
 }
 
-/* line 139, compass/sass/style.sass */
+/* line 61, compass/sass/style.sass */
 p {
   font-size: 10px;
   margin-bottom: 20px;
 }
-/* line 143, compass/sass/style.sass */
+/* line 65, compass/sass/style.sass */
 p:last-child {
   margin-bottom: 0;
 }
 
-/* line 146, compass/sass/style.sass */
+/* line 68, compass/sass/style.sass */
 a {
   color: #c2c2c2;
   text-decoration: none;
 }
-/* line 150, compass/sass/style.sass */
+/* line 72, compass/sass/style.sass */
 a:hover {
   color: #bddf56;
 }
-/* line 153, compass/sass/style.sass */
+/* line 75, compass/sass/style.sass */
 a:link {
   -webkit-tap-highlight-color: #fcd700;
 }
 
-/* line 157, compass/sass/style.sass */
+/* line 79, compass/sass/style.sass */
 select, input, textarea {
   color: #333333;
 }
 
 /* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
 /*  j.mp/webkit-tap-highlight-color */
-/* line 164, compass/sass/style.sass */
+/* line 86, compass/sass/style.sass */
 ins {
   background-color: #fcd700;
   color: black;
   text-decoration: none;
 }
 
-/* line 169, compass/sass/style.sass */
+/* line 91, compass/sass/style.sass */
 mark {
   background-color: #fcd700;
   color: black;
@@ -525,12 +630,12 @@ mark {
 
 /* And here begins the Wordpress fun.
  *------------------------------------------------------------------------------- */
-/* line 178, compass/sass/style.sass */
+/* line 100, compass/sass/style.sass */
 .clear {
   clear: both;
 }
 
-/* line 181, compass/sass/style.sass */
+/* line 103, compass/sass/style.sass */
 #page-wrap {
   height: auto;
   min-height: 100%;
@@ -542,7 +647,7 @@ mark {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 190, compass/sass/style.sass */
+/* line 112, compass/sass/style.sass */
 #page-wrap #sidebar {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -560,42 +665,29 @@ mark {
 * html #page-wrap #sidebar {
   overflow-x: hidden;
 }
-/* line 196, compass/sass/style.sass */
+/* line 118, compass/sass/style.sass */
 #page-wrap #sidebar footer {
   overflow: hidden;
 }
-/* line 199, compass/sass/style.sass */
+/* line 121, compass/sass/style.sass */
 #page-wrap #sidebar header, #page-wrap #sidebar form, #page-wrap #sidebar footer, #page-wrap #sidebar ul, #page-wrap #sidebar .filler {
   border-bottom: 1px dotted #212121;
   padding: 20px;
 }
-/* line 203, compass/sass/style.sass */
+/* line 125, compass/sass/style.sass */
 #page-wrap #sidebar h3 {
   padding: 20px;
   padding-bottom: 0;
 }
-/* line 209, compass/sass/style.sass */
+/* line 131, compass/sass/style.sass */
 #page-wrap #sidebar a {
   font-size: 10px;
 }
-/* line 212, compass/sass/style.sass */
-#page-wrap #sidebar .copyright {
-  position: absolute;
-  bottom: 0;
-  padding: 20px;
-  text-align: center;
-  width: 220px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  color: #323232;
-}
-/* line 221, compass/sass/style.sass */
+/* line 134, compass/sass/style.sass */
 #page-wrap #sidebar #menu a {
   font-size: 1.8em;
 }
-/* line 224, compass/sass/style.sass */
+/* line 137, compass/sass/style.sass */
 #page-wrap #sidebar #logo a {
   display: block;
   text-indent: 9000px;
@@ -605,21 +697,21 @@ mark {
   margin-bottom: 1px;
   height: 80px;
 }
-/* line 232, compass/sass/style.sass */
+/* line 145, compass/sass/style.sass */
 #page-wrap #sidebar #logo a:hover {
   background: url("images/logo_highlight.png") no-repeat center;
   padding: 20px;
   background-color: rgba(13, 13, 13, 0.93);
   margin-bottom: 1px;
 }
-/* line 238, compass/sass/style.sass */
+/* line 151, compass/sass/style.sass */
 #page-wrap #sidebar .details p {
   text-transform: uppercase;
   color: #323232;
   font-size: 8px;
   margin-bottom: 0;
 }
-/* line 244, compass/sass/style.sass */
+/* line 157, compass/sass/style.sass */
 #page-wrap #content {
   display: inline;
   float: left;
@@ -634,23 +726,16 @@ mark {
 * html #page-wrap #content {
   overflow-x: hidden;
 }
-/* line 249, compass/sass/style.sass */
-#page-wrap #content .fill {
-  width: 100%;
-  height: 300px;
-}
-/* line 253, compass/sass/style.sass */
-#page-wrap #content .divider {
-  width: 700px;
-}
-/* line 257, compass/sass/style.sass */
-#page-wrap #content .details a {
+/* line 163, compass/sass/style.sass */
+#page-wrap #content .entry-content a {
+  font-size: 8px;
   padding: 0em 0.6em;
-  background: rgba(0, 0, 0, 0.4);
+  background: url("images/form_bg.png");
   display: inline-block;
   text-transform: uppercase;
   cursor: pointer;
   display: inline-block;
+  margin-top: 3px;
   -moz-box-shadow: inset 0 0 1em 0 rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: inset 0 0 1em 0 rgba(0, 0, 0, 0.2);
   -o-box-shadow: inset 0 0 1em 0 rgba(0, 0, 0, 0.2);
@@ -666,18 +751,61 @@ mark {
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 94, compass/sass/style.sass */
+/* line 79, compass/sass/global.sass */
+#page-wrap #content .entry-content a:hover {
+  background: #bddf56;
+  color: black;
+}
+/* line 166, compass/sass/style.sass */
+#page-wrap #content .fill {
+  width: 100%;
+  height: 300px;
+}
+/* line 170, compass/sass/style.sass */
+#page-wrap #content .divider {
+  width: 700px;
+}
+/* line 174, compass/sass/style.sass */
+#page-wrap #content .details a {
+  font-size: 8px;
+  padding: 0em 0.6em;
+  background: url("images/form_bg.png");
+  display: inline-block;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 3px;
+  -moz-box-shadow: inset 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  -o-box-shadow: inset 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 79, compass/sass/global.sass */
 #page-wrap #content .details a:hover {
   background: #bddf56;
   color: black;
 }
-/* line 260, compass/sass/style.sass */
+/* line 177, compass/sass/style.sass */
 #page-wrap #content .details p {
   text-transform: uppercase;
   font-size: 8px;
+  margin-bottom: 2px;
+}
+/* line 182, compass/sass/style.sass */
+#page-wrap #content .details p:last-child {
   margin-bottom: 0;
 }
-/* line 265, compass/sass/style.sass */
+/* line 185, compass/sass/style.sass */
 #page-wrap #content .details .left {
   width: 350px;
   border-right: 1px dotted black;
@@ -688,15 +816,15 @@ mark {
   display: inline;
   float: left;
 }
-/* line 59, compass/sass/style.sass */
+/* line 41, compass/sass/global.sass */
 #page-wrap #content .details .left section {
   padding: 20px;
 }
-/* line 62, compass/sass/style.sass */
+/* line 44, compass/sass/global.sass */
 #page-wrap #content .details .left section:not(:last-child) {
   border-bottom: 1px dotted black;
 }
-/* line 268, compass/sass/style.sass */
+/* line 188, compass/sass/style.sass */
 #page-wrap #content .details .right {
   width: 349px;
   -moz-box-sizing: border-box;
@@ -706,86 +834,59 @@ mark {
   display: inline;
   float: left;
 }
-/* line 59, compass/sass/style.sass */
+/* line 41, compass/sass/global.sass */
 #page-wrap #content .details .right section {
   padding: 20px;
 }
-/* line 62, compass/sass/style.sass */
+/* line 44, compass/sass/global.sass */
 #page-wrap #content .details .right section:not(:last-child) {
   border-bottom: 1px dotted black;
 }
-/* line 271, compass/sass/style.sass */
+/* line 191, compass/sass/style.sass */
 #page-wrap #content .filler {
   clear: both;
 }
-/* line 275, compass/sass/style.sass */
+/* line 195, compass/sass/style.sass */
 #page-wrap #content.front h2 {
   text-transform: none;
   margin-bottom: 10px;
 }
-/* line 279, compass/sass/style.sass */
+/* line 199, compass/sass/style.sass */
 #page-wrap #content #content_footer {
   overflow: hidden;
   *zoom: 1;
   position: absolute;
   bottom: 0;
-  background: rgba(194, 194, 194, 0.75);
   color: black;
 }
-/* line 286, compass/sass/style.sass */
+/* line 205, compass/sass/style.sass */
 #page-wrap #content #content_footer h3 {
   color: white;
 }
-/* line 289, compass/sass/style.sass */
+/* line 208, compass/sass/style.sass */
 #page-wrap #content #content_footer a {
   color: black;
 }
-/* line 292, compass/sass/style.sass */
-#page-wrap #content #content_footer .top {
-  overflow: hidden;
-  *zoom: 1;
-  border-bottom: 1px dotted black;
-}
-/* line 296, compass/sass/style.sass */
-#page-wrap #content #content_footer section {
+/* line 211, compass/sass/style.sass */
+#page-wrap #content #content_footer .bottom {
+  width: 700px;
+  height: 50px;
+  background: url("images/footer_bg.png");
   padding: 20px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 300, compass/sass/style.sass */
-#page-wrap #content #content_footer section:not(:last-child) {
-  display: inline;
-  float: left;
-  margin-right: 20px;
-  width: 220px;
-  border-right: 1px dotted black;
-}
-/* line 147, ../../../../../../../Users/michaeldelaney/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.11.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #page-wrap #content #content_footer section:not(:last-child) {
-  overflow-x: hidden;
-}
-/* line 304, compass/sass/style.sass */
-#page-wrap #content #content_footer section:last-child {
-  display: inline;
-  float: left;
-  margin-right: 0;
-  width: 220px;
-}
-/* line 147, ../../../../../../../Users/michaeldelaney/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.11.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #page-wrap #content #content_footer section:last-child {
-  overflow-x: hidden;
-}
-/* line 307, compass/sass/style.sass */
+/* line 218, compass/sass/style.sass */
 #page-wrap #content .pagination {
   text-transform: uppercase;
 }
-/* line 310, compass/sass/style.sass */
+/* line 221, compass/sass/style.sass */
 #page-wrap #content #gallery {
   margin-bottom: 1px;
 }
-/* line 313, compass/sass/style.sass */
+/* line 224, compass/sass/style.sass */
 #page-wrap #content article footer {
   overflow: hidden;
   *zoom: 1;
@@ -795,12 +896,12 @@ mark {
   box-sizing: border-box;
   border-bottom: 1px dotted black;
 }
-/* line 318, compass/sass/style.sass */
+/* line 229, compass/sass/style.sass */
 #page-wrap #content header {
   margin-top: 50px;
 }
-/* line 321, compass/sass/style.sass */
-#page-wrap #content.page, #page-wrap #content header, #page-wrap #content .entry-content, #page-wrap #content #respond, #page-wrap #content .filler, #page-wrap #content .comment, #page-wrap #content article > h3, #page-wrap #content > h3, #page-wrap #content .pagination, #page-wrap #content .copyright {
+/* line 232, compass/sass/style.sass */
+#page-wrap #content.page, #page-wrap #content header, #page-wrap #content .entry-content, #page-wrap #content #respond, #page-wrap #content .filler, #page-wrap #content .comments .comment, #page-wrap #content > h3, #page-wrap #content .pagination {
   border-bottom: 1px dotted black;
   padding: 20px;
   overflow: hidden;
@@ -811,7 +912,59 @@ mark {
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 328, compass/sass/style.sass */
+/* line 239, compass/sass/style.sass */
+#page-wrap #content > article h3 {
+  padding: 20px;
+  padding-bottom: 0;
+}
+/* line 244, compass/sass/style.sass */
+#page-wrap #content pre code {
+  white-space: pre;
+  font-size: 12px;
+  padding: 20px;
+  -moz-box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.4);
+  -o-box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.4);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url("images/form_bg.png");
+  color: #c2c2c2;
+  padding: 10px;
+  border: 1px dotted #212121;
+}
+/* line 56, compass/sass/global.sass */
+#page-wrap #content pre code:focus {
+  outline: none;
+  border: 1px dotted #bddf56;
+}
+/* line 252, compass/sass/style.sass */
+#page-wrap #content .comment .avatar {
+  display: inline-block;
+}
+/* line 254, compass/sass/style.sass */
+#page-wrap #content .comment .avatar img {
+  height: 26px;
+  width: 26px;
+}
+/* line 258, compass/sass/style.sass */
+#page-wrap #content .comment .details {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+/* line 262, compass/sass/style.sass */
+#page-wrap #content .comment h4 {
+  display: inline-block;
+}
+/* line 265, compass/sass/style.sass */
 #page-wrap #content .video, #page-wrap #content #masonry, #page-wrap #content .gallery {
   border-bottom: 1px dotted black;
   -moz-box-sizing: border-box;
@@ -819,17 +972,17 @@ mark {
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 333, compass/sass/style.sass */
+/* line 270, compass/sass/style.sass */
 #page-wrap #content #masonry li:not(:last-child) {
   margin-right: 1px;
   display: inline;
   float: left;
 }
-/* line 336, compass/sass/style.sass */
+/* line 273, compass/sass/style.sass */
 #page-wrap #content #masonry .masonry_row .masonry_col {
   position: relative;
 }
-/* line 338, compass/sass/style.sass */
+/* line 275, compass/sass/style.sass */
 #page-wrap #content #masonry .masonry_row .masonry_col .masonry_col_overlay {
   position: absolute;
   padding: 20px;
@@ -842,13 +995,13 @@ mark {
   box-sizing: border-box;
   color: black;
 }
-/* line 346, compass/sass/style.sass */
+/* line 283, compass/sass/style.sass */
 #page-wrap #content #masonry .masonry_row .masonry_col .masonry_col_overlay a {
   color: black;
   opacity: 1;
 }
 
-/* line 351, compass/sass/style.sass */
+/* line 288, compass/sass/style.sass */
 #sidebar input {
   -moz-box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.4);
@@ -870,13 +1023,13 @@ mark {
   border: 1px dotted #212121;
   width: 100%;
 }
-/* line 74, compass/sass/style.sass */
+/* line 56, compass/sass/global.sass */
 #sidebar input:focus {
   outline: none;
   border: 1px dotted #bddf56;
 }
 
-/* line 357, compass/sass/style.sass */
+/* line 294, compass/sass/style.sass */
 #content input[type=text], #content input[type=email], #content input[type=password] {
   -moz-box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.4);
@@ -897,35 +1050,36 @@ mark {
   padding: 10px;
   border: 1px dotted #212121;
 }
-/* line 74, compass/sass/style.sass */
+/* line 56, compass/sass/global.sass */
 #content input[type=text]:focus, #content input[type=email]:focus, #content input[type=password]:focus {
   outline: none;
   border: 1px dotted #bddf56;
 }
 
-/* line 362, compass/sass/style.sass */
+/* line 299, compass/sass/style.sass */
 #sidebar form label, #content form label {
   text-transform: uppercase;
   font-size: 10px;
 }
-/* line 366, compass/sass/style.sass */
+/* line 303, compass/sass/style.sass */
 #sidebar form div, #content form div {
   margin-bottom: 10px;
 }
-/* line 369, compass/sass/style.sass */
+/* line 306, compass/sass/style.sass */
 #sidebar form div:last-child, #content form div:last-child {
   margin-bottom: 0;
 }
-/* line 372, compass/sass/style.sass */
+/* line 309, compass/sass/style.sass */
 #sidebar form .submit_button, #content form .submit_button {
   margin-top: 10px;
   padding: 0.4em 0.6em;
   font-size: 15px !important;
-  background: rgba(0, 0, 0, 0.4);
+  background: url("images/form_bg.png");
   display: inline-block;
   text-transform: uppercase;
   cursor: pointer;
   display: inline-block;
+  margin-top: 3px;
   -moz-box-shadow: inset 0 0 1em 0 rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: inset 0 0 1em 0 rgba(0, 0, 0, 0.2);
   -o-box-shadow: inset 0 0 1em 0 rgba(0, 0, 0, 0.2);
@@ -941,12 +1095,12 @@ mark {
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 94, compass/sass/style.sass */
+/* line 79, compass/sass/global.sass */
 #sidebar form .submit_button:hover, #content form .submit_button:hover {
   background: #bddf56;
   color: black;
 }
-/* line 376, compass/sass/style.sass */
+/* line 313, compass/sass/style.sass */
 #sidebar form textarea, #content form textarea {
   -moz-box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.4);
@@ -971,12 +1125,12 @@ mark {
   min-height: 35px;
   resize: vertical;
 }
-/* line 74, compass/sass/style.sass */
+/* line 56, compass/sass/global.sass */
 #sidebar form textarea:focus, #content form textarea:focus {
   outline: none;
   border: 1px dotted #bddf56;
 }
-/* line 384, compass/sass/style.sass */
+/* line 321, compass/sass/style.sass */
 #sidebar form input[type=text], #sidebar form input[type=email], #sidebar form input[type=password], #content form input[type=text], #content form input[type=email], #content form input[type=password] {
   -moz-box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.4);
@@ -998,16 +1152,16 @@ mark {
   border: 1px dotted #212121;
   margin-right: 5px;
 }
-/* line 74, compass/sass/style.sass */
+/* line 56, compass/sass/global.sass */
 #sidebar form input[type=text]:focus, #sidebar form input[type=email]:focus, #sidebar form input[type=password]:focus, #content form input[type=text]:focus, #content form input[type=email]:focus, #content form input[type=password]:focus {
   outline: none;
   border: 1px dotted #bddf56;
 }
-/* line 388, compass/sass/style.sass */
+/* line 325, compass/sass/style.sass */
 #sidebar form input[type=checkbox], #content form input[type=checkbox] {
   margin-right: 10px;
 }
-/* line 391, compass/sass/style.sass */
+/* line 328, compass/sass/style.sass */
 #sidebar form input[type=hidden], #content form input[type=hidden] {
   display: none;
 }

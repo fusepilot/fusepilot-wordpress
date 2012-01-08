@@ -1,0 +1,104 @@
+/* Name: Dark
+ * Description: Dark style from softwaremaniacs.org
+ * Author: Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+ */
+/* line 11, compass/sass/dark.sass */
+pre code {
+  font-family: monospace;
+  display: block;
+  padding: 0.5em;
+  background: #444444;
+}
+/* line 17, compass/sass/dark.sass */
+pre .keyword,
+pre .literal,
+pre .change,
+pre .winutils,
+pre .flow,
+pre .lisp .title,
+pre .tex .special {
+  color: #c2c2c2;
+}
+/* line 26, compass/sass/dark.sass */
+pre code,
+pre .ruby .subst {
+  color: #dddddd;
+}
+/* line 30, compass/sass/dark.sass */
+pre .string,
+pre .function .title,
+pre .class .title,
+pre .haskell .label,
+pre .ini .title,
+pre .tag .value,
+pre .css .rules .value,
+pre .preprocessor,
+pre .ruby .symbol,
+pre .ruby .symbol .string,
+pre .ruby .symbol .keyword,
+pre .ruby .symbol .keymethods,
+pre .ruby .instancevar,
+pre .ruby .class .parent,
+pre .built_in,
+pre .sql .aggregate,
+pre .django .template_tag,
+pre .django .variable,
+pre .smalltalk .class,
+pre .javadoc,
+pre .ruby .string,
+pre .django .filter .argument,
+pre .smalltalk .localvars,
+pre .smalltalk .array,
+pre .attr_selector,
+pre .pseudo,
+pre .addition,
+pre .stream,
+pre .envvar,
+pre .apache .tag,
+pre .apache .cbracket,
+pre .tex .command,
+pre .input_number {
+  color: #bddf56;
+}
+/* line 66, compass/sass/dark.sass */
+pre .comment,
+pre .java .annotation,
+pre .python .decorator,
+pre .template_comment,
+pre .pi,
+pre .doctype,
+pre .deletion,
+pre .shebang,
+pre .apache .sqbracket,
+pre .tex .formula {
+  color: #464646;
+}
+/* line 78, compass/sass/dark.sass */
+pre .keyword,
+pre .literal,
+pre .css .id,
+pre .phpdoc,
+pre .function .title,
+pre .class .title,
+pre .haskell .label,
+pre .vbscript .built_in,
+pre .sql .aggregate,
+pre .rsl .built_in,
+pre .smalltalk .class,
+pre .xml .tag .title,
+pre .diff .header,
+pre .chunk,
+pre .winutils,
+pre .bash .variable,
+pre .lisp .title,
+pre .apache .tag,
+pre .tex .special {
+  font-weight: bold;
+}
+/* line 99, compass/sass/dark.sass */
+pre .xml .css,
+pre .xml .javascript,
+pre .xml .vbscript,
+pre .tex .formula {
+  opacity: 0.5;
+}

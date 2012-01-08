@@ -1,0 +1,103 @@
+﻿/*
+  Name: Dark
+  Description: Dark style from softwaremaniacs.org
+  Author: Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+  */
+  
+
+@import 'global'
+
+pre
+  code
+    font-family: monospace
+    display: block
+    padding: 0.5em
+    background: #444
+
+  .keyword,
+  .literal,
+  .change,
+  .winutils,
+  .flow,
+  .lisp .title,
+  .tex .special
+    color: $text_color
+
+  code,
+  .ruby .subst
+    color: #DDD
+
+  .string,
+  .function .title,
+  .class .title,
+  .haskell .label,
+  .ini .title,
+  .tag .value,
+  .css .rules .value,
+  .preprocessor,
+  .ruby .symbol,
+  .ruby .symbol .string,
+  .ruby .symbol .keyword,
+  .ruby .symbol .keymethods,
+  .ruby .instancevar,
+  .ruby .class .parent,
+  .built_in,
+  .sql .aggregate,
+  .django .template_tag,
+  .django .variable,
+  .smalltalk .class,
+  .javadoc,
+  .ruby .string,
+  .django .filter .argument,
+  .smalltalk .localvars,
+  .smalltalk .array,
+  .attr_selector,
+  .pseudo,
+  .addition,
+  .stream,
+  .envvar,
+  .apache .tag,
+  .apache .cbracket,
+  .tex .command,
+  .input_number
+    //color: #D88
+    color: $highlight
+
+  .comment,
+  .java .annotation,
+  .python .decorator,
+  .template_comment,
+  .pi,
+  .doctype,
+  .deletion,
+  .shebang,
+  .apache .sqbracket,
+  .tex .formula
+    color: $dark_text_color + 20
+
+  .keyword,
+  .literal,
+  .css .id,
+  .phpdoc,
+  .function .title,
+  .class .title,
+  .haskell .label,
+  .vbscript .built_in,
+  .sql .aggregate,
+  .rsl .built_in,
+  .smalltalk .class,
+  .xml .tag .title,
+  .diff .header,
+  .chunk,
+  .winutils,
+  .bash .variable,
+  .lisp .title,
+  .apache .tag,
+  .tex .special
+    font-weight: bold
+
+  .xml .css,
+  .xml .javascript,
+  .xml .vbscript,
+  .tex .formula
+    opacity: 0.5

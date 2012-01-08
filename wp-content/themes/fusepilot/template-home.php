@@ -27,8 +27,6 @@ Template Name: Home
 	
 	<?php include (TEMPLATEPATH . '/partials/masonry.php' );?>
   
-  <div class="fill"></div>
-  
   <?php include (TEMPLATEPATH . '/partials/content_footer.php' );?>
 </div>
 

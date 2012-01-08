@@ -9,7 +9,6 @@
     <?php if(count(get_the_category()) > 1): // > 1 to compensate for 'uncategorized' ?>
       <span>|</span><?php foreach(get_the_category() as $index=>$category): ?>
       <?php if($category->cat_name != 'Uncategorized'): ?>
-        <?php if($index > 0) echo '<span>,</span>' ?>
         <a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->name; ?></a>
       <?php endif;?>
       <?php endforeach; ?>

@@ -1,0 +1,81 @@
+$blueprint-grid-columns: 16
+$blueprint-grid-width: 40px
+$blueprint-grid-margin: 20px
+
+$highlight: #BDDF56
+$text_color: #C2C2C2
+$dark_text_color: #323232
+$dark_background_color: rgba(13,13,13, .93)
+$margin: 20px
+$padding: 20px
+$box_margin: 1px
+$p_size: 10px
+$radius: 2px
+
+$site_width: 1000px
+
+@mixin box_container($scheme)
+  @if $scheme == dark
+    background-color: $dark_background_color
+  @else if $scheme == light
+    background: url("images/light_box_bg.png")
+
+  @else if $scheme == highlight
+    background: url("images/highlight_box_bg.gif")
+    
+  padding: $padding
+  +box-sizing(border-box)
+  margin-bottom: $box_margin
+  
+@mixin half($side)
+  @if $side == left
+    width: span(6) + $padding * .5
+    border-right: 1px dotted black
+  @else if $side == right
+    width: span(6) + $padding * .5 - 1
+    
+  +box-sizing(border-box)
+  display: inline
+  float: left
+  
+  section
+    padding: $padding
+  
+    &:not(:last-child)
+      border-bottom: 1px dotted black
+      
+@mixin input
+  +single-box-shadow(rgba(0,0,0,.4), 0,0,10px,0, true)
+  +border-radius($radius)
+  +box-sizing(border-box)
+  background: url("images/form_bg.png")
+  color: #c2c2c2
+  padding: 10px
+  border: 1px dotted rgba(33,33,33,1)
+  
+  &:focus
+    outline: none
+    border: 1px dotted $highlight
+    
+@mixin button($size)
+  @if $size == small
+    font-size: 8px
+    padding: 0.0em 0.6em
+  @else if $size == large
+    padding: 0.4em 0.6em
+    font-size: 15px !important
+    
+  //background: rgba(0,0,0,.2)
+  background: url("images/form_bg.png")
+  display: inline-block
+  text-transform: uppercase
+  cursor: pointer
+  display: inline-block
+  margin-top: 3px
+  +single-box-shadow(rgba(0,0,0,.2), 0,0,1em,0, true)
+  +border-radius($radius)
+  +box-sizing(border-box)
+
+  &:hover
+    background: $highlight
+    color: black

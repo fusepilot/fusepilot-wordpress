@@ -1,7 +1,6 @@
 <div class="details">
   <div class="left">
     <section>
-      <h3>Stats</h3>
       <p>
         <span>Posted: </span><time datetime="<?php echo date(DATE_W3C); ?>" pubdate class="updated"><?php the_time('M jS Y \a\t h:ia') ?></time>
       </p>
@@ -9,16 +8,14 @@
         <?php if(count(get_the_category()) > 1): // > 1 to compensate for 'uncategorized' ?>
           <span>Categories: </span><?php foreach(get_the_category() as $index=>$category): ?>
           <?php if($category->cat_name != 'Uncategorized'): ?>
-            <?php if($index > 0) echo '<span>,</span>'; ?>
             <a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->name; ?></a>
           <?php endif;?>
           <?php endforeach; ?>
         <?php endif; ?>
       </p>
       <p>
-        <?php if(count(the_tags()) > 0): // > 1 to compensate for 'uncategorized' ?>
+        <?php if(count(get_the_tags()) > 0): // > 1 to compensate for 'uncategorized' ?>
           <span>Tags: </span><?php foreach(get_the_tags() as $index=>$tag): ?>
-          <?php if($index > 0) echo '<span>,</span>' ?>
           <a href="<?php echo get_tag_link( $tag->term_id ); ?>"><?php echo $tag->name; ?></a>
           <?php endforeach; ?>
         <?php endif; ?>
@@ -32,7 +29,7 @@
   </div>
   <div class="right">
     <section>
-      <h3>Like Buttons</h3>
+      
     </section>
   </div>
 </div>

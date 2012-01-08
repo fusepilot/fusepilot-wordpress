@@ -50,6 +50,8 @@ $(document).ready(function (){
 
 $(window).load(function() {
   placeFooter();
+  
+  $('pre code:not(.no-highlight)').highlight();
 });
 
 $(window).resize(function() {
