@@ -28,7 +28,7 @@ $margin: 20px
 $padding: 20px
 $box_margin: 1px
 $p_size: 10px
-$radius: 4px
+$radius: 2px
 
 $site_width: 1000px
 
@@ -74,6 +74,26 @@ $site_width: 1000px
   &:focus
     outline: none
     border: 1px dotted $highlight
+    
+@mixin button($size)
+  @if $size == small
+    padding: 0.0em 0.6em
+  @else if $size == large
+    padding: 0.4em 0.6em
+    font-size: 15px !important
+    
+  background: rgba(0,0,0,.4)
+  display: inline-block
+  text-transform: uppercase
+  cursor: pointer
+  display: inline-block
+  +single-box-shadow(rgba(0,0,0,.2), 0,0,1em,0, true)
+  +border-radius($radius)
+  +box-sizing(border-box)
+
+  &:hover
+    background: $highlight
+    color: black
 
       
 
@@ -234,7 +254,9 @@ mark
       width: span(12)
       
     .details
-    
+      a
+        +button(small)
+      
       p
         text-transform: uppercase
         font-size: $p_size * 0.8
@@ -348,14 +370,8 @@ mark
         margin-bottom: 0
     
     .submit_button
-      display: block
       margin-top: $margin * .5
-      font-size: 20px !important
-      text-transform: uppercase
-      cursor: pointer
-    
-      &:hover
-        color: $highlight
+      +button(large)
 
     textarea
       +input

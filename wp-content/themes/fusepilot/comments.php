@@ -71,7 +71,7 @@
 				<input type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="60" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
 				<label for="email">Mail (will not be published) <?php if ($req) echo "(required)"; ?></label>
 			</div>
-
+      
 			<div>
 				<input type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="60" tabindex="3" />
 				<label for="url">Website</label>
@@ -84,6 +84,10 @@
 		<div>
 			<textarea name="comment" id="comment" cols="58" rows="10" tabindex="4"></textarea>
 		</div>
+
+    <?php if( !is_user_logged_in()): ?>
+      <p>Your first comment will be reviewed before its published.</p>
+    <?php endif; ?>
 
 		<div>
 			<input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
