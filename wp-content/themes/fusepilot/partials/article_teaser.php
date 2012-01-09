@@ -1,5 +1,10 @@
 <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
   
+  <?php if(get_field('teaser')): ?>
+    <?php $image_id = get_field('teaser'); 
+		echo wp_get_attachment_image($image_id, 'teaser'); ?>
+  <?php endif; ?>
+  
   <header>
     <h1 class="entry-title"><a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
     <?php include (TEMPLATEPATH . '/partials/meta.php' ); ?>

@@ -71,7 +71,7 @@ if(isset($_POST['submitted'])) {
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
 
-<section id="content">
+<section id="content" class="page">
 
 <?php if(isset($emailSent) && $emailSent == true) { ?>
 

@@ -67,6 +67,7 @@
     add_image_size( "masonry-triple", 700, 160, true );
     add_image_size( "masonry-double", 466, 160, true );
     add_image_size( "masonry-single", 233, 160, true );
+    add_image_size( "teaser", 700, 80, true );
     
     function show_pagination() {
     	global $wp_query;
