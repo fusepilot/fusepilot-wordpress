@@ -38,11 +38,7 @@ $site_width: 1000px
   display: inline
   float: left
   
-  section
-    padding: $padding
-  
-    &:not(:last-child)
-      border-bottom: 1px dotted black
+  padding: $padding
       
 @mixin input
   +single-box-shadow(rgba(0,0,0,.4), 0,0,10px,0, true)
@@ -79,3 +75,11 @@ $site_width: 1000px
   &:hover
     background: $highlight
     color: black
+    
+@mixin scrollbar
+  ::-webkit-scrollbar
+    background: url('images/form_bg.png')
+    height: 4px
+    
+  ::-webkit-scrollbar-thumb
+    background-color: $highlight

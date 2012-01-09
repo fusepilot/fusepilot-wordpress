@@ -12,6 +12,7 @@
 @import 'compass/css3/box-shadow'
 @import 'compass/css3/border-radius'
 @import 'dark'
+@import 'compass/css3/shared'
 
 @import 'reset'
 @import 'nivo'
@@ -118,9 +119,12 @@ mark
     footer
       overflow: hidden
     
-    header, form, footer, ul, .filler
+    ul
       border-bottom: 1px dotted rgba(33,33,33,1)
       padding: $margin
+      
+    form
+      padding: $padding
       
     h3
       padding: $margin
@@ -142,6 +146,7 @@ mark
       background-color: rgba(13, 13, 13, 0.93)
       margin-bottom: 1px
       height: 80px
+      
       &:hover
         background: url("images/logo_highlight.png") no-repeat center
         padding: 20px
@@ -155,9 +160,9 @@ mark
       margin-bottom: 0
     
   #content
+    +scrollbar
     +column(12, true)
     +box-sizing(border-box)
-    //background: url("images/light_box_bg.png")
     
     .entry-content
       a
@@ -182,10 +187,10 @@ mark
         &:last-child
           margin-bottom: 0
       
-      .left
+      section:first-child
         +half(left)
         
-      .right
+      section:last-child
         +half(right)
     
     .filler
@@ -195,25 +200,6 @@ mark
       h2
         text-transform: none
         margin-bottom: $margin * .5
-      
-    #content_footer
-      +clearfix
-      position: absolute
-      bottom: 0
-      color: black
-      
-      h3
-        color: white
-      
-      a
-        color: black
-        
-      .bottom
-        width: span(12)
-        height: 50px
-        background: url('images/footer_bg.png')
-        padding: $padding
-        +box-sizing(border-box)
       
     .pagination
       text-transform: uppercase
@@ -229,25 +215,42 @@ mark
     header
       margin-top: 50px
     
-    &.page, header, .entry-content, #respond, .filler, .comments .comment, &> h3, .pagination
+    &.page, header, .entry-content, #respond, .filler, .comments .comment, .pagination
       border-bottom: 1px dotted black
       padding: $margin
       +clearfix
       clear: both
       +box-sizing(border-box)
-      
-    > article h3
-      padding: $padding
-      padding-bottom: 0
+    
+    .code_header
+      background: url('images/footer_bg.png')
+      +box-sizing(border-box)
+      color: $dark_text_color
+      padding: $padding * .15 $padding * .5
+      text-transform: none
+      +border-radius($radius)
       
     pre
+      overflow: auto
+      width: 660px
+      background: url("images/form_bg.png")
+      +single-box-shadow(rgba(0,0,0,.4), 0,0,10px,0, true)
+      +border-radius($radius)
+      margin-bottom: $margin
+      
+      &:last-child
+        margin-bottom: 0
+        
       code
         white-space: pre
         font-size: 12px
-        padding: $padding
+        width: auto
+        word-wrap: normal
+        padding: $padding * .5
+        background: none
         
-        +input
-      
+        
+          
     .comment
       .avatar
         display: inline-block
@@ -265,6 +268,25 @@ mark
     .video, #masonry, .gallery
       border-bottom: 1px dotted black
       +box-sizing(border-box)
+    
+    #content_footer
+      +clearfix
+      position: absolute
+      bottom: 0
+      color: black
+
+      h3
+        color: white
+
+      a
+        color: black
+
+      .bottom
+        width: span(12)
+        height: 50px
+        background: url('images/footer_bg.png')
+        padding: $padding
+        +box-sizing(border-box)
     
     #masonry
       li:not(:last-child)

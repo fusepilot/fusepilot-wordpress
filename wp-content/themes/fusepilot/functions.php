@@ -18,7 +18,7 @@
 	
 	// Add RSS links to <head> section
 	add_theme_support( 'automatic-feed-links' );
-	
+
   // function fusepilot_enqueue_scripts() {
   //   wp_enqueue_script('jquery');
   //   wp_deregister_script('jquery');
