@@ -9,6 +9,10 @@ Template Name: Portfolio
 
 <section id="content" class="index">
   
+  <header>
+    <h2>Work Index</h2>
+  </header>
+  
   <?php
 	//query posts
 	query_posts(

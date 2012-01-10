@@ -76,7 +76,7 @@ if(isset($_POST['submitted'])) {
 <?php if(isset($emailSent) && $emailSent == true) { ?>
 
 	<div class="thanks">
-		<h1>Thanks, <?=$name;?></h1>
+		<h2>Thanks, <?=$name;?></h2>
 		<p>Your email was successfully sent. I will be in touch soon.</p>
 	</div>
 
@@ -86,11 +86,12 @@ if(isset($_POST['submitted'])) {
 	
 	<?php while (have_posts()) : the_post(); ?>
 	  <header>
-  		<h1><?php the_title(); ?></h1>
-  		<?php the_content(); ?>
+  		<h2><?php the_title(); ?></h2>
 		</header>
 		
 		<div class="entry-content">
+		  <?php the_content(); ?>
+		  
   		<?php if(isset($hasError) || isset($captchaError)) { ?>
   			<p class="error">There was an error submitting the form.<p>
   		<?php } ?>

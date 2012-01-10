@@ -10,7 +10,7 @@
 	<?php endif; ?>
   
   <header>
-    <h1 class="entry-title"><?php the_title(); ?></h1>
+    <h2 class="entry-title"><?php the_title(); ?></h2>
     <?php include (TEMPLATEPATH . '/partials/meta.php' ); ?>
   </header>
 

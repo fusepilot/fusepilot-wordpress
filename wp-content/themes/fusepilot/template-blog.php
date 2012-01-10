@@ -7,7 +7,14 @@ Template Name: Blog
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
 
+
+
 <section id="content" class="index">
+  
+  <header>
+    <h2>Blog Index</h2>
+  </header>
+  
   <?php
 	//query posts
 	query_posts(
@@ -26,7 +33,7 @@ Template Name: Blog
   
 	<?php else : ?>
 
-		<h2>Not Found</h2>
+		<h3>Not Found</h3>
 
 	<?php endif; ?>
 	

@@ -52,4 +52,26 @@
     return $code;
   }
   add_shortcode( 'code', 'code_shortcode');
-?>
+  
+  function image_shortcode($atts, $content = null) {
+    return shortcode_unautop($content);
+  }
+  add_shortcode("image", "image_shortcode");
+  
+  function column_shortcode( $atts, $content = null )
+  {
+  	extract( shortcode_atts( array(
+  	  'offset' =>'',
+        'size' => '',
+  	  'position' =>''
+        ), $atts ) );
+
+
+  	  if($offset !='') { $column_offset = $offset; } else { $column_offset ='one'; }
+
+        return '<div class="'.$column_offset.'-' . $size . ' column-'.$position.'">' . do_shortcode($content) . '</div>';
+
+  }
+  add_shortcode('column', 'column_shortcode');
+  
+  ?>

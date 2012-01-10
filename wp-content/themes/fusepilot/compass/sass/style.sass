@@ -18,7 +18,11 @@
 @import 'nivo'
 @import 'global'
 
-      
+  
+*
+  ::selection, ::-moz-selection
+    background: $highlight
+    color: black
 
 html, body
   height: 100%
@@ -62,9 +66,6 @@ h6
 p
   font-size: $p_size * 1.0
   margin-bottom: $margin
-  
-  &:last-child
-    margin-bottom: 0
 
 a
   color: $text_color
@@ -72,28 +73,6 @@ a
   
   &:hover
     color: $highlight
-    
-  &:link
-    -webkit-tap-highlight-color: #fcd700
-    
-
-select, input, textarea
-  color: #333
-
-/* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
-
-/*  j.mp/webkit-tap-highlight-color */
-
-ins
-  background-color: #fcd700
-  color: #000
-  text-decoration: none
-
-mark
-  background-color: #fcd700
-  color: #000
-  font-style: italic
-  font-weight: bold
 
 /* And here begins the Wordpress fun.
  *------------------------------------------------------------------------------- */
@@ -138,23 +117,25 @@ mark
     a
       font-size: $p_size
     
-    #menu a
-      font-size: 1.8em
+    #menu     
+      li
+        &.active
+          a 
+            color: $highlight
+      
+        a
+          font-size: 1.8em
       
     #logo a
       display: block
       text-indent: 9000px
       background: url("images/logo.png") no-repeat center
       padding: 20px
-      background-color: rgba(13, 13, 13, 0.93)
       margin-bottom: 1px
       height: 80px
       
       &:hover
         background: url("images/logo_highlight.png") no-repeat center
-        padding: 20px
-        background-color: rgba(13, 13, 13, 0.93)
-        margin-bottom: 1px
         
     .details p
       text-transform: uppercase
@@ -166,10 +147,38 @@ mark
     +scrollbar
     +column(12, true)
     +box-sizing(border-box)
+    padding-top: 55px
+    
+    &.front
+      padding-top: 0
+    
+    header, #respond, .filler, .comments .comment, .pagination
+      border-bottom: 1px dotted black
+      padding: $margin
+      +clearfix
+      clear: both
+      +box-sizing(border-box)
     
     .entry-content
+      padding-right: $padding
+      padding-left: $padding
+      padding-top: $padding
+      padding-bottom: -$padding
+      border-bottom: 1px dotted black
+      
       a
         +button(small)
+        
+      img
+        width: span(12)
+        margin-left: $padding * -1
+        
+      blockquote
+        padding-left: $padding
+        padding-right: $padding
+        
+        p
+          font-size: 1.2em
     
     .fill
       width: 100%
@@ -186,9 +195,6 @@ mark
         text-transform: uppercase
         font-size: $p_size * 0.8
         margin-bottom: 2px
-        
-        &:last-child
-          margin-bottom: 0
       
       section:first-child
         +half(left)
@@ -220,24 +226,6 @@ mark
       border-bottom: 1px dotted black
       
     
-    header, .entry-content, #respond, .filler, .comments .comment, .pagination
-      border-bottom: 1px dotted black
-      padding: $margin
-      +clearfix
-      clear: both
-      +box-sizing(border-box)
-      
-    &.index
-      article:first-child
-        margin-top: 50px
-      
-      header
-        margin: 0
-        
-    &.page
-      margin-top: 50px
-      
-    
     .code_header
       background: url('images/footer_bg.png')
       +box-sizing(border-box)
@@ -253,9 +241,6 @@ mark
       +single-box-shadow(rgba(0,0,0,.4), 0,0,10px,0, true)
       +border-radius($radius)
       margin-bottom: $margin
-      
-      &:last-child
-        margin-bottom: 0
         
       code
         white-space: pre
@@ -360,9 +345,6 @@ mark
   
     div
       margin-bottom: $margin * .5
-      
-      &:last-child
-        margin-bottom: 0
     
     .submit_button
       margin-top: $margin * .5

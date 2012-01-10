@@ -61,6 +61,21 @@
     }
     add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
     
+    
+    function is_page_current($page_id) {
+      $page = get_page($page_id);
+      $page_slug = $page->post_name;
+      $current_url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+      $uri = str_replace(site_url(), '', $current_url);
+      
+     $match = "/^\/{$page_slug}/i";
+      if(preg_match($match, $uri)) {
+        return 1;
+      } else {
+        return 0;
+      }
+    }
+    
     // add_theme_support( 'post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'audio', 'chat', 'video')); // Add 3.1 post format theme support.
 
     add_image_size( "gallery", 700, 394, true );
@@ -77,7 +92,7 @@
     //show project with posts in taxonomy
     add_filter( 'pre_get_posts', 'my_get_posts' );
     function my_get_posts( $query ) {
-        if ( is_category() )
+        if ( $query->is_category )
           $query->set( 'post_type', array( 'post', 'project') );
         return $query;
     }
