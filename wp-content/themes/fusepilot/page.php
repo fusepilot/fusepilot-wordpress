@@ -5,7 +5,6 @@
 
   <header>
     <h2><?php the_title(); ?></h2>
-    <?php include (TEMPLATEPATH . '/partials/meta.php' ); ?>
   </header>
   
   <div class="entry-content">

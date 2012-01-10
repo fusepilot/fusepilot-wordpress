@@ -164,7 +164,7 @@ a
       padding-left: $padding
       padding-top: $padding
       padding-bottom: -$padding
-      border-bottom: 1px dotted black
+      border-right: 1px dotted black
       
       h1, h2, h3, h4, h5, h6
         margin-bottom: $margin * .25
@@ -177,11 +177,28 @@ a
         margin-left: $padding * -1
         
       blockquote
-        padding-left: $padding
-        padding-right: $padding
+        padding: 0 $padding
         
         p
           font-size: 1.2em
+          
+      ul
+        margin-bottom: $margin
+        padding: 0 $padding
+        
+        li
+          background: url("images/plus.gif") no-repeat 0px 5px
+          padding-left: $padding * .75
+          font-size: $p_size
+          
+      span
+        &.highlight
+          background: url("images/highlight_box_bg.gif")
+          color: black
+          padding: 2px
+          +border-radius($radius)
+          padding: 2px 6px
+          margin: 0 2px
       
       .columns
         padding-left: $padding
@@ -231,6 +248,18 @@ a
       
       .clear
         +clearfix
+        
+      .message
+        +input
+        margin-bottom: $margin
+        font-size: $p_size * 1.5
+        color: black
+        
+        &.info
+          background: url("images/highlight_box_bg.gif")
+        
+        &.error
+          background: rgb(255, 82, 85)
     
     .fill
       width: 100%

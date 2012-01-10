@@ -7,7 +7,7 @@
   
   include_once 'column_shortcode.php';
   
-  
+  @ini_set('pcre.backtrack_limit', 500000);
   
   
   
@@ -77,6 +77,34 @@
     return shortcode_unautop($content);
   }
   add_shortcode("image", "image_shortcode");
+  
+  
+  
+  
+  
+  
+  
+  
+  function highlight_shortcode($atts, $content = null) {
+    $output = "<span class=\"highlight\">{$content}</span>";
+    return $output;
+  }
+  add_shortcode("highlight", "highlight_shortcode");
+  
+  
+  
+  
+  
+  function message_shortcode($atts, $content = null) {
+    extract( shortcode_atts( array(
+      'status' =>'info',
+    ), $atts ) );
+    $class = "message {$status}";
+    $content = do_shortcode($content);
+    $output = "<div class=\"{$class}\">{$content}</div>";
+    return $output;
+  }
+  add_shortcode("message", "message_shortcode"); 
   
   
   
