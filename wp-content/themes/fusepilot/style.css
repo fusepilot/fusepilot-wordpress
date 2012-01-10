@@ -737,7 +737,7 @@ a:hover {
   padding-left: 20px;
   padding-top: 20px;
   padding-bottom: -20px;
-  border-right: 1px dotted black;
+  border-bottom: 1px dotted black;
 }
 /* line 169, compass/sass/style.sass */
 #page-wrap #content .entry-content h1, #page-wrap #content .entry-content h2, #page-wrap #content .entry-content h3, #page-wrap #content .entry-content h4, #page-wrap #content .entry-content h5, #page-wrap #content .entry-content h6 {
@@ -897,7 +897,7 @@ a:hover {
   padding: 10px;
   border: 1px dotted #212121;
   margin-bottom: 20px;
-  font-size: 15px;
+  font-size: 1.2em;
   color: black;
 }
 /* line 52, compass/sass/global.sass */
