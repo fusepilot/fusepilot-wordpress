@@ -1,18 +1,16 @@
-<?php
-  $pages = get_pages(array('sort_column' => 'menu_order', 'sort_order' => 'asc'));
-  $links = array();
+<?php 
+  $items = wp_get_nav_menu_items('navigation');
   
-  foreach($pages as $i => $page) {
-    $link = '<li class="page-' . (is_page($page->ID) ? 'active' : 'item') . '">';
-    $link .= '<a href="' . get_page_link($page->ID) . '" title="' . apply_filters('the_title', $page->post_title) . '">' . apply_filters('the_title', $page->post_title) . '</a>';
-    $link .= '</li>';
-    
-    $links[$i] = $link;
+  foreach($items as $i => $item) {
+    $title = $item->title;
+    $url = $item->url;
+    $class = "item";
+    if(is_page_current($item->object_id)) $class .= " active";
+    $menu_list[] = '<li class="' . $class . '"><a href="' . $url . '" title="' . $title . '">' . $title . '</a></li>';
   }
-  
-  $links = implode('<span class="separator">|</span>', $links);
 ?>
-
-<ul>
-  <?php echo $links; ?>
-</ul>
+<nav id="menu">
+  <ul>
+    <?php echo implode('<span class="separator">|</span>', $menu_list); ?>
+  </ul>
+</nav>

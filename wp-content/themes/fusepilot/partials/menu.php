@@ -1,31 +1,4 @@
-
-  <?php 
-  // $pages = get_pages(array("exclude" => 138));
-  // $links = array();
-  // 
-  // foreach($pages as $i => $page) {
-  //   $page_url = get_page_link($page->ID);
-  //   
-  //   $title = apply_filters('the_title', $page->post_title);
-  //   
-  //   
-  //   $link = '<li class="item';
-  //   
-  //   if(is_page_current($page)) {
-  //     $link .= " active";
-  //   }
-  //   
-  //   $link .= $page->ID;
-  //   
-  //   $link .= '">';
-  //   $link .= '<a href="' . $page_url . '" title="' . $title . '">' . $title . '</a>';
-  //   $link .= '</li>';
-  //   
-  //   $links[$i] = $link;
-  // }
-  // 
-  // $links = implode('', $links);
-  
+<?php 
   $items = wp_get_nav_menu_items('navigation');
   
   foreach($items as $i => $item) {

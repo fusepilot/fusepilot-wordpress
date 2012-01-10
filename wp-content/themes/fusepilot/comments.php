@@ -14,7 +14,7 @@
 
 <?php if ( comments_open() ) : ?>
 
-<div id="respond">
+<div class="comment_form">
 
 	<h3><?php comment_form_title( 'Leave a Reply', 'Leave a Reply to %s' ); ?></h3>
 

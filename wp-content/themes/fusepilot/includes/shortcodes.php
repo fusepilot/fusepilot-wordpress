@@ -1,10 +1,16 @@
 <?php
-  include_once 'geshi.php';
+  //include_once 'geshi.php';
 
-  //move wpautop filter to AFTER shortcode is processed
   remove_filter( 'the_content', 'wpautop' );
-  add_filter( 'the_content', 'wpautop' , 99);
-  //add_filter( 'the_content', 'shortcode_unautop',100 );
+  add_filter( 'the_content', 'wpautop', 99);
+  
+  
+  include_once 'column_shortcode.php';
+  
+  
+  
+  
+  
   
   function vimeo_embed_shortcode($atts, $content = null) {
     extract(shortcode_atts(array(
@@ -15,6 +21,14 @@
   return '<iframe src="http://player.vimeo.com/video/'.$id.'?title=0&byline=0&portrait=0&color=ffffff" width="'.$width.'" height="'.$height.'" frameborder="0"></iframe>';
   }
   add_shortcode("vimeo", "vimeo_embed_shortcode");
+  
+  
+  
+  
+  
+  
+  
+  
 
   function code_shortcode( $atts, $content = null ) {
     //$content = force_balance_tags( $content );
@@ -53,25 +67,41 @@
   }
   add_shortcode( 'code', 'code_shortcode');
   
+  
+  
+  
+  
+  
+  
   function image_shortcode($atts, $content = null) {
     return shortcode_unautop($content);
   }
   add_shortcode("image", "image_shortcode");
   
-  function column_shortcode( $atts, $content = null )
-  {
-  	extract( shortcode_atts( array(
-  	  'offset' =>'',
-        'size' => '',
-  	  'position' =>''
-        ), $atts ) );
-
-
-  	  if($offset !='') { $column_offset = $offset; } else { $column_offset ='one'; }
-
-        return '<div class="'.$column_offset.'-' . $size . ' column-'.$position.'">' . do_shortcode($content) . '</div>';
-
-  }
-  add_shortcode('column', 'column_shortcode');
   
+  
+  
+  
+  
+  
+  
+  
+  
+  function category_link_shortcode( $atts, $content = null ) { 
+    extract( shortcode_atts( array(
+      'name' =>'',
+      ), $atts ) );
+    
+    $category_id = get_cat_ID( $name );
+    if(empty($category_id)) return "";
+    
+    $category = get_category( $category_id );
+    $category_name = $category->name;
+    $category_link = get_category_link( $category_id );
+    
+    $output = "<a href={$category_link} title=\"{$category_name}\">{$category_name}</a>";
+    
+    return $output;
+  }
+  add_shortcode('category_link', 'category_link_shortcode');
   ?>

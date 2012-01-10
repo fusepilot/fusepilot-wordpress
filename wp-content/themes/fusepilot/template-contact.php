@@ -91,7 +91,9 @@ if(isset($_POST['submitted'])) {
 		
 		<div class="entry-content">
 		  <?php the_content(); ?>
+		</div>
 		  
+		<div class="contact_form">
   		<?php if(isset($hasError) || isset($captchaError)) { ?>
   			<p class="error">There was an error submitting the form.<p>
   		<?php } ?>

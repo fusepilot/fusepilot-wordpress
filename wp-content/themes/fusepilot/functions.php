@@ -92,7 +92,7 @@
     //show project with posts in taxonomy
     add_filter( 'pre_get_posts', 'my_get_posts' );
     function my_get_posts( $query ) {
-        if ( $query->is_category )
+        if ( $query->is_category || $query->is_tag )
           $query->set( 'post_type', array( 'post', 'project') );
         return $query;
     }

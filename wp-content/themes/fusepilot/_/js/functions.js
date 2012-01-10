@@ -10,7 +10,7 @@ $(document).ready(function (){
     });
   });
 
-	Cufon.replace('h1, h2, h3, h4, nav, #content .links, .pagination a, #menu, .submit_button, blockquote', {
+	Cufon.replace('h1, h2, h3, h4, #content .links, .pagination a, #sidebar #menu, .submit_button, blockquote', {
     hover: true,
     fontStyle: "italic",
   });
