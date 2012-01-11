@@ -49,7 +49,7 @@ $(document).ready(function (){
 });
 
 $(window).load(function() {
-  //placeFooter();
+  placeFooter();
   
   $('pre code:not(.no-highlight)').highlight();
 });

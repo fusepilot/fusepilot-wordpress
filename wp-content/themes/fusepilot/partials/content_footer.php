@@ -1,5 +1,44 @@
 <div class="fill"></div>
 <footer id="content_footer">
+  <div class="top">
+    <div class="categories">
+      <h3>Categories</h3>
+
+      <?php 
+        $args=array(
+          'orderby' => 'count',
+          'order' => 'desc',
+          );
+        $categories=get_categories($args);
+      ?>
+
+      <ul>
+        <?php foreach($categories as $category): ?>
+        <li>
+          <a href="<?php echo get_category_link( $category->term_id ); ?>" data-count="<?php echo $category->count ?>"><?php echo $category->name?></a>
+        </li>
+        <?php endforeach; ?>
+      </ul>
+    </div>
+    <div class="twitter">
+      <h3>Twitter</h3>
+      <ul>
+        <li>
+          <div class="tweet">
+            <p>This is a tweet.</p>
+            <p class="details">About 3 hours ago</p>
+          </div>
+        </li>
+        <li>
+          <div class="tweet">
+            <p>This is another tweet.</p>
+            <p class="details">About 3 hours ago</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="clear"></div>
   <div class="bottom">
     <div class="copyright"><p>&copy;2011-<?php echo date("Y"); echo " "; bloginfo('name'); ?></p></div>
     

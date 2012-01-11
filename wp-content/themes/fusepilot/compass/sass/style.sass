@@ -18,12 +18,6 @@
 @import 'nivo'
 @import 'global'
 
-  
-*
-  ::selection, ::-moz-selection
-    background: $highlight
-    color: black
-
 html, body
   height: 100%
   background: url("images/background.jpg") center top repeat-x
@@ -85,7 +79,7 @@ a
   min-height: 100%
   width: 100%
   position: relative
-  background: url("images/column_bg.png") repeat-y
+  background: url("images/column_bg_2.png") repeat-y
   +container
   //margin: 0 auto
   
@@ -159,6 +153,26 @@ a
       clear: both
       +box-sizing(border-box)
     
+    .entry-content, .comment_form, .contact_form, header, article footer, h3.header, .pagination
+      background: url("images/content_bg.png")
+    
+    .comment_form
+      h3
+        margin-bottom: $margin * .5
+    
+    .message
+      +inset
+      padding: $padding * .5
+      margin-bottom: $margin
+      font-size: 1.2em
+      color: black
+      
+      &.info
+        background: url("images/highlight_box_bg.gif")
+      
+      &.error
+        background: rgb(255, 82, 85)
+    
     .entry-content
       padding-right: $padding
       padding-left: $padding
@@ -175,6 +189,8 @@ a
       img
         width: span(12)
         margin-left: $padding * -1
+        border-top: 1px dotted black
+        border-bottom: 1px dotted black
         
       blockquote
         padding: 0 $padding
@@ -193,22 +209,26 @@ a
           
       span
         &.highlight
+          +inset
           background: url("images/highlight_box_bg.gif")
           color: black
           padding: 2px
-          +border-radius($radius)
           padding: 2px 6px
           margin: 0 2px
       
       .columns
-        padding-left: $padding
-        padding-right: $padding
-      
-        .column
-          position: relative
-          margin-right: 4%
-          float: left
+        margin-bottom: $margin
+        display: table
+        width: 100%
         
+        .column
+          display: table-cell
+          border-right: 1px dotted white
+          padding: 0 $margin
+          
+          &.last
+            border-right: none
+          
           &.one_half
             width: 48%
 
@@ -248,22 +268,11 @@ a
       
       .clear
         +clearfix
-        
-      .message
-        +input
-        margin-bottom: $margin
-        font-size: 1.2em
-        color: black
-        
-        &.info
-          background: url("images/highlight_box_bg.gif")
-        
-        &.error
-          background: rgb(255, 82, 85)
     
     .fill
       width: 100%
       height: 300px
+      background: url("images/fill_bg.png") no-repeat
     
     .divider
       width: span(12)
@@ -318,10 +327,8 @@ a
     pre
       overflow: auto
       width: 660px
-      background: url("images/form_bg.png")
-      +single-box-shadow(rgba(0,0,0,.4), 0,0,10px,0, true)
-      +border-radius($radius)
       margin-bottom: $margin
+      +inset
         
       code
         white-space: pre
@@ -353,24 +360,26 @@ a
     
     #content_footer
       +clearfix
+      width: 700px
       position: absolute
       bottom: 0
       color: black
 
       h3
-        color: white
-
-      a
-        color: black
+        margin-bottom: $margin * .5
 
       .bottom
+        margin-top: $margin
         width: span(12)
         height: 50px
         background: url('images/footer_bg.png')
         padding: $padding
         +box-sizing(border-box)
+        
+        a
+          color: black
       
-      .copyright  
+      .copyright
         display: inline
         p
           display: inline
@@ -378,10 +387,10 @@ a
       .footer_nav
         float: right
         font-size: $p_size
+        display: inline
         
         ul 
           text-align: right
-          display: inline
           
           li
             display: inline
@@ -389,6 +398,42 @@ a
         .separator
           margin-left: $margin * .25
           margin-right: $margin * .25
+      
+      .top
+        color: $text_color
+        display: table
+        width: 100%
+        margin-top: $margin
+        
+        .categories
+          width: 66%
+          display: table-cell
+          border-right: 1px dotted white
+          padding: 0 $margin
+        
+          li
+            margin-right: $margin * .25
+            margin-bottom: $margin * .25
+            display: inline-block
+          
+            a
+              +button(medium)
+            
+        .twitter
+          width: 33%
+          display: table-cell
+          padding: 0 $margin
+          
+          .tweet
+            +inset
+            padding: $padding * .5
+            margin-bottom: $margin * .5
+            
+            p
+              margin-bottom: 0
+              
+              &.details
+                color: $dark_text_color
     
     #masonry
       li:not(:last-child)

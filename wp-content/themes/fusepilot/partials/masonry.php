@@ -28,6 +28,8 @@
     </li>
   <?php endforeach; ?>
   </ul>
+  
+  <div class="clear"></div>
 
   <?php $index++; ?>
 
