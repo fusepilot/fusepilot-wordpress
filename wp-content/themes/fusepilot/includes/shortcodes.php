@@ -97,9 +97,9 @@
   
   function message_shortcode($atts, $content = null) {
     extract( shortcode_atts( array(
-      'status' =>'info',
+      'type' =>'info',
     ), $atts ) );
-    $class = "message {$status}";
+    $class = "message {$type}";
     $content = do_shortcode($content);
     $output = "<div class=\"{$class}\">{$content}</div>";
     return $output;

@@ -2,11 +2,14 @@
     
   require_once("includes/shortcodes.php");
   require_once("includes/post_types.php");
-  
+  require_once("includes/comment_errors.php");
   require_once("includes/theme_options.php");
+  require_once("includes/flash.php");
   
   global $settings;
   $settings = get_option( 'fusepilot_theme_options' );
+  
+  global $title;
   
   // Translations can be filed in the /languages/ directory
   load_theme_textdomain( 'html5reset', TEMPLATEPATH . '/languages' );
@@ -74,6 +77,18 @@
       } else {
         return 0;
       }
+    }
+    
+    add_action('wp_insert_comment','fusepilot_wp_insert_comment_hook');
+    function fusepilot_wp_insert_comment_hook($id){
+      $comment = get_comment($id);
+      
+      if($comment->comment_approved) {
+        set_flash("comment_accepted", 1);
+      } else {
+        set_flash("comment_needs_moderation", 1);
+      }
+      
     }
     
     // add_theme_support( 'post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'audio', 'chat', 'video')); // Add 3.1 post format theme support.

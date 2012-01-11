@@ -10,10 +10,12 @@ $(document).ready(function (){
     });
   });
 
-	Cufon.replace('h1, h2, h3, h4, #content .links, .pagination a, #sidebar #menu, .submit_button, blockquote, .message', {
+	Cufon.replace('h1, h2, h3, h4, #content .links, .pagination a, #sidebar #menu, .submit_button, blockquote, .message, a.back', {
     hover: true,
     fontStyle: "italic",
   });
+  
+  $(".message.flash").delay(3000).slideUp();
   
   $("#masonry .masonry_col").hover(function() {
     var $col, $overlay, title;
@@ -43,6 +45,23 @@ $(document).ready(function (){
     $(".nivo-directionNav, .nivo-controlNav", $slider).each(function() {
       $controls.append($(this));
     });
+  });
+  
+  $("#commentform").validate({
+    invalidHandler: function(form, validator) {
+      $error = $("<div class=\"message error\"></div>")
+      $form = $(".comment_form");
+      var errors = validator.numberOfInvalids();
+      $error.html("Please fill out the fields marked in red.");
+      $form.not(".invalid").prepend($error);
+      $form.addClass("invalid");
+      Cufon.replace($error, {fontStyle: "italic"});
+      if(errors) {
+        
+      }
+    }, errorPlacement:function(error, element) {
+      return;
+    }
   });
   
   placeFooter();

@@ -11,6 +11,7 @@ $padding: 20px
 $box_margin: 1px
 $p_size: 10px
 $radius: 3px
+$error_color: rgb(255, 82, 85)
 
 $site_width: 1000px
 
@@ -59,15 +60,15 @@ $site_width: 1000px
 @mixin button($size)
   @if $size == small
     font-size: 8px
-    padding: 0.2em 0.8em
+    padding: 0.2em 0.8em 
   
   @else if $size == medium
     padding: 0.3em 0.7em
-    font-size: 10px !important  
+    font-size: 10px
   
   @else if $size == large
-    padding: 0.4em 0.6em
-    font-size: 15px !important
+    padding: 0.6em 0.6em
+    font-size: 15px
     
   +inset
   display: inline-block

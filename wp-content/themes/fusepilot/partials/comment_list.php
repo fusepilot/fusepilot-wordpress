@@ -1,6 +1,6 @@
 <?php if ( have_comments() ) : ?>
 	
-	<h3 id="comments"><?php comments_number('No Comments', '1 Comment', '% Comments' );?></h3>
+  <!-- <h3 id="comments"><?php comments_number('No Comments', '1 Comment', '% Comments' );?></h3> -->
 
 	<?php
 	
@@ -13,7 +13,7 @@
 	
 	?>
 
-	<ol class="comments">
+	<div class="comments">
 		<?php foreach($comments as $comment): ?>
 		  <div class="comment">
 		    <div class="avatar">
@@ -37,7 +37,7 @@
 	      </div>
 		  </div>
 	  <?php endforeach; ?>
-	</ol>
+	</div>
 
  <?php else : // this is displayed if there are no comments so far ?>
 

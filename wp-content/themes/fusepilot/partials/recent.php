@@ -9,7 +9,7 @@
       <li>
         <article>
           <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-          <div class="details"><p><time datetime="<?php echo date(DATE_W3C); ?>" pubdate class="updated"><?php the_time('M jS Y') ?></time></p></div>
+          <p class="details"><time datetime="<?php echo date(DATE_W3C); ?>" pubdate class="updated"><?php the_time('M jS Y') ?></time></p>
         </article>
       </li>
     <?php endwhile;?>
