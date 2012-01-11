@@ -82,14 +82,26 @@ a
   background: url("images/column_bg_2.png") repeat-y
   +container
   
+  
+  
+  
+  
+  // sidebar
+  
   #sidebar
     +box-sizing(border-box)
     +column(4)
     border-top: 4px solid $highlight
     text-align: right
     
+    
+    
+    
+    
+    // general
+    
     ul
-      border-bottom: 1px dotted rgba(33,33,33,1)
+      border-bottom: border(rgba(33,33,33,1))
       padding: $margin
       
       li
@@ -104,16 +116,35 @@ a
     header
       padding: $margin
       
+      
+      
+      
+      
+    // search
+    
     #search
       form
         padding: $padding
         
         input
           margin-bottom: $margin * .25
+          width: 100%
+          +input($dark_inset_color)
+        
+        a
+          background: hsl(0, 0%, 7%)
+          +button(large, $dark_inset_color)
       
     h3
       padding: $margin
       padding-bottom: 0
+    
+    
+    
+    
+    
+    
+    //menu
     
     #menu     
       li
@@ -135,26 +166,60 @@ a
       &:hover
         background: url("images/logo_highlight.png") no-repeat center
     
+    
+    
+    
+    
+    
+  // main content  
+    
   #content
     +scrollbar
     +column(12, true)
     +box-sizing(border-box)
     padding-top: 55px
     
+    
+    
+    
+    
+    // general 
+    
+    .fill
+      width: 100%
+      height: 300px
+      background: url("images/fill_bg.png") no-repeat
+    
+    .divider
+      width: span(12)
+      
+      
+      
+      
+      
+    // specific for page
+    
     &.front
       padding-top: 0
+      
+      h2
+        text-transform: none
+        margin-bottom: $margin * .5
+        
+      
+      
+      
+      
+    // add background to content element
     
-    header, .header, .comment, .comment_form, .pagination, .contact_form, .messages
-      border-bottom: 1px dotted black
+    header, .header, #comments .comment, .comment_form, .pagination, .contact_form, .messages
+      border-bottom: border()
       padding: $margin
       +clearfix
       clear: both
       +box-sizing(border-box)
-      
-    .comment
-      padding-bottom: 0
     
-    .entry-content, .comment_form, .contact_form, header, article footer, h3.header, .pagination, h3#comments, .comment, .messages
+    .entry-content, .comment_form, .contact_form, header, article footer, h3.header, .pagination, h3#comments, #comments .comment, .messages
       background: url("images/content_bg.png")
     
     .comment_form
@@ -174,12 +239,19 @@ a
       &.error
         background: $error_color
     
+    
+    
+    
+    
+    
+    // main body styling
+    
     .entry-content
       padding-right: $padding
       padding-left: $padding
       padding-top: $padding
       padding-bottom: -$padding
-      border-bottom: 1px dotted black
+      border-bottom: border()
       
       h1, h2, h3, h4, h5, h6
         margin-bottom: $margin * .25
@@ -193,8 +265,8 @@ a
       img
         width: span(12)
         margin-left: $padding * -1
-        border-top: 1px dotted black
-        border-bottom: 1px dotted black
+        border-top: border()
+        border-bottom: border()
         
       blockquote
         padding: 0 $padding
@@ -227,7 +299,7 @@ a
         
         .column
           display: table-cell
-          border-right: 1px dotted white
+          border-right: border()
           padding: 0 $margin
           
           &.last
@@ -270,18 +342,10 @@ a
             margin-right: 0 !important
             clear: right
       
-      .clear
-        +clearfix
-    
-    .fill
-      width: 100%
-      height: 300px
-      background: url("images/fill_bg.png") no-repeat
-    
-    .divider
-      width: span(12)
-      
     .details
+      display: table
+      width: 100%
+      
       a
         +button(small)
       
@@ -290,35 +354,36 @@ a
         font-size: $p_size * 0.8
         margin-bottom: 2px
       
-      section:first-child
-        +half(left)
+      section
+        width: 50%
+        display: table-cell
+        padding: $padding
+        vertical-align: top
         
-      section:last-child
-        +half(right)
+        &:first-child
+          border-right: border()
         
       .social_share
         display: inline
         margin-right: $margin - 5
-    
-    .filler
-      clear: both
       
-    &.front
-      h2
-        text-transform: none
-        margin-bottom: $margin * .5
+    
       
     .pagination
       text-transform: uppercase
       
-    #gallery
-      margin-bottom: $box_margin
-      
     article footer
       +clearfix
       +box-sizing(border-box)
-      border-bottom: 1px dotted black
+      border-bottom: border()
       
+      
+      
+      
+      
+      
+      
+    // code 
     
     .code_header
       background: url('images/footer_bg.png')
@@ -342,25 +407,94 @@ a
         padding: $padding * .5
         background: none
         
-        
-          
-    .comment
-      .avatar
-        display: inline-block
-        img
-          height: 26px
-          width: 26px
-      
-      .details
-        display: inline-block
-        margin-bottom: $margin * .25
-        
-      h4
-        display: inline-block
+    
+    
+    
+    
+    
+    // media
     
     .video, #masonry, .gallery
-      border-bottom: 1px dotted black
+      border-bottom: border()
       +box-sizing(border-box)
+      
+    #gallery
+      margin-bottom: $box_margin
+    
+    
+    
+    
+    
+    
+    
+    // comments
+    
+    #comments 
+      .comment
+        padding-bottom: 0
+        .avatar
+          display: inline-block
+          img
+            height: 26px
+            width: 26px
+      
+        .details
+          display: inline-block
+          margin-bottom: $margin * .25
+        
+        h4
+          display: inline-block
+    
+    
+    
+    
+    
+    
+    
+    
+    // form
+    
+    form
+      label
+        text-transform: uppercase
+        font-size: $p_size
+
+      div
+        margin-bottom: $margin * .5
+
+      a.submit_button
+        +button(large)
+
+      textarea
+        +input
+        height: 150px
+        width: 100%
+        min-height: 35px
+        resize: vertical
+
+      input
+        &[type=text], &[type=email], &[type=password]
+          +input
+          margin-right: $margin * .25
+
+        &[type=checkbox]
+          margin-right: $margin * .5
+
+        &[type=hidden]
+          display: none
+
+      input, textarea
+        &.error, &.error:focus
+          border: 1px dotted $error_color !important
+      
+      
+      
+      
+      
+      
+      
+      
+    // footer
     
     #content_footer
       +clearfix
@@ -404,15 +538,14 @@ a
           margin-right: $margin * .25
       
       .top
-        color: $text_color
         display: table
-        width: 100%
+        color: $text_color
         margin-top: $margin
         
         .categories
           width: 66%
           display: table-cell
-          border-right: 1px dotted white
+          border-right: border()
           padding: 0 $margin
         
           li
@@ -456,48 +589,4 @@ a
           a
             color: black
             opacity: 1
-
-#sidebar
-  input
-    +input
-    width: 100%
-    
-#content
-  input
-    &[type=text], &[type=email], &[type=password]
-      +input
-
-#sidebar, #content
-  form
-    label
-      text-transform: uppercase
-      font-size: $p_size
-  
-    div
-      margin-bottom: $margin * .5
-    
-    a.submit_button
-      +button(large)
-
-    textarea
-      +input
-      height: 150px
-      width: 100%
-      min-height: 35px
-      resize: vertical
-    
-    input
-      &[type=text], &[type=email], &[type=password]
-        +input
-        margin-right: $margin * .25
-        
-      &[type=checkbox]
-        margin-right: $margin * .5
-        
-      &[type=hidden]
-        display: none
-        
-    input, textarea
-      &.error, &.error:focus
-        border: 1px dotted $error_color !important
       

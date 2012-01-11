@@ -4,7 +4,7 @@
 <section id="content" class="single">
 	<?php if (have_posts()) : ?>
 
-		<h3>Search Results For: <?php the_search_query(); ?></h3>
+		<h3 class="header">Search Results For: <?php the_search_query(); ?></h3>
 
 		<?php include (TEMPLATEPATH . '/_/inc/nav.php' ); ?>
 

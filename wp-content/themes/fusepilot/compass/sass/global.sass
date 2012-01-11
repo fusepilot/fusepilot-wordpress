@@ -13,7 +13,13 @@ $p_size: 10px
 $radius: 3px
 $error_color: rgb(255, 82, 85)
 
+$inset_color: hsl(0, 0%, 11%)
+$dark_inset_color: hsl(0, 0%, 7%)
+
 $site_width: 1000px
+
+@function border($color:black)
+  @return 1px dotted $color
 
 @mixin box_container($scheme)
   @if $scheme == dark
@@ -31,7 +37,7 @@ $site_width: 1000px
 @mixin half($side)
   @if $side == left
     width: span(6) + $padding * .5
-    border-right: 1px dotted black
+    border-right: border()
   @else if $side == right
     width: span(6) + $padding * .5 - 1
     
@@ -41,23 +47,23 @@ $site_width: 1000px
   
   padding: $padding
   
-@mixin inset
+@mixin inset($color:$inset_color)
   +box-shadow(rgba(0, 0, 0, 0.125) 1px 1px inset, rgba(255,255,255,.125) -1px -1px inset)
   +border-radius($radius)
   +box-sizing(border-box)
-  background: #1C1C1C
-  color: #c2c2c2
+  background: $color
+  color: $text_color
       
-@mixin input
-  +inset
+@mixin input($color:$inset_color)
+  +inset($color)
   padding: 10px
-  border: 1px solid rgba(black, 0)
+  border: border(transparent)
   
   &:focus
     outline: none
-    border: 1px dotted $highlight
+    border: border($highlight)
     
-@mixin button($size)
+@mixin button($size, $color:$inset_color)
   @if $size == small
     font-size: 8px
     padding: 0.2em 0.8em 
@@ -70,7 +76,7 @@ $site_width: 1000px
     padding: 0.6em 0.6em
     font-size: 15px
     
-  +inset
+  +inset($color)
   display: inline-block
   text-transform: uppercase
   cursor: pointer

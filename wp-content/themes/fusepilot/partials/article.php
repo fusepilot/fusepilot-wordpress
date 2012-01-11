@@ -18,8 +18,7 @@
 	  <?php include (TEMPLATEPATH . '/partials/messages.php' );?>
 	  
 		<?php the_content(); ?>
-		<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>				
-		<!-- <?php edit_post_link('Edit this entry','','.'); ?> -->
+		<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
 	</div>
 	
 	<footer>

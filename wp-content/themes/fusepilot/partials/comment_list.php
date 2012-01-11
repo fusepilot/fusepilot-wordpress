@@ -13,7 +13,7 @@
 	
 	?>
 
-	<div class="comments">
+	<div id="comments">
 		<?php foreach($comments as $comment): ?>
 		  <div class="comment">
 		    <div class="avatar">
