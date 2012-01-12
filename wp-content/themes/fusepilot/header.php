@@ -84,8 +84,6 @@
 	<!-- CSS: screen, mobile & print are all in the same file -->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	
-	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/twilight.css">
-	
 	<script src="<?php bloginfo('template_directory'); ?>/_/js/jquery-1.7.1.min.js"></script>
 	<!-- all our JS is at the bottom of the page, except for Modernizr. -->
 	<script src="<?php bloginfo('template_directory'); ?>/_/js/modernizr-1.7.min.js"></script>
@@ -96,14 +94,17 @@
 	
 	<script src="<?php bloginfo('template_directory'); ?>/_/js/jquery.nivo.slider.pack.js"></script>
 	
-	<script src="<?php bloginfo('template_directory'); ?>/_/js/highlight.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/_/js/jquery.validate.min.js"></script>
+	
+	<!--<script src="<?php bloginfo('template_directory'); ?>/_/js/highlight.js"></script>
+	
 	<script src="<?php bloginfo('template_directory'); ?>/_/js/highlight.jquery.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/_/js/languages/ruby.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/_/js/languages/python.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/_/js/languages/javascript.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/_/js/languages/cpp.js"></script>
-	<script src="<?php bloginfo('template_directory'); ?>/_/js/languages/php.js"></script>
-	<script src="<?php bloginfo('template_directory'); ?>/_/js/jquery.validate.min.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/_/js/languages/php.js"></script> -->
+
 	
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 

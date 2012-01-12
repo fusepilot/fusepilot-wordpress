@@ -27,8 +27,6 @@
   
   
   
-  
-  
 
   function code_shortcode( $atts, $content = null ) {
     //$content = force_balance_tags( $content );
@@ -45,7 +43,13 @@
     $code = '';
     $class = '';
     if($file) $code .= '<h5 class="code_header">'. $file .'</h5>';
-    if($language) $class = ' class="' . $language . '"';
+    if($language) { 
+      $class = ' class="' . $language . '"';
+      
+      //wp_enqueue_script("highlight", get_template_directory_uri() . "/_/js/highlight.js");
+      //wp_enqueue_script("highlight_jquery", get_template_directory_uri() . "/_/js/highlight.jquery.js", array("jquery"));
+      //wp_enqueue_script($language, get_template_directory_uri() . "/_/js/languages/" . $language . ".js");
+    }
     
     //$content = htmlentities($content);
     // $content = str_replace(array('</p>', '<br />'), '', $content);
@@ -59,6 +63,8 @@
     // $geshi->set_tab_width(20);
     // $geshi->enable_line_numbers(GESHI_FANCY_LINE_NUMBERS);
     // $geshi->enable_classes();'
+    
+    
     
     $code .= '<pre><code>';
     $code .= $content;

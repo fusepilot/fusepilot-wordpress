@@ -1,19 +1,18 @@
 /* trigger when page is ready */
 
 $(document).ready(function (){
-  
-  $('input[type="submit"]', '#sidebar, #content').each(function(){
-    $(this).after(unescape('<a class="submit_button"></a>'));
-    $(this).hide();
-    $(this).next('a.submit_button').text($(this).val()).click(function(){
-        $(this).prev('input[type="submit"]').click();
-    });
-  });
-
 	Cufon.replace('h1, h2, h3, h4, #content .links, .pagination a, #sidebar #menu, .submit_button, blockquote, .message, a.back', {
     hover: true,
     fontStyle: "italic",
   });
+  
+  $('input[type="submit"]', '#sidebar, #content').each(function(){
+     $(this).after(unescape('<a class="submit_button"></a>'));
+     $(this).hide();
+     $(this).next('a.submit_button').text($(this).val()).click(function(){
+         $(this).prev('input[type="submit"]').click();
+     });
+   });
   
   $(".message.flash").delay(6000).slideUp();
   
@@ -70,7 +69,7 @@ $(document).ready(function (){
 $(window).load(function() {
   placeFooter();
   
-  $('pre code:not(.no-highlight)').highlight();
+  
 });
 
 $(window).resize(function() {
