@@ -1,7 +1,14 @@
 <?php get_header(); ?>
-
-	<h2><?php _e('Error 404 - Page Not Found','html5reset'); ?></h2>
-
 <?php get_sidebar(); ?>
+
+<section id="content" class="error">
+  
+  <div class="entry-content">
+    <img src="<?php bloginfo('template_directory'); ?>/images/404.png" />
+  </div>
+  
+  <?php include (TEMPLATEPATH . '/partials/content_footer.php' );?>
+
+</section>
 
 <?php get_footer(); ?>
