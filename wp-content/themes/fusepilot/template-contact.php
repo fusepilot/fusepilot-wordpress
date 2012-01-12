@@ -76,7 +76,7 @@ if(isset($_POST['submitted'])) {
 <?php if(isset($emailSent) && $emailSent == true) { ?>
 
 	<div class="thanks">
-		<h2>Thanks, <?=$name;?></h2>
+		<h3>Thanks, <?=$name;?></h3>
 		<p>Your email was successfully sent. I will be in touch soon.</p>
 	</div>
 
@@ -86,7 +86,7 @@ if(isset($_POST['submitted'])) {
 	
 	<?php while (have_posts()) : the_post(); ?>
 	  <header>
-  		<h2><?php the_title(); ?></h2>
+  		<h3><?php the_title(); ?></h3>
 		</header>
 		
 		<div class="entry-content">

@@ -34,19 +34,6 @@ $site_width: 1000px
   +box-sizing(border-box)
   margin-bottom: $box_margin
   
-@mixin half($side)
-  @if $side == left
-    width: span(6) + $padding * .5
-    border-right: border()
-  @else if $side == right
-    width: span(6) + $padding * .5 - 1
-    
-  +box-sizing(border-box)
-  display: inline
-  float: left
-  
-  padding: $padding
-  
 @mixin inset($color:$inset_color)
   +box-shadow(rgba(0, 0, 0, 0.125) 1px 1px inset, rgba(255,255,255,.125) -1px -1px inset)
   +border-radius($radius)

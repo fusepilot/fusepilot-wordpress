@@ -20,23 +20,9 @@
         <?php endforeach; ?>
       </ul>
     </div>
-    <div class="twitter">
-      <h3>Twitter</h3>
-      <ul>
-        <li>
-          <div class="tweet">
-            <p>This is a tweet.</p>
-            <p class="details">About 3 hours ago</p>
-          </div>
-        </li>
-        <li>
-          <div class="tweet">
-            <p>This is another tweet.</p>
-            <p class="details">About 3 hours ago</p>
-          </div>
-        </li>
-      </ul>
-    </div>
+    
+    <?php include (TEMPLATEPATH . '/partials/tweets.php' );?>
+    
   </div>
   <div class="clear"></div>
   <div class="bottom">

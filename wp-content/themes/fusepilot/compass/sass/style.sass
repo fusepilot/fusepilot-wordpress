@@ -177,7 +177,10 @@ a
     +scrollbar
     +column(12, true)
     +box-sizing(border-box)
-    padding-top: 55px
+    
+    
+    
+    
     
     
     
@@ -193,6 +196,60 @@ a
     .divider
       width: span(12)
       
+    .pagination
+      text-transform: uppercase
+      
+    .message
+      +inset
+      padding: $padding * .5
+      margin-bottom: $margin
+      font-size: 1.2em
+      color: black
+
+      &.info, &.flash
+        background: url("images/highlight_box_bg.gif")
+
+      &.error
+        background: $error_color   
+      
+      
+      
+      
+      
+      
+    // details
+    
+    .details
+      a
+        +button(small)
+
+      p
+        text-transform: uppercase
+        font-size: $p_size * 0.8
+        margin-bottom: 2px
+
+
+      &.expanded
+        display: table
+        width: 100%
+
+        section
+          width: 50%
+          display: table-cell
+          padding: $padding
+          vertical-align: top
+
+          &:first-child
+            border-right: border()
+
+        .social_share
+          display: inline
+          margin-right: $margin - 5
+      
+      
+      
+      
+      
       
       
       
@@ -200,44 +257,33 @@ a
     // specific for page
     
     &.front
-      padding-top: 0
-      
       h2
         text-transform: none
-        margin-bottom: $margin * .5
         
-      
-      
+    &.single
+      article header
+        padding-top: 70px
+    
+    &.index, &.archive
+      h3.header
+        padding-top: 70px
+        
+    &.page
+      header
+        padding-top: 70px
       
       
     // add background to content element
     
-    header, .header, #comments .comment, .comment_form, .pagination, .contact_form, .messages
+    header, .header, #comment_form, #comments .comment, .comment_form, .pagination, .contact_form, .messages
       border-bottom: border()
       padding: $margin
       +clearfix
       clear: both
       +box-sizing(border-box)
     
-    .entry-content, .comment_form, .contact_form, header, article footer, h3.header, .pagination, h3#comments, #comments .comment, .messages
+    .entry-content, #comment_form, .comment_form, .contact_form, header, article footer, h3.header, .pagination, h3#comments, #comments .comment, .messages
       background: url("images/content_bg.png")
-    
-    .comment_form
-      h3
-        margin-bottom: $margin * .5
-    
-    .message
-      +inset
-      padding: $padding * .5
-      margin-bottom: $margin
-      font-size: 1.2em
-      color: black
-      
-      &.info, &.flash
-        background: url("images/highlight_box_bg.gif")
-      
-      &.error
-        background: $error_color
     
     
     
@@ -341,36 +387,7 @@ a
           &.last
             margin-right: 0 !important
             clear: right
-      
-    .details
-      display: table
-      width: 100%
-      
-      a
-        +button(small)
-      
-      p
-        text-transform: uppercase
-        font-size: $p_size * 0.8
-        margin-bottom: 2px
-      
-      section
-        width: 50%
-        display: table-cell
-        padding: $padding
-        vertical-align: top
-        
-        &:first-child
-          border-right: border()
-        
-      .social_share
-        display: inline
-        margin-right: $margin - 5
-      
-    
-      
-    .pagination
-      text-transform: uppercase
+            
       
     article footer
       +clearfix
@@ -413,10 +430,6 @@ a
     
     
     // media
-    
-    .video, #masonry, .gallery
-      border-bottom: border()
-      +box-sizing(border-box)
       
     #gallery
       margin-bottom: $box_margin
@@ -445,7 +458,9 @@ a
         h4
           display: inline-block
     
-    
+    #comment_form
+      h3
+        margin-bottom: $margin * .5
     
     
     
@@ -562,15 +577,18 @@ a
           padding: 0 $margin
           
           .tweet
-            +inset
-            padding: $padding * .5
+            +button(medium)
+            display: block
             margin-bottom: $margin * .5
             
             p
               margin-bottom: 0
+              text-transform: none
               
               &.details
                 color: $dark_text_color
+                text-transform: uppercase
+                font-size: $p_size * 0.8
     
     #masonry
       li:not(:last-child)

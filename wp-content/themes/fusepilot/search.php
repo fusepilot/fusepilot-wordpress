@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
 
-<section id="content" class="single">
+<section id="content" class="index">
 	<?php if (have_posts()) : ?>
 
 		<h3 class="header">Search Results For: <?php the_search_query(); ?></h3>

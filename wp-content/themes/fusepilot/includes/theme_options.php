@@ -36,6 +36,11 @@ function theme_options_do_page() {
 			<?php settings_fields( 'fusepilot_options' ); ?>
 			<?php $options = get_option( 'fusepilot_theme_options' ); ?>
 
+
+
+
+
+
 			<table class="form-table">
 				<tr valign="top"><th scope="row"><?php _e( 'Front page video', 'fusepilottheme' ); ?></th>
 					<td>
@@ -44,6 +49,23 @@ function theme_options_do_page() {
 					</td>
 				</tr>
 			</table>
+			
+			
+			
+			
+			<table class="form-table">
+				<tr valign="top"><th scope="row"><?php _e( 'Twitter ID', 'fusepilottheme' ); ?></th>
+					<td>
+						<input id="fusepilot_theme_options[twitter_id]" class="regular-text" type="text" name="fusepilot_theme_options[twitter_id]" value="<?php esc_attr_e( $options['twitter_id'] ); ?>" />
+						<label class="description" for="fusepilot_theme_options[twitter_id]"><?php _e( 'Twitter ID', 'fusepilottheme' ); ?></label>
+					</td>
+				</tr>
+			</table>
+
+
+
+
+
 
 			<p class="submit">
 				<input type="submit" class="button-primary" value="<?php _e( 'Save Options', 'fusepilottheme' ); ?>" />

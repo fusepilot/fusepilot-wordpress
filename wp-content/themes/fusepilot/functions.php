@@ -5,6 +5,7 @@
   require_once("includes/comment_errors.php");
   require_once("includes/theme_options.php");
   require_once("includes/flash.php");
+  require_once("includes/social.php");
   
   global $settings;
   $settings = get_option( 'fusepilot_theme_options' );
@@ -47,6 +48,12 @@
     		'before_title'  => '<h2>',
     		'after_title'   => '</h2>'
     	));
+    }
+    
+    function format_date($date) {
+      $w3c_date = date(DATE_W3C, $date);
+      $styled_date = date('M jS Y \a\t h:ia', strtotime($date));
+      return "<time datetime=\"{$w3c_date}\" pubdate class=\"updated\">{$styled_date}</time>";
     }
     
     function remove_dashboard_widgets() {

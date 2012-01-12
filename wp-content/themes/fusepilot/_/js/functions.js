@@ -15,7 +15,7 @@ $(document).ready(function (){
     fontStyle: "italic",
   });
   
-  $(".message.flash").delay(3000).slideUp();
+  $(".message.flash").delay(6000).slideUp();
   
   $("#masonry .masonry_col").hover(function() {
     var $col, $overlay, title;

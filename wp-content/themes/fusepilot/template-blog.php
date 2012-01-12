@@ -11,9 +11,7 @@ Template Name: Blog
 
 <section id="content" class="index">
   
-  <header>
-    <h2>Blog Index</h2>
-  </header>
+  <h3 class="header">Blog Index</h3>
   
   <?php
 	//query posts

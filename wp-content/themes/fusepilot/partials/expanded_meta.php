@@ -1,4 +1,4 @@
-<div class="details">
+<div class="details expanded">
   <section>
     <p>
       <span>Posted: </span><time datetime="<?php echo date(DATE_W3C); ?>" pubdate class="updated"><?php the_time('M jS Y \a\t h:ia') ?></time>
@@ -13,7 +13,7 @@
       <?php endif; ?>
     </p>
     <p>
-      <?php if(count(get_the_tags()) > 0): // > 1 to compensate for 'uncategorized' ?>
+      <?php if(count(get_the_tags()) > 1): // > 1 to compensate for 'uncategorized' ?>
         <span>Tags: </span><?php foreach(get_the_tags() as $index=>$tag): ?>
         <a href="<?php echo get_tag_link( $tag->term_id ); ?>"><?php echo $tag->name; ?></a>
         <?php endforeach; ?>
