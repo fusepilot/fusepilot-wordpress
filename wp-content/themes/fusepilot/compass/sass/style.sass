@@ -391,7 +391,12 @@ a
           &.last
             margin-right: 0 !important
             clear: right
-            
+      
+      .vimeo
+        margin-left: $padding * -1
+        border-top: border()
+        border-bottom: border()
+        
       
     article footer
       +clearfix
@@ -438,7 +443,29 @@ a
     #gallery
       margin-bottom: $box_margin
     
-    
+    #masonry 
+      .masonry_row
+      
+        .masonry_col
+          float: left
+          display: inline-block
+          position: relative
+          
+          &:not(:last-child)
+            margin-right: 1px
+      
+          .masonry_col_overlay
+            
+            position: absolute
+            padding: 20px
+            background: url("images/highlight_box_bg.gif")
+            display: none
+            opacity: .75
+            +box-sizing(border-box)
+            color: black
+            a
+              color: black
+              opacity: 1
     
     
     
@@ -505,6 +532,9 @@ a
       input, textarea
         &.error, &.error:focus
           border: 1px dotted $error_color !important
+      
+      
+      
       
       
       
@@ -593,22 +623,4 @@ a
                 color: $dark_text_color
                 text-transform: uppercase
                 font-size: $p_size * 0.8
-    
-    #masonry
-      li:not(:last-child)
-        margin-right: 1px
-        +float-left
-      .masonry_row .masonry_col
-        position: relative
-        .masonry_col_overlay
-          position: absolute
-          padding: 20px
-          background: url("images/highlight_box_bg.gif")
-          display: none
-          opacity: .75
-          +box-sizing(border-box)
-          color: black
-          a
-            color: black
-            opacity: 1
       
