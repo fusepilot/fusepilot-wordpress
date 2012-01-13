@@ -13,23 +13,22 @@
 @import 'compass/css3/border-radius'
 @import 'dark'
 @import 'compass/css3/shared'
+@import 'compass/css3/background-size'
 
 @import 'reset'
 @import 'nivo'
 @import 'global'
 
 html, body
+  border-top: 2px solid $highlight
   height: 100%
-  background: url("images/background.jpg") center top repeat-x
+  background: url("images/background.jpg") no-repeat center top
   background-color: #181818 
   font-family: Verdana
   color: $text_color
   line-height: 1em
+  +background-size(1600px 1400px)
 
-/* using local fonts? make sure to read up on Paul Irish's 
- *  Bulletproof @font-face syntax: http://mky.be/font-face/bulletproof/ */
-
-/* we like off-black for text */
 
 h1 
   font-size: $p_size * 3
@@ -138,7 +137,6 @@ form
   #sidebar
     +box-sizing(border-box)
     +column(4)
-    border-top: 4px solid $highlight
     text-align: right
     
     
@@ -146,6 +144,9 @@ form
     
     
     // general
+    
+    #search_form, #feeds
+      border-bottom: border(rgba(33,33,33,1))
     
     ul, .category_list
       border-bottom: border(rgba(33,33,33,1))
@@ -413,8 +414,8 @@ form
         padding: 0 $padding
         
         li
-          background: url("images/plus.gif") no-repeat 0px 5px
-          padding-left: $padding * .75
+          background: url("images/zero.png") no-repeat 0px 6px
+          padding-left: $padding * .65
           font-size: $p_size
           
       span
@@ -497,12 +498,14 @@ form
     
     .code_header
       //background: url('images/footer_bg.png')
+      +inset
       background: $text_color
       +box-sizing(border-box)
       color: $dark_text_color
       padding: $padding * .15 $padding * .5
       text-transform: none
       +border-top-radius($radius)
+      +border-bottom-radius(0)
       margin-bottom: 0 !important
       
     pre
