@@ -114,22 +114,26 @@ $(document).ready(function (){
   
   // validate comment form before submission
   
-  $("#commentform").validate({
-    invalidHandler: function(form, validator) {
-      $error = $("<div class=\"message error\"></div>")
-      $form = $(".comment_form");
-      var errors = validator.numberOfInvalids();
-      $error.html("Please fill out the fields marked in red.");
-      $form.not(".invalid").prepend($error);
-      $form.addClass("invalid");
-      Cufon.replace($error, {fontStyle: "italic"});
-      if(errors) {
-        
+  $("#commentform, #search_form").each(function() {
+    $(this).validate({
+      invalidHandler: function(form, validator) {
+        $error = $("<div class=\"message error\"></div>")
+        $form = $(".comment_form");
+        var errors = validator.numberOfInvalids();
+        $error.html("Please fill out the fields marked in red.");
+        $form.not(".invalid").prepend($error);
+        $form.addClass("invalid");
+        Cufon.replace($error, {fontStyle: "italic"});
+        if(errors) {
+
+        }
+      }, errorPlacement:function(error, element) {
+        return;
       }
-    }, errorPlacement:function(error, element) {
-      return;
-    }
-  });
+    });
+  })
+  
+  
   
   placeFooter();
 });
