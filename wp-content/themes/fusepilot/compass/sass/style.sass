@@ -496,18 +496,23 @@ form
     // code 
     
     .code_header
-      background: url('images/footer_bg.png')
+      //background: url('images/footer_bg.png')
+      background: $text_color
       +box-sizing(border-box)
       color: $dark_text_color
       padding: $padding * .15 $padding * .5
       text-transform: none
-      +border-radius($radius)
+      +border-top-radius($radius)
+      margin-bottom: 0 !important
       
     pre
       overflow: auto
       width: 660px
       margin-bottom: $margin
       +inset
+      
+      &.has_header
+        +border-top-radius(0)
         
       code
         white-space: pre

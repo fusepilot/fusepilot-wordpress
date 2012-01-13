@@ -64,11 +64,15 @@
     // $geshi->enable_line_numbers(GESHI_FANCY_LINE_NUMBERS);
     // $geshi->enable_classes();'
     
+    $pre_class = "";
     
+    if($file) {
+      $pre_class = " class=\"has_header\"";
+    }
     
-    $code .= '<pre><code>';
+    $code .= "<pre{$pre_class}><code>";
     $code .= $content;
-    $code .= '</code></pre>';
+    $code .= "</code></pre>";
     return $code;
   }
   add_shortcode( 'code', 'code_shortcode');
