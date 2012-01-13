@@ -30,16 +30,16 @@
       $image = wp_get_attachment_image_src(get_field('teaser'), $image_size);
     ?>
     
-    <div class="masonry_col">
+    <a class="masonry_col" href="<?php the_permalink() ?>">
       <div class="masonry_col_overlay">
-        <a href="<?php the_permalink() ?>">
           <h3><?php the_title() ?></h3>
-          <?php include (TEMPLATEPATH . '/partials/meta.php' ); ?>
-        </a>
+        
+      <?php include (TEMPLATEPATH . '/partials/masonry_meta.php' ); ?>
       </div>
   
       <img src="<?php echo $image[0]; ?>" alt="" />
-    </div>
+      
+    </a>
   <?php endforeach; ?>
   </div>
   
