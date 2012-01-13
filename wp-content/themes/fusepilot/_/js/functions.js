@@ -1,10 +1,23 @@
 /* trigger when page is ready */
 
 $(document).ready(function (){
+  
+  
+  
+  
+  
+  // replace fonts
+  
 	Cufon.replace('h1, h2, h3, h4, #content .links, .pagination a, #sidebar #menu, .submit_button, blockquote, .message, a.back', {
     hover: true,
     fontStyle: "italic",
   });
+  
+  
+  
+  
+  
+  // replace form button with styleble sumbit button
   
   $('input[type="submit"]', '#sidebar, #content').each(function(){
      $(this).after(unescape('<a class="submit_button"></a>'));
@@ -13,8 +26,20 @@ $(document).ready(function (){
          $(this).prev('input[type="submit"]').click();
      });
    });
+   
+   
+   
+   
+   
+  // hide flash after delay
   
   $(".message.flash").delay(6000).slideUp();
+  
+  
+  
+  
+  
+  // add overlay to masonry
   
   $("#masonry .masonry_col").hover(function() {
     var $col, $overlay, title;
@@ -26,6 +51,36 @@ $(document).ready(function (){
     $overlay.toggle();
   });
   
+  
+  
+  
+  
+  // sets the width of the category meters
+  
+  $category_list = $("#sidebar .category_list");
+  max_count = $category_list.data("max-count");
+  widest_link = 0;
+  max_width = 0;
+  category_list_width = $(".category_list").width()
+  
+  $(".category_link", $category_list).each(function() {
+    widest_link = Math.max(widest_link, $(this).width());
+  });
+  
+  max_width = category_list_width - widest_link - 20;
+  
+  $(".category", $category_list).each(function() {
+    $category = $(this);
+    $meter = $(".category_meter", $category);
+    count = $category.data("count");
+    percent = count / max_count;
+    $meter.width(percent * max_width);
+  })
+  
+  
+  
+  // nivo galleries
+  
   $("#gallery").nivoSlider({
     effect: "boxRainGrow",
     directionNavHide: false,
@@ -33,6 +88,13 @@ $(document).ready(function (){
     boxRows: 3,
     captionOpacity: 0.0
   });
+  
+  
+  
+  
+  
+  
+  // collect nivo controls into a div to be styled
   
   $(".nivoSlider").each(function() {
     var $controls, $slider;
@@ -45,6 +107,12 @@ $(document).ready(function (){
       $controls.append($(this));
     });
   });
+  
+  
+  
+  
+  
+  // validate comment form before submission
   
   $("#commentform").validate({
     invalidHandler: function(form, validator) {

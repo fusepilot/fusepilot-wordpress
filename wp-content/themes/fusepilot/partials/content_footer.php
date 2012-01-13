@@ -8,13 +8,16 @@
         $args=array(
           'orderby' => 'count',
           'order' => 'desc',
+          'exclude' => "1"
           );
         $categories=get_categories($args);
+        
+        $max_count = $categories[0]->count;
       ?>
 
-      <ul>
+      <ul class="category_list" data-max-count="<?php echo $max_count; ?>">
         <?php foreach($categories as $category): ?>
-        <li>
+        <li class="category_item">
           <a href="<?php echo get_category_link( $category->term_id ); ?>" data-count="<?php echo $category->count ?>"><?php echo $category->name?></a>
         </li>
         <?php endforeach; ?>
