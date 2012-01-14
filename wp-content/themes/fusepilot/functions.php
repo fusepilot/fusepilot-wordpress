@@ -10,8 +10,6 @@
   global $settings;
   $settings = get_option( 'fusepilot_theme_options' );
   
-  global $title;
-  
   // Translations can be filed in the /languages/ directory
   load_theme_textdomain( 'html5reset', TEMPLATEPATH . '/languages' );
 
@@ -70,7 +68,6 @@
 
     }
     add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
-    
     
     function is_page_current($page_id) {
       $page = get_page($page_id);
