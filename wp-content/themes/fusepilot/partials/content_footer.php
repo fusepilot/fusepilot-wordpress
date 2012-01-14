@@ -1,4 +1,5 @@
 <div class="fill"></div>
+<div class="fill_bg"></div>
 <footer id="content_footer">
   <div class="top">
     <div class="categories">

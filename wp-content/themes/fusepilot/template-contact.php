@@ -93,43 +93,23 @@ if(isset($_POST['submitted'])) {
 		  <?php the_content(); ?>
 		</div>
 		  
-		<div class="contact_form">
-  		<?php if(isset($hasError) || isset($captchaError)) { ?>
-  			<p class="error">There was an error submitting the form.<p>
-  		<?php } ?>
+		<div id="contact_form">
 	
   		<form action="<?php the_permalink(); ?>" id="contactForm" method="post">
   		  <div>
-    			<input type="text" name="contactName" id="contactName" tabindex="1" value="<?php if(isset($_POST['contactName'])) echo $_POST['contactName'];?>" class="requiredField" />
-    			<?php if($nameError != '') { ?>
-    				<span class="error"><?=$nameError;?></span> 
-    			<?php } ?>
-    			<label for="contactName">Name</label>
+    			<input type="text" name="contactName" id="contactName" placeholder="Name*" tabindex="1" class="required" />
   			</div>
 			
   			<div>
-    			<input type="text" name="email" id="email" tabindex="2" value="<?php if(isset($_POST['email']))  echo $_POST['email'];?>" class="requiredField email" />
-    			<?php if($emailError != '') { ?>
-    				<span class="error"><?=$emailError;?></span>
-    			<?php } ?>
-    			<label for="email">Email</label>
+    			<input type="text" name="email" id="email" placeholder="Email*" tabindex="2" class="required email" />
   			</div>
 			
   			<div>
-    			<label for="commentsText">Comments</label>
-    			<textarea name="comments" id="commentsText" tabindex="3"rows="20" cols="30" class="requiredField"><?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['comments']); } else { echo $_POST['comments']; } } ?></textarea>
-    			<?php if($commentError != '') { ?>
-    				<span class="error"><?=$commentError;?></span> 
-    			<?php } ?>
+    			<textarea name="comments" id="commentsText" tabindex="3"rows="20" cols="30" class="required"></textarea>
     		</div>
   		
     		<div>
     			<input type="checkbox" name="sendCopy" id="sendCopy" tabindex="4" value="true"<?php if(isset($_POST['sendCopy']) && $_POST['sendCopy'] == true) echo ' checked="checked"'; ?> /><label for="sendCopy">Send a copy of this email to yourself</label>
-    		</div>
-  		
-    		<div>
-    			<input type="text" name="checking" id="checking" tabindex="5" class="screenReader" value="<?php if(isset($_POST['checking']))  echo $_POST['checking'];?>" />
-    			<label for="checking" class="screenReader">If you want to submit this form, do not enter anything in this field</label>
     		</div>
   		
     		<div>

@@ -1,4 +1,4 @@
-<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+<article class="<?php echo get_post_type(); ?>">
   
   
   
@@ -9,7 +9,7 @@
   
   <?php if(get_field('teaser')): ?>
     <?php $image_id = get_field('teaser'); 
-		echo wp_get_attachment_image($image_id, 'teaser'); ?>
+		echo wp_get_attachment_image($image_id, 'masonry-triple'); ?>
   <?php endif; ?>
   
 	<div class="entry-content">

@@ -114,7 +114,7 @@ $(document).ready(function (){
   
   // validate comment form before submission
   
-  $("#commentform, #search_form").each(function() {
+  $("#commentform, #search_form, #contactForm").each(function() {
     $(this).validate({
       invalidHandler: function(form, validator) {
         $error = $("<div class=\"message error\"></div>")
@@ -140,8 +140,6 @@ $(document).ready(function (){
 
 $(window).load(function() {
   placeFooter();
-  
-  
 });
 
 $(window).resize(function() {
@@ -150,5 +148,5 @@ $(window).resize(function() {
 
 function placeFooter() {
   footer_height = $('#content_footer').outerHeight();
-  $('.fill').height(footer_height);
+  $('.fill').height(footer_height - 1);
 }

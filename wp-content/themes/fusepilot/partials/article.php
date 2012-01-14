@@ -1,4 +1,4 @@
-<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+<article class="<?php echo get_post_type(); ?>">
 
   <?php if(get_field('gallery')): ?>
     <div id="gallery">

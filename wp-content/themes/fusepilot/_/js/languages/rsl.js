@@ -37,7 +37,7 @@ hljs.LANGUAGES.rsl  = {
                     'environment': 1,
                     'exp': 1,
                     'faceforward': 1,
-                    'filterstep': 1,
+                    'step': 1,
                     'floor': 1,
                     'format': 1,
                     'fresnel': 1,

@@ -82,15 +82,14 @@ a
 
 form
   label
-    text-transform: uppercase
     font-size: $p_size
 
   div
     margin-bottom: $margin * .5
-
+  
   a.submit_button
-    +button(large)
-
+    text-transform: uppercase
+  
   textarea
     +input
     height: 150px
@@ -125,7 +124,7 @@ form
   min-height: 100%
   width: 100%
   position: relative
-  background: url("images/column_bg_2.png") repeat-y
+  background: url("images/column_bg.png") repeat-y
   +container
   
   
@@ -214,11 +213,11 @@ form
         input
           margin-bottom: $margin * .25
           width: 100%
-          +input($dark_inset_color)
+          //+input($dark_inset_color)
         
         a
-          background: hsl(0, 0%, 7%)
-          +button(large, $dark_inset_color)
+          //background: hsl(0, 0%, 7%)
+          //+button(large, $dark_inset_color)
       
     h3
       padding: $margin
@@ -273,10 +272,7 @@ form
     
     // general 
     
-    .fill
-      width: 100%
-      height: 300px
-      background: url("images/fill_bg.png") no-repeat
+    
     
     .divider
       width: span(12)
@@ -364,15 +360,26 @@ form
       
     // add background to content element
     
-    header, .header, #comment_form, #comments .comment, .comment_form, .pagination, .contact_form, .messages
+    header, .header, #comment_form, #comments .comment, #contact_form, .comment_form, .pagination, .contact_form, .messages, h3#comments
       border-bottom: border()
       padding: $margin
       +clearfix
       clear: both
       +box-sizing(border-box)
     
-    .entry-content, #comment_form, .comment_form, .contact_form, header, article footer, h3.header, .pagination, h3#comments, #comments .comment, .messages
-      background: url("images/content_bg.png")
+    //.entry-content, #comment_form, #contact_form, .comment_form, .contact_form, header, article footer, h3.header, .pagination, h3#comments, #comments .comment, .messages
+      //background: url("images/content_bg.png")
+    
+    
+    
+    
+    
+    
+    // form submit button
+    
+    form a.submit_button
+      +button(large)
+    
     
     
     
@@ -570,8 +577,11 @@ form
     #comments 
       .comment
         padding-bottom: 0
+        
         .avatar
-          display: inline-block
+          display: inline
+          margin-right: $margin * .25
+          
           img
             height: 26px
             width: 26px
@@ -586,7 +596,9 @@ form
     #comment_form
       h3
         margin-bottom: $margin * .5
-    
+        
+      .required_mark
+        color: red
       
       
       
@@ -595,13 +607,20 @@ form
       
     // footer
     
+    
+    .fill
+      width: 100%
+      height: 300px
+    
     #content_footer
       +clearfix
       width: 700px
       position: absolute
       bottom: 0
       color: black
-
+      border-top: border()
+      //background: url("images/content_bg.png") top
+      
       h3
         margin-bottom: $margin * .5
 

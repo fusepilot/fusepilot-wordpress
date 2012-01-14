@@ -28,18 +28,15 @@
 		<?php else : ?>
 
 			<div>
-				<input type="text" name="author" id="author" class="required" value="<?php echo esc_attr($comment_author); ?>" size="60" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
-				<label for="author">Name <?php if ($req) echo "(required)"; ?></label>
+				<input type="text" name="author" id="author" placeholder="Full Name*" class="required" value="<?php echo esc_attr($comment_author); ?>" size="60" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
 			</div>
 
 			<div>
-				<input type="text" name="email" id="email" class="required" value="<?php echo esc_attr($comment_author_email); ?>" size="60" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
-				<label for="email">Mail (will not be published) <?php if ($req) echo "(required)"; ?></label>
+				<input type="text" name="email" id="email" placeholder="Email* (Will not be published)" class="required" value="<?php echo esc_attr($comment_author_email); ?>" size="60" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
 			</div>
       
 			<div>
-				<input type="text" name="url" id="url" class="required" value="<?php echo esc_attr($comment_author_url); ?>" size="60" tabindex="3" />
-				<label for="url">Website</label>
+				<input type="text" name="url" id="url" placeholder="Website" value="<?php echo esc_attr($comment_author_url); ?>" size="60" tabindex="3"/>
 			</div>
       
 		<?php endif; ?>
@@ -51,7 +48,8 @@
 		</div>
 
     <?php if( !is_user_logged_in()): ?>
-      <p>Your first comment will be reviewed before its published.</p>
+      <p>Your first comment will be reviewed before it's published. <br/>
+      * Required</p>
     <?php endif; ?>
 
 		<div>
