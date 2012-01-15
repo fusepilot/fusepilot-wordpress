@@ -26,7 +26,7 @@ if(isset($_POST['submitted'])) {
 			$emailError = 'You forgot to enter your email address.';
 			$hasError = true;
 		} else if (!eregi("^[A-Z0-9._%-]+@[A-Z0-9._%-]+\.[A-Z]{2,4}$", trim($_POST['email']))) {
-			$emailError = 'You entered an invalid email address.';
+			$emailError = '2You entered an invalid email address.';
 			$hasError = true;
 		} else {
 			$email = trim($_POST['email']);
@@ -86,7 +86,7 @@ if(isset($_POST['submitted'])) {
 	
 	<?php while (have_posts()) : the_post(); ?>
 	  <header>
-  		<h3><?php the_title(); ?></h3>
+  		<h2><?php the_title(); ?></h2>
 		</header>
 		
 		<div class="entry-content">

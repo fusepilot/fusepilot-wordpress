@@ -9,7 +9,7 @@ Template Name: Portfolio
 
 <section id="content" class="index">
   
-  <h3 class="header">Work Index</h3>
+  <h2 class="header">Work Index</h2>
   
   <?php
 	//query posts
