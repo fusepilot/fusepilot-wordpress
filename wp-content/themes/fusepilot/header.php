@@ -64,7 +64,9 @@
 	
 	<script src="<?php bloginfo('template_directory'); ?>/_/js/cufon-yui.js"></script>
 	
-	<script src="<?php bloginfo('template_directory'); ?>/_/js/forza_325.font.js"></script>
+	<!--<script src="<?php bloginfo('template_directory'); ?>/_/js/forza_325.font.js"></script>-->
+	<script src="<?php bloginfo('template_directory'); ?>/_/js/Forza_Light_300-Forza_Medium_350-Forza_Light_italic_300-Forza_Medium_italic_350.font.js"></script>
+	
 	
 	<script src="<?php bloginfo('template_directory'); ?>/_/js/jquery.nivo.slider.pack.js"></script>
 	

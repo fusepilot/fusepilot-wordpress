@@ -25,7 +25,6 @@ html, body
   background: url("images/background.jpg") no-repeat center top
   background-color: #181818 
   font-family: Verdana
-  font-weight: normal
   color: $text_color
   line-height: 1em
   +background-size(1600px 1400px)
@@ -35,27 +34,39 @@ h1
   font-size: $p_size * 3
   text-transform: uppercase
   color: $highlight
+  +font(bold)
   
 h2 
   font-size: $p_size * 2.5
   text-transform: uppercase
   color: $highlight
+  +font(bold, italic)
   
 h3
   font-size: $p_size * 2
   text-transform: uppercase
+  color: $bright_text_color
+  +font(normal, italic)
+  
+  a
+    color: $bright_text_color
+    
   
 h4
   font-size: $p_size * 1.5
   text-transform: uppercase
+  color: $bright_text_color
+  +font(normal)
   
 h5
   font-size: $p_size * 1.0
   text-transform: uppercase
+  color: $bright_text_color
     
 h6
   font-size: $p_size * 1.0
   text-transform: uppercase
+  color: $bright_text_color
 
 p
   font-size: $p_size * 1.0
@@ -89,6 +100,7 @@ form
     margin-bottom: $margin * .5
   
   a.submit_button
+    +font(normal, italic)
     text-transform: uppercase
   
   textarea
@@ -139,6 +151,11 @@ form
     +column(4)
     text-align: right
     
+    a
+      color: $bright_text_color
+      
+      &:hover
+        color: $highlight
     
     
     
@@ -231,7 +248,8 @@ form
     
     //menu
     
-    #menu     
+    #menu
+      +font(normal, italic)    
       li
         &.active
           a 
@@ -287,6 +305,7 @@ form
       margin-bottom: $margin
       font-size: 1.2em
       color: black
+      +font(bold, italic)
 
       &.info, &.flash
         background: url("images/highlight_box_bg.gif")
@@ -336,29 +355,6 @@ form
       
       
       
-    // specific for page
-    
-    &.front
-      h2
-        text-transform: none
-        
-    &.single
-      article header:first-child
-        padding-top: 70px
-    
-    &.index, &.archive
-      h2.header
-        padding-top: 70px
-        
-          
-        
-    &.page
-      header
-        padding-top: 70px
-        
-    &.error
-      img
-        border-bottom: none !important
       
       
     // add background to content element
@@ -374,7 +370,32 @@ form
       //background: url("images/content_bg.png")
     
     
-    
+    // specific for page
+
+    &.front
+      h2
+        text-transform: none
+
+    &.single
+      article header:first-child
+        padding-top: 70px
+
+    &.index, &.archive
+      h2.header
+        padding-top: 70px
+      
+      article    
+        &:nth-child(2n)
+          background: hsla(0,0,100%, .05)
+      
+
+    &.page
+      header
+        padding-top: 70px
+
+    &.error
+      img
+        border-bottom: none !important
     
     
     
@@ -413,8 +434,14 @@ form
         border-top: border()
         border-bottom: border()
         
+        &.teaser
+          border-top: none
+          margin-top: $margin * -1
+          margin-bottom: $margin
+        
       blockquote
         padding: 0 $padding
+        +font(normal, italic)
         
         p
           font-size: 1.2em

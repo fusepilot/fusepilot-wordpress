@@ -7,12 +7,15 @@
     <?php include (TEMPLATEPATH . '/partials/meta.php' ); ?>
   </header>
   
-  <?php if(get_field('teaser')): ?>
-    <?php $image_id = get_field('teaser'); 
-		echo wp_get_attachment_image($image_id, 'masonry-triple'); ?>
-  <?php endif; ?>
+  
   
 	<div class="entry-content">
+	  <?php if(get_field('teaser')): ?>
+      <?php $image_id = get_field('teaser');
+      $image_src = wp_get_attachment_image_src($image_id, 'masonry-triple'); ?>
+      <img class="teaser" src="<?php echo $image_src[0]; ?>" />
+    <?php endif; ?>
+	  
 		<?php the_excerpt(); ?>
 		<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>			
 		<!-- <?php edit_post_link('Edit this entry','','.'); ?> -->

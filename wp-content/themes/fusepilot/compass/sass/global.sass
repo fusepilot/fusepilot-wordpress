@@ -3,7 +3,8 @@ $blueprint-grid-width: 40px
 $blueprint-grid-margin: 20px
 
 $highlight: #BDDF56
-$text_color: #C2C2C2
+$text_color: hsl(0, 0%, 60%)
+$bright_text_color: white
 $dark_text_color: #323232
 $dark_background_color: rgba(13,13,13, .93)
 $margin: 20px
@@ -20,6 +21,19 @@ $site_width: 1000px
 
 @function border($color:black)
   @return 1px dotted $color
+
+@mixin font($weight:normal, $style:none)
+  @if $weight == normal
+    font-family: Forza Light
+    
+    @if $style == italic
+      font-style: italic
+
+  @else if $weight == bold
+    font-family: Forza Medium
+    
+    @if $style == italic
+      font-style: italic
 
 @mixin box_container($scheme)
   @if $scheme == dark
