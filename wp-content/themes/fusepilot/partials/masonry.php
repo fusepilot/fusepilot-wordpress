@@ -18,10 +18,11 @@
     <?php 
       the_post();//stupidly, this is what advances the loop.
       $post_index = $wp_query->current_post + 1;
+      
       $last = $post_count == $post_index;
       
       $image_size = "";
-      if(!$last) {
+      if(!$last || count($pattern[$pattern_row]) > 1) {
         $image_size = $image_sizes[$pattern_col - 1];
       } else {
         $image_size = $image_sizes[2];
