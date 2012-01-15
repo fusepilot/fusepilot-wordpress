@@ -22,20 +22,7 @@ Template Name: Blog
 	));
 	?>
   
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-    <?php include (TEMPLATEPATH . '/partials/article_teaser.php' ); ?>
-	<?php endwhile; ?>
-  
-	<?php include (TEMPLATEPATH . '/partials/pagination.php' ); ?>
-  
-  
-	<?php else : ?>
-
-		<h3>Not Found</h3>
-
-	<?php endif; ?>
-	
-	<?php wp_reset_query(); ?>
+  <?php include (TEMPLATEPATH . '/partials/list.php' ); ?>
 	
 	<?php include (TEMPLATEPATH . '/partials/content_footer.php' );?>
 </section>
