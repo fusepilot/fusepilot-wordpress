@@ -74,10 +74,13 @@ if(isset($_POST['submitted'])) {
 <section id="content" class="page">
 
 <?php if(isset($emailSent) && $emailSent == true) { ?>
-
-	<div class="thanks">
-		<h3>Thanks, <?=$name;?></h3>
-		<p>Your email was successfully sent. I will be in touch soon.</p>
+  
+  <header>
+	  <h2>Thanks, <?=$name;?></h2>
+	</header>
+	
+  <div class="entry-content">
+		<p>Your email was sent. I will be in touch soon.</p>
 	</div>
 
 <?php } else { ?>
