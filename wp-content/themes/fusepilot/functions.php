@@ -49,7 +49,7 @@
     }
     
     function format_date($date) {
-      $w3c_date = date(DATE_W3C, $date);
+      $w3c_date = date(DATE_W3C, strtotime($date));
       $styled_date = date('M jS Y \a\t h:ia', strtotime($date));
       return "<time datetime=\"{$w3c_date}\" pubdate class=\"updated\">{$styled_date}</time>";
     }

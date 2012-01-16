@@ -1,6 +1,6 @@
 <?php 
   $items = wp_get_nav_menu_items('navigation');
-  
+  $menu_list = "";
   foreach($items as $i => $item) {
     $title = $item->title;
     $url = $item->url;
