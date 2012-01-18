@@ -83,6 +83,17 @@
       }
     }
     
+    // return active style if style matches or is default when no style is provided
+    //function the_style_active($style, $default=false) {
+    //  echo $_GET['style'] == $style || (empty($_GET['style']) && $default) ? "active" : "";
+    //}
+    
+    function the_active_param($param, $value, $output="active", $default=false) {
+      echo $_GET[$param] == $value || (empty($_GET[$param]) && $default) ? $output : "";
+    }
+    
+    //the_style_active("style", "masonry", "active", true);
+    
     add_action('wp_insert_comment','fusepilot_wp_insert_comment_hook');
     function fusepilot_wp_insert_comment_hook($id){
       $comment = get_comment($id);

@@ -18,7 +18,7 @@
         "width" => '700',
         "height" => '394'
     ), $atts));
-  return '<iframe class="video vimeo" src="http://player.vimeo.com/video/'.$id.'?title=0&byline=0&portrait=0&color=ffffff" width="'.$width.'" height="'.$height.'" frameborder="0"></iframe>';
+  return '<iframe class="video vimeo" src="http://player.vimeo.com/video/'.$id.'?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=0" width="'.$width.'" height="'.$height.'" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>';
   }
   add_shortcode("vimeo", "vimeo_embed_shortcode");
   

@@ -81,14 +81,16 @@ $(document).ready(function (){
   
   
   // nivo galleries
+  if($.nivoSlider) {
+    $("#gallery").nivoSlider({
+      effect: "boxRainGrow",
+      directionNavHide: false,
+      boxCols: 6,
+      boxRows: 3,
+      captionOpacity: 0.0
+    });
+  }
   
-  $("#gallery").nivoSlider({
-    effect: "boxRainGrow",
-    directionNavHide: false,
-    boxCols: 6,
-    boxRows: 3,
-    captionOpacity: 0.0
-  });
   
   
   

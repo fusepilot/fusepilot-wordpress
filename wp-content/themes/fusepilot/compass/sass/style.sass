@@ -134,7 +134,7 @@ form
     
       
 
-#page-wrap
+#page_wrap
   height: auto
   min-height: 100%
   width: 100%
@@ -294,9 +294,8 @@ form
     
     
     
+    
     // general 
-    
-    
     
     .divider
       width: span(12)
@@ -392,6 +391,43 @@ form
       article    
         &:nth-child(2n)
           background: hsla(0,0,100%, .05)
+          
+      .list_options
+        a 
+          color: $bright_text_color
+          
+          &:hover, &.active
+            color: $highlight
+        
+        .style_options
+          display: inline-block
+          margin-right: $margin * .5
+          
+        .order_options
+          display: inline-block
+          a
+            font-size: 8px
+            text-transform: uppercase
+          
+        .list_button
+          display: inline-block
+          width: 16px
+          height: 14px
+          text-indent: 9000px
+          background: url("images/list_style_icons.png") 16px 0px
+        
+          &:hover, &.active
+            background: url("images/list_style_icons.png") 16px 14px
+          
+        .masonry_button
+          display: inline-block
+          width: 16px
+          height: 14px
+          text-indent: 9000px
+          background: url("images/list_style_icons.png") 0px 0px
+        
+          &:hover, &.active
+            background: url("images/list_style_icons.png") 0px 14px
       
 
     &.page
@@ -443,6 +479,10 @@ form
           border-top: none
           margin-top: $margin * -1
           margin-bottom: $margin
+          
+        &:last-child
+          margin-bottom: 0
+          border-bottom: none
         
       blockquote
         padding: 0 $padding
