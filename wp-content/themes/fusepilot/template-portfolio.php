@@ -11,6 +11,9 @@ Template Name: Portfolio
   
   <h2 class="header">Work Index</h2>
   
+  <a href="<?php the_permalink() ?>/?style=masonry">masonry</a>
+  <a href="<?php the_permalink() ?>/?style=list">list</a>
+  
   <?php
 	//query posts
 	query_posts(

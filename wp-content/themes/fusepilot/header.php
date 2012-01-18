@@ -7,7 +7,7 @@
 <!--[if gt IE 9]><!--><html class="no-js" <?php language_attributes(); ?>><!--<![endif]-->
 <!-- the "no-js" class is for Modernizr. -->
 
-<head profile="http://gmpg.org/xfn/11">
+<head>
 
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -26,15 +26,6 @@
 	
 	<meta name="author" content="Michael Delaney">
 	<meta name="Copyright" content="Copyright Fusepilot 2011. All Rights Reserved.">
-	
-	<!--  Mobile Viewport meta tag
-	j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag 
-	device-width : Occupy full width of the screen in its current orientation
-	initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
-	maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width -->
-	<!-- Uncomment to use; use thoughtfully!
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-	-->
 	
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico">
 	<link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/images/apple-touch-icon.png">

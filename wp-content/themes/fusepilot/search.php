@@ -4,7 +4,7 @@
 <section id="content" class="index">
 	<?php if (have_posts()) : ?>
 
-		<h3 class="header">Search Results For: <?php the_search_query(); ?></h3>
+		<h2 class="header">Search Results For: <?php the_search_query(); ?></h2>
 
 		<?php include (TEMPLATEPATH . '/_/inc/nav.php' ); ?>
 
@@ -17,14 +17,10 @@
 		<?php include (TEMPLATEPATH . '/_/inc/nav.php' ); ?>
 
 	<?php else : ?>
-
-		<h3>No posts found.</h3>
-
+		  <h2 class="header">No posts found.</h2>
 	<?php endif; ?>
 	
 	<?php include (TEMPLATEPATH . '/partials/content_footer.php' ); ?>
 <section>
-
-
 
 <?php get_footer(); ?>
