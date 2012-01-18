@@ -226,21 +226,22 @@ form
     // search
     
     #search
-      form
+      form  
+        position: relative
         padding: $padding
         
         input[type=text]
-          background: url("images/search.png") no-repeat 151px 10px
           background-color: $dark_inset_color
-        
+          
         input
           margin-bottom: $margin * .25
           width: 100%
-          //+input($dark_inset_color)
         
-        a
-          //background: hsl(0, 0%, 7%)
-          //+button(large, $dark_inset_color)
+        .search_icon
+          top: 31px
+          right: 31px
+          position: absolute
+          +sprite(-126px, -106px, 13px, 13px)
       
     h3
       padding: $margin
@@ -263,16 +264,19 @@ form
         a
           font-size: 2.75em
       
-    #logo a
-      display: block
+    #logo 
+      padding: $margin * 2 0
       text-indent: 9000px
-      background: url("images/logo.png") no-repeat center
-      padding: 20px
-      margin-bottom: 1px
-      height: 80px
       
-      &:hover
-        background: url("images/logo_highlight.png") no-repeat center
+      a
+        display: block
+        +sprite(-10px, -6px, 173px, 43px)
+        //
+        //margin-bottom: 1px
+        //height: 80px
+      
+        &:hover
+          +sprite(-10px, -49px)
     
     
     
@@ -411,23 +415,17 @@ form
           
         .list_button
           display: inline-block
-          width: 16px
-          height: 14px
-          text-indent: 9000px
-          background: url("images/list_style_icons.png") 16px 0px
+          +sprite(-37px, -103px, 16px, 14px)
         
           &:hover, &.active
-            background: url("images/list_style_icons.png") 16px 14px
+            +sprite(-37px, -118px)
           
         .masonry_button
           display: inline-block
-          width: 16px
-          height: 14px
-          text-indent: 9000px
-          background: url("images/list_style_icons.png") 0px 0px
+          +sprite(-20px, -103px, 16px, 14px)
         
           &:hover, &.active
-            background: url("images/list_style_icons.png") 0px 14px
+            +sprite(-20px, -118px)
       
 
     &.page
@@ -496,7 +494,7 @@ form
         padding: 0 $padding
         
         li
-          background: url("images/zero.png") no-repeat 0px 6px
+          +sprite(-130px, -120px)
           padding-left: $padding * .65
           font-size: $p_size
           

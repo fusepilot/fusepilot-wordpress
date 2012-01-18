@@ -70,20 +70,20 @@
     display: inline
     a
       display: inline-block
-      height: 10px
       color: transparent
       text-indent: -9000px
       &.nivo-prevNav
-        width: 10px
-        background: url("images/gallery_controls.png") no-repeat -12px 0px
+        margin-right: $margin * .125
+        +sprite(-84px, -108px, 11px, 8px)
         &:hover
-          background: url("images/gallery_controls.png") no-repeat -12px -10px
+          +sprite(-84px, -123px, 11px, 8px)
+          
       &.nivo-nextNav
-        width: 12px
-        background: url("images/gallery_controls.png") no-repeat 0px 0px
+        +sprite(-68px, -106px, 10px, 10px)
         margin-right: 10px
         &:hover
-          background: url("images/gallery_controls.png") no-repeat 0px -10px
+          +sprite(-68px, -120px, 10px, 10px)
+          
   .nivo-controlNav
     display: inline
     cursor: pointer
@@ -93,6 +93,6 @@
       height: 10px
       color: transparent
       text-indent: -9000px
-      background: url("images/gallery_controls.png") no-repeat -22px 1px
+      +sprite(-100px, -106px, 11px, 9px)
       &.active, &:hover
-        background: url("images/gallery_controls.png") no-repeat -22px -9px
+        +sprite(-100px, -121px, 11px, 9px)
