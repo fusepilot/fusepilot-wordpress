@@ -1,23 +1,21 @@
 /*   
  *Theme Name: Fusepilot
  *Theme URI: http://www.fusepilot.com
- *Description: A style-free theme to get you started on an HTML5-based Wordpress theme of your own.
+ *Description:
  *Author: Michael Delaney
  *Author URI: http://monkeydo.biz
  *Version: 1.0 */
  
+@import 'reset'
+@import 'global'
 @import 'blueprint/grid'
 @import 'compass/css3/box-sizing'
 @import 'compass/utilities/general/clearfix'
 @import 'compass/css3/box-shadow'
 @import 'compass/css3/border-radius'
-@import 'dark'
 @import 'compass/css3/shared'
 @import 'compass/css3/background-size'
-
-@import 'reset'
 @import 'nivo'
-@import 'global'
 
 html, body
   border-top: 2px solid $highlight
@@ -79,8 +77,10 @@ a
   &:hover
     color: $highlight
 
-/* And here begins the Wordpress fun.
- *------------------------------------------------------------------------------- */
+
+
+
+
 
 .clear
   clear: both
@@ -141,6 +141,10 @@ form
   position: relative
   background: url("images/column_bg.png") repeat-y
   +container
+  
+  
+  
+  
   
   
   
@@ -367,7 +371,7 @@ form
       clear: both
       +box-sizing(border-box)
     
-    //.entry-content, #comment_form, #contact_form, .comment_form, .contact_form, header, article footer, h3.header, .pagination, h3#comments, #comments .comment, .messages
+    //.entry_content, #comment_form, #contact_form, .comment_form, .contact_form, header, article footer, h3.header, .pagination, h3#comments, #comments .comment, .messages
       //background: url("images/content_bg.png")
     
     
@@ -413,7 +417,7 @@ form
     
     // main body styling
     
-    .entry-content
+    .entry_content
       padding-right: $padding
       padding-left: $padding
       padding-top: $padding
