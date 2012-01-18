@@ -21,12 +21,12 @@
 	// Add RSS links to <head> section
 	add_theme_support( 'automatic-feed-links' );
 
-  // function fusepilot_enqueue_scripts() {
-  //   wp_enqueue_script('jquery');
-  //   wp_deregister_script('jquery');
-  //  wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"), false);
-  // }
-  //   add_action('wp_enqueue_scripts', 'fusepilot_enqueue_scripts');
+  function fusepilot_enqueue_scripts() {
+    wp_enqueue_script('jquery');
+    wp_deregister_script('jquery');
+    wp_register_script('nivo', get_template_directory_uri() . "/js/jquery.nivo.slider.pack.js");
+  }
+  add_action('wp_enqueue_scripts', 'fusepilot_enqueue_scripts');
   
 	// Clean up the <head>
 	function removeHeadLinks() {

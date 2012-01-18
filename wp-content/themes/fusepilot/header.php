@@ -27,16 +27,15 @@
 	<meta name="author" content="Michael Delaney">
 	<meta name="Copyright" content="Copyright Fusepilot 2011. All Rights Reserved.">
 	
-	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico">
-	<link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/images/apple-touch-icon.png">
+	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
+	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon.png">
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	
-	<script src="<?php bloginfo('template_directory'); ?>/_/js/jquery-1.7.1.min.js"></script>
-	<script src="<?php bloginfo('template_directory'); ?>/_/js/modernizr-1.7.min.js"></script>
-	<script src="<?php bloginfo('template_directory'); ?>/_/js/cufon-yui.js"></script>
-	<script src="<?php bloginfo('template_directory'); ?>/_/js/Forza_Light_300-Forza_Medium_350-Forza_Light_italic_300-Forza_Medium_italic_350.font.js"></script>
-	<script src="<?php bloginfo('template_directory'); ?>/_/js/jquery.nivo.slider.pack.js"></script>
-	<script src="<?php bloginfo('template_directory'); ?>/_/js/jquery.validate.min.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.7.1.min.js"></script>	
+	<script src="<?php echo get_template_directory_uri(); ?>/js/modernizr-1.7.min.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/cufon-yui.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/Forza_Light_300-Forza_Medium_350-Forza_Light_italic_300-Forza_Medium_italic_350.font.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.validate.min.js"></script>
 
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 

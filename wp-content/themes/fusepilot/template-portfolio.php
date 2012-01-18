@@ -11,6 +11,8 @@ Template Name: Portfolio
   
   <h2 class="header">Work Index</h2>
   
+  <?php $style = $_GET['style'];  ?>
+  
   <a href="<?php the_permalink() ?>/?style=masonry">masonry</a>
   <a href="<?php the_permalink() ?>/?style=list">list</a>
   
@@ -24,7 +26,6 @@ Template Name: Portfolio
 	?>
 	
 	<?php
-	  $style = $_GET['style']; 
 	  
 	  switch($style) {
 	    case 'masonry':
