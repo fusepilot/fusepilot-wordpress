@@ -83,6 +83,7 @@
       }
     }
     
+    
     // return active style if style matches or is default when no style is provided
     //function the_style_active($style, $default=false) {
     //  echo $_GET['style'] == $style || (empty($_GET['style']) && $default) ? "active" : "";

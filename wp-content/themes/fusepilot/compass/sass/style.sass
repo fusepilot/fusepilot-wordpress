@@ -391,39 +391,42 @@ form
     &.index, &.archive
       h2.header
         padding-top: 70px
-      
+
       article    
         &:nth-child(2n)
           background: hsla(0,0,100%, .05)
-          
+
       .list_options
         a 
           color: $bright_text_color
-          
+
           &:hover, &.active
             color: $highlight
-        
+
         .style_options
           display: inline-block
           margin-right: $margin * .5
-          
+
+          a
+            text-indent: 9000px
+
         .order_options
           display: inline-block
           a
             font-size: 8px
             text-transform: uppercase
-          
+
         .list_button
           display: inline-block
           +sprite(-37px, -103px, 16px, 14px)
-        
+
           &:hover, &.active
             +sprite(-37px, -118px)
-          
+
         .masonry_button
           display: inline-block
           +sprite(-20px, -103px, 16px, 14px)
-        
+
           &:hover, &.active
             +sprite(-20px, -118px)
       
