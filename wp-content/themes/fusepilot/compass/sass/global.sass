@@ -22,6 +22,13 @@ $site_width: 1000px
 @function border($color:black)
   @return 1px dotted $color
 
+@mixin sprite($x, $y, $width:nil, $height:nil)
+  @if $width != nil
+    width: $width
+  @if $height != nil
+    height: $height
+  background: url("images/site_sprites.png") $x $y no-repeat
+
 @mixin font($weight:normal, $style:none)
   @if $weight == normal
     font-family: Forza Light
