@@ -1,23 +1,21 @@
 /*   
  *Theme Name: Fusepilot
  *Theme URI: http://www.fusepilot.com
- *Description: A style-free theme to get you started on an HTML5-based Wordpress theme of your own.
+ *Description:
  *Author: Michael Delaney
  *Author URI: http://monkeydo.biz
  *Version: 1.0 */
  
+@import 'reset'
+@import 'global'
 @import 'blueprint/grid'
 @import 'compass/css3/box-sizing'
 @import 'compass/utilities/general/clearfix'
 @import 'compass/css3/box-shadow'
 @import 'compass/css3/border-radius'
-@import 'dark'
 @import 'compass/css3/shared'
 @import 'compass/css3/background-size'
-
-@import 'reset'
 @import 'nivo'
-@import 'global'
 
 html, body
   border-top: 2px solid $highlight
@@ -79,8 +77,10 @@ a
   &:hover
     color: $highlight
 
-/* And here begins the Wordpress fun.
- *------------------------------------------------------------------------------- */
+
+
+
+
 
 .clear
   clear: both
@@ -134,13 +134,17 @@ form
     
       
 
-#page-wrap
+#page_wrap
   height: auto
   min-height: 100%
   width: 100%
   position: relative
   background: url("images/column_bg.png") repeat-y
   +container
+  
+  
+  
+  
   
   
   
@@ -222,21 +226,22 @@ form
     // search
     
     #search
-      form
+      form  
+        position: relative
         padding: $padding
         
         input[type=text]
-          background: url("images/search.png") no-repeat 151px 10px
           background-color: $dark_inset_color
-        
+          
         input
           margin-bottom: $margin * .25
           width: 100%
-          //+input($dark_inset_color)
         
-        a
-          //background: hsl(0, 0%, 7%)
-          //+button(large, $dark_inset_color)
+        .search_icon
+          top: 31px
+          right: 31px
+          position: absolute
+          +sprite(-126px, -106px, 13px, 13px)
       
     h3
       padding: $margin
@@ -259,16 +264,19 @@ form
         a
           font-size: 2.75em
       
-    #logo a
-      display: block
+    #logo 
+      padding: $margin * 2 0
       text-indent: 9000px
-      background: url("images/logo.png") no-repeat center
-      padding: 20px
-      margin-bottom: 1px
-      height: 80px
       
-      &:hover
-        background: url("images/logo_highlight.png") no-repeat center
+      a
+        display: block
+        +sprite(-10px, -6px, 173px, 43px)
+        //
+        //margin-bottom: 1px
+        //height: 80px
+      
+        &:hover
+          +sprite(-10px, -49px)
     
     
     
@@ -290,9 +298,8 @@ form
     
     
     
+    
     // general 
-    
-    
     
     .divider
       width: span(12)
@@ -309,7 +316,7 @@ form
       +font(bold, italic)
 
       &.info, &.flash
-        background: url("images/highlight_box_bg.gif")
+        background: url("images/highlight_box_bg.png")
 
       &.error
         background: $error_color   
@@ -367,7 +374,7 @@ form
       clear: both
       +box-sizing(border-box)
     
-    //.entry-content, #comment_form, #contact_form, .comment_form, .contact_form, header, article footer, h3.header, .pagination, h3#comments, #comments .comment, .messages
+    //.entry_content, #comment_form, #contact_form, .comment_form, .contact_form, header, article footer, h3.header, .pagination, h3#comments, #comments .comment, .messages
       //background: url("images/content_bg.png")
     
     
@@ -384,10 +391,44 @@ form
     &.index, &.archive
       h2.header
         padding-top: 70px
-      
+
       article    
         &:nth-child(2n)
           background: hsla(0,0,100%, .05)
+
+      .list_options
+        a 
+          color: $bright_text_color
+
+          &:hover, &.active
+            color: $highlight
+
+        .style_options
+          display: inline-block
+          margin-right: $margin * .5
+
+          a
+            text-indent: 9000px
+
+        .order_options
+          display: inline-block
+          a
+            font-size: 8px
+            text-transform: uppercase
+
+        .list_button
+          display: inline-block
+          +sprite(-37px, -103px, 16px, 14px)
+
+          &:hover, &.active
+            +sprite(-37px, -118px)
+
+        .masonry_button
+          display: inline-block
+          +sprite(-20px, -103px, 16px, 14px)
+
+          &:hover, &.active
+            +sprite(-20px, -118px)
       
 
     &.page
@@ -413,7 +454,7 @@ form
     
     // main body styling
     
-    .entry-content
+    .entry_content
       padding-right: $padding
       padding-left: $padding
       padding-top: $padding
@@ -439,6 +480,10 @@ form
           border-top: none
           margin-top: $margin * -1
           margin-bottom: $margin
+          
+        &:last-child
+          margin-bottom: 0
+          border-bottom: none
         
       blockquote
         padding: 0 $padding
@@ -452,14 +497,14 @@ form
         padding: 0 $padding
         
         li
-          background: url("images/zero.png") no-repeat 0px 6px
+          +sprite(-130px, -120px)
           padding-left: $padding * .65
           font-size: $p_size
           
       span
         &.highlight
           +inset
-          background: url("images/highlight_box_bg.gif")
+          background: url("images/highlight_box_bg.png")
           color: black
           padding: 2px
           padding: 2px 6px
@@ -588,7 +633,7 @@ form
             
             position: absolute
             padding: 20px
-            background: url("images/highlight_box_bg.gif")
+            background: url("images/highlight_box_bg.png")
             display: none
             opacity: .75
             +box-sizing(border-box)

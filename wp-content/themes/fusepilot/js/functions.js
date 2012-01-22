@@ -81,7 +81,6 @@ $(document).ready(function (){
   
   
   // nivo galleries
-  
   $("#gallery").nivoSlider({
     effect: "boxRainGrow",
     directionNavHide: false,
@@ -89,6 +88,7 @@ $(document).ready(function (){
     boxRows: 3,
     captionOpacity: 0.0
   });
+  
   
   
   

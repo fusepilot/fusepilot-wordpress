@@ -79,7 +79,7 @@ if(isset($_POST['submitted'])) {
 	  <h2>Thanks, <?=$name;?></h2>
 	</header>
 	
-  <div class="entry-content">
+  <div class="entry_content">
 		<p>Your email was sent. I will be in touch soon.</p>
 	</div>
 
@@ -92,7 +92,7 @@ if(isset($_POST['submitted'])) {
   		<h2><?php the_title(); ?></h2>
 		</header>
 		
-		<div class="entry-content">
+		<div class="entry_content">
 		  <?php the_content(); ?>
 		</div>
 		  

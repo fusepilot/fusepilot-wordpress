@@ -3,7 +3,7 @@
 
 <section id="content" class="error">
   
-  <div class="entry-content">
+  <div class="entry_content">
     <img src="<?php bloginfo('template_directory'); ?>/images/404.png" />
   </div>
   

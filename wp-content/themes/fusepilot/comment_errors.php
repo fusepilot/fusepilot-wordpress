@@ -5,7 +5,7 @@
 
 <section id="content" class="single">
   
-  <div class="entry-content">
+  <div class="entry_content">
     <?php echo do_shortcode("[message type=error]{$message}[/message]"); ?>
     
     <p><a class="back" href='javascript:history.back()'>Go Back</a></p>
