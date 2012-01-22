@@ -9,23 +9,40 @@ Template Name: Portfolio
 
 <section id="content" class="index">
   
-  <h2 class="header">Work Index</h2>
-  
-  <?php $style = $_GET['style'];  ?>
-  
-  <a href="<?php the_permalink() ?>/?style=masonry">masonry</a>
-  <a href="<?php the_permalink() ?>/?style=list">list</a>
-  
   <?php
-	//query posts
-	query_posts(
-		array(
-		'post_type'=> 'project',
-		'paged'=>$paged
-	));
-	?>
+    $params = $_GET;
+    $urls['masonry'] = get_permalink() . '?' . http_build_query( array_merge($params, array('style' => 'masonry')) );
+    $urls['list'] = get_permalink() . '?' . http_build_query( array_merge($params, array('style' => 'list')) );
+    $urls['name'] = get_permalink() . '?' . http_build_query( array_merge($params, array('order_by' => 'title')) );
+    $urls['date'] = get_permalink() . '?' . http_build_query( array_merge($params, array('order_by' => 'date')) );
+  ?>
+  
+  <header>
+    <!-- <h2>Work Index</h2> -->
+    <div class="list_options">
+      <div class="style_options">
+        <a class="masonry_button <?php the_active_param("style", "masonry", "active", true); ?>" href="<?php echo $urls['masonry']; ?>">Masonry</a>
+        <a class="list_button <?php the_active_param("style", "list", "active"); ?>" href="<?php echo $urls['list']; ?>">List</a>
+      </div>
+      <div class="order_options">
+        <a class="order_button <?php the_active_param("order_by", "date", "active", true); ?>" href="<?php echo $urls['date']; ?>">Date</a>
+        <a class="order_button <?php the_active_param("order_by", "title", "active"); ?>" href="<?php echo $urls['name']; ?>">Name</a>
+      </div>
+    </div>
+  </header>
+  
+  
+  <?php 
+    $style = $_GET['style'];
 	
-	<?php
+  	$args = array('post_type'=> 'project', 'paged'=>$paged);
+	
+  	$order_by = $_GET['order_by'];
+    if(!empty($order_by)) {
+      $args['orderby'] = $order_by;
+    };
+  
+    query_posts($args);
 	  
 	  switch($style) {
 	    case 'masonry':
