@@ -48,6 +48,10 @@
     	));
     }
     
+    function the_active_param($param, $value, $output="active", $default=false) {
+      echo $_GET[$param] == $value || (empty($_GET[$param]) && $default) ? $output : "";
+    }
+    
     function format_date($date) {
       $w3c_date = date(DATE_W3C, strtotime($date));
       $styled_date = date('M jS Y \a\t h:ia', strtotime($date));
