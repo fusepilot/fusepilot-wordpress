@@ -17,6 +17,7 @@
 !wp-content/
 .DS_Store
 wp-content/themes/fusepilot/compass/.sass-cache
+wp-content/themes/fusepilot/style.css
 
 # Ignore everything in the "wp-content" directory, except the "plugins"
 # and "themes" directories.
