@@ -5,7 +5,7 @@
     <?php include (TEMPLATEPATH . '/partials/meta.php' ); ?>
   </header>
   
-	<div class="entry_content">
+	<div class="entry-content">
 	  <?php if(get_field('teaser')): ?>
       <?php $image_id = get_field('teaser');
       $image_src = wp_get_attachment_image_src($image_id, 'masonry-triple'); ?>

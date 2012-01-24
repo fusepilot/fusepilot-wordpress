@@ -26,7 +26,7 @@ Template Name: Portfolio
   </header>
   	
 	<?php if(get_content()): ?>
-		<div class="entry_content">
+		<div class="entry-content">
 		  <?php the_content(); ?>
 		</div>  
 	<?php endif; ?>
