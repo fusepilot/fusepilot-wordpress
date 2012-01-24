@@ -81,6 +81,17 @@
   
   
   
+  function quote_shortcode($atts, $content = null) {
+    $content = shortcode_unautop($content);
+    $output = "<blockquote>{$content}</blockquote>";
+    return $output;
+  }
+  add_shortcode("quote", "quote_shortcode");
+  
+  
+  
+  
+  
   
   
   function image_shortcode($atts, $content = null) {
