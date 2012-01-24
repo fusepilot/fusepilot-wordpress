@@ -12,7 +12,7 @@ Template Name: Blog
 	<h2 class="header"><?php the_title(); ?></h2>
 	
 	<?php if(get_content()): ?>
-		<div class="entry-content">
+		<div class="entry_content">
 		  <?php the_content(); ?>
 		</div>  
 	<?php endif; ?>

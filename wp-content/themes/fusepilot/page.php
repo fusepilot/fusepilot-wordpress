@@ -5,7 +5,7 @@
 
   <h2 class="header"><?php the_title(); ?></h2>
   
-  <div class="entry-content">
+  <div class="entry_content">
   	<?php the_content(); ?>
   </div>
 

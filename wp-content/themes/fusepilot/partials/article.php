@@ -19,7 +19,7 @@
     <?php include (TEMPLATEPATH . '/partials/meta.php' ); ?>
   </header>
 
-	<div class="entry-content">
+	<div class="entry_content">
 	    
 	  <?php include (TEMPLATEPATH . '/partials/messages.php' );?>
 	  
