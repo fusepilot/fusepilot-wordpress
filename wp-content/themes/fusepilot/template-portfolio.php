@@ -13,21 +13,15 @@ Template Name: Portfolio
     $params = $_GET;
     $urls['masonry'] = get_permalink() . '?' . http_build_query( array_merge($params, array('style' => 'masonry')) );
     $urls['list'] = get_permalink() . '?' . http_build_query( array_merge($params, array('style' => 'list')) );
-    $urls['name'] = get_permalink() . '?' . http_build_query( array_merge($params, array('order_by' => 'title')) );
-    $urls['date'] = get_permalink() . '?' . http_build_query( array_merge($params, array('order_by' => 'date')) );
+    //$urls['name'] = get_permalink() . '?' . http_build_query( array_merge($params, array('order_by' => 'title')) );
+    //$urls['date'] = get_permalink() . '?' . http_build_query( array_merge($params, array('order_by' => 'date')) );
   ?>
   
   <header>
     <!-- <h2>Work Index</h2> -->
     <div class="list_options">
-      <div class="style_options">
-        <a class="masonry_button <?php the_active_param("style", "masonry", "active", true); ?>" href="<?php echo $urls['masonry']; ?>">Masonry</a>
-        <a class="list_button <?php the_active_param("style", "list", "active"); ?>" href="<?php echo $urls['list']; ?>">List</a>
-      </div>
-      <div class="order_options">
-        <a class="order_button <?php the_active_param("order_by", "date", "active", true); ?>" href="<?php echo $urls['date']; ?>">Date</a>
-        <a class="order_button <?php the_active_param("order_by", "title", "active"); ?>" href="<?php echo $urls['name']; ?>">Name</a>
-      </div>
+      <a class="masonry_button <?php the_active_param("style", "masonry", "active", true); ?>" href="<?php echo $urls['masonry']; ?>">Masonry</a>
+      <a class="list_button <?php the_active_param("style", "list", "active"); ?>" href="<?php echo $urls['list']; ?>">List</a>
     </div>
   </header>
   
