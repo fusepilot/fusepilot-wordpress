@@ -74,56 +74,49 @@ if(isset($_POST['submitted'])) {
 <section id="content" class="page">
 
 <?php if(isset($emailSent) && $emailSent == true) { ?>
-  
-  <header>
-	  <h2>Thanks, <?=$name;?></h2>
-	</header>
+	
+	<h2 class="header">Thanks, <?=$name;?></h2>
 	
   <div class="entry-content">
 		<p>Your email was sent. I will be in touch soon.</p>
 	</div>
 
 <?php } else { ?>
-
-	<?php if (have_posts()) : ?>
+  
+  <h2 class="header"><?php the_title(); ?></h2>
 	
-	<?php while (have_posts()) : the_post(); ?>
-	  <header>
-  		<h2><?php the_title(); ?></h2>
-		</header>
-		
+	<?php if(get_content()): ?>
 		<div class="entry-content">
 		  <?php the_content(); ?>
-		</div>
-		  
-		<div id="contact_form">
-	
-  		<form action="<?php the_permalink(); ?>" id="contactForm" method="post">
-  		  <div>
-    			<input type="text" name="contactName" id="contactName" placeholder="Name*" tabindex="1" class="required" />
-  			</div>
-			
-  			<div>
-    			<input type="text" name="email" id="email" placeholder="Email*" tabindex="2" class="required email" />
-  			</div>
-			
-  			<div>
-    			<textarea name="comments" id="commentsText" tabindex="3"rows="20" cols="30" class="required"></textarea>
-    		</div>
-  		
-    		<div>
-    			<input type="checkbox" name="sendCopy" id="sendCopy" tabindex="4" value="true"<?php if(isset($_POST['sendCopy']) && $_POST['sendCopy'] == true) echo ' checked="checked"'; ?> /><label for="sendCopy">Send a copy of this email to yourself</label>
-    		</div>
-  		
-    		<div>
-    			<input type="hidden" name="submitted" id="submitted" value="true" />
-    			<input type="submit" value="Send" id="searchsubmit" tabindex="6" />
-  			</div>
-  		</form>
-		</div>
-	
-		<?php endwhile; ?>
+		</div>  
 	<?php endif; ?>
+	  
+	<div id="contact_form">
+
+		<form action="<?php the_permalink(); ?>" id="contactForm" method="post">
+		  <div>
+  			<input type="text" name="contactName" id="contactName" placeholder="Name*" tabindex="1" class="required" />
+			</div>
+		
+			<div>
+  			<input type="text" name="email" id="email" placeholder="Email*" tabindex="2" class="required email" />
+			</div>
+		
+			<div>
+  			<textarea name="comments" id="commentsText" tabindex="3"rows="20" cols="30" class="required"></textarea>
+  		</div>
+		
+  		<div>
+  			<input type="checkbox" name="sendCopy" id="sendCopy" tabindex="4" value="true"<?php if(isset($_POST['sendCopy']) && $_POST['sendCopy'] == true) echo ' checked="checked"'; ?> /><label for="sendCopy">Send a copy of this email to yourself</label>
+  		</div>
+		
+  		<div>
+  			<input type="hidden" name="submitted" id="submitted" value="true" />
+  			<input type="submit" value="Send" id="searchsubmit" tabindex="6" />
+			</div>
+		</form>
+	</div>
+		
 <?php } ?>
   
   <?php include (TEMPLATEPATH . '/partials/content_footer.php' );?>

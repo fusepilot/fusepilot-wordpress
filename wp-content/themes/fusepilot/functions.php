@@ -97,6 +97,13 @@
       
     }
     
+    function get_content() {
+      global $post;
+      if(!empty($post->post_content)) {
+        return $post->post_content;
+      }
+    }
+    
     // add_theme_support( 'post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'audio', 'chat', 'video')); // Add 3.1 post format theme support.
 
     add_image_size( "gallery", 700, 394, true );

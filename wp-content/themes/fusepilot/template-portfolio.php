@@ -24,7 +24,13 @@ Template Name: Portfolio
       <a class="list_button <?php the_active_param("style", "list", "active"); ?>" href="<?php echo $urls['list']; ?>">List</a>
     </div>
   </header>
-  
+  	
+	<?php if(get_content()): ?>
+		<div class="entry-content">
+		  <?php the_content(); ?>
+		</div>  
+	<?php endif; ?>
+
   
   <?php 
     $style = $_GET['style'];
