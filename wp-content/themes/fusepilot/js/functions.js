@@ -18,6 +18,12 @@ $(document).ready(function (){
   
   
   
+  $('input[placeholder], textarea[placeholder]').placeholder();
+  
+  
+  
+  
+  
   // replace form button with styleble sumbit button
   
   $('input[type="submit"]', '#sidebar, #content').each(function(){

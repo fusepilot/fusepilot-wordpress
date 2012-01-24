@@ -31,7 +31,8 @@
 	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon.png">
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	
-	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.7.1.min.js"></script>	
+	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.7.1.min.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.placeholder.min.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/modernizr-1.7.min.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/cufon-yui.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/Forza_Light_300-Forza_Medium_350-Forza_Light_italic_300-Forza_Medium_italic_350.font.js"></script>
