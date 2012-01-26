@@ -6,6 +6,7 @@ require_once("includes/comment_errors.php");
 require_once("includes/theme_options.php");
 require_once("includes/flash.php");
 require_once("includes/social.php");
+require_once("includes/relative_attachments.php");
 
 // setup settings
 global $settings;
