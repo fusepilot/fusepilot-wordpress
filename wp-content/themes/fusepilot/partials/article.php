@@ -9,14 +9,7 @@
 ?>
 <article class="<?php echo $class; ?>">
   
-  <?php 
-
-  if(get_field("vimeo_id")): 
-
-    $video_id = get_field("vimeo_id");
-    echo do_shortcode("[vimeo id=\"{$video_id}\"]"); 
-
-  elseif(get_field('gallery') || get_field('teaser')): ?>
+  <?php if(get_field('gallery') || get_field('teaser')): ?>
 
     <div id="gallery">
   		<?php while(the_repeater_field('gallery')): 
