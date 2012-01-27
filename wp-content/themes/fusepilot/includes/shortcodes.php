@@ -95,9 +95,28 @@
   
   
   function image_shortcode($atts, $content = null) {
-    return shortcode_unautop($content);
+    extract( shortcode_atts( array(
+      'filename' =>'',
+      'alt' =>'',
+      'style' => 'gallery',
+    ), $atts ) );
+    
+    
+    $query_images_args = array('post_type' => 'attachment', 'post_mime_type' =>'image', 'post_status' => 'inherit', 'posts_per_page' => -1);
+    $query_images = new WP_Query( $query_images_args );
+    $image_src = "";
+    foreach ( $query_images->posts as $image) {
+      if( esc_html( basename( $image->guid )) == $filename) {
+        $image_src = wp_get_attachment_image($image->ID, $style);
+        break;
+      }
+    }
+    
+    $output = $image_src;
+    return $output;
   }
-  add_shortcode("image", "image_shortcode");
+
+  add_shortcode('image','image_shortcode');
   
   
   
