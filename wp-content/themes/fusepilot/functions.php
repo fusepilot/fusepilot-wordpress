@@ -51,6 +51,10 @@ if (function_exists('register_sidebar')) {
     ));
 }
 
+function has_attached_media() {
+    if( get_field('gallery') || get_field('teaser') || get_field('vimeo_id') ) return true;
+}
+
 // function to set active style links that match a param
 function the_active_param($param, $value, $output = "active", $default = false)
 {

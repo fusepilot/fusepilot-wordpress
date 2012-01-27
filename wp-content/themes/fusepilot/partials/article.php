@@ -1,12 +1,23 @@
-<article class="<?php echo get_post_type(); ?>">
+<?php 
+   
+  $class = "";
+  $class .= get_post_type();
+
+  if(has_attached_media()) {
+    $class .= " has_media";
+  }
+?>
+<article class="<?php echo $class; ?>">
   
   <?php 
 
   if(get_field("vimeo_id")): 
+
     $video_id = get_field("vimeo_id");
     echo do_shortcode("[vimeo id=\"{$video_id}\"]"); 
-    
+
   elseif(get_field('gallery') || get_field('teaser')): ?>
+
     <div id="gallery">
   		<?php while(the_repeater_field('gallery')): 
   			$thumbnails_id = get_sub_field('image'); 
@@ -18,6 +29,7 @@
   		<?php $image_id = get_field('teaser');
       echo wp_get_attachment_image($image_id, 'gallery'); ?>
     </div>
+
 	<?php endif; ?>
 
 
