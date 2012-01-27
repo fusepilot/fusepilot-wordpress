@@ -1,4 +1,6 @@
-<article class="<?php echo get_post_type(); ?>">
+<article class="<?php echo get_post_type(); ?> teaser">
+  
+  <div class="article_tick"></div>
   
   <header>
     <h3 class="entry-title"><a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
