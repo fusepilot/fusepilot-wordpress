@@ -33,9 +33,9 @@
     
     <a class="masonry_col" href="<?php the_permalink() ?>">
       <div class="masonry_col_overlay">
-          <h3><?php the_title() ?></h3>
+        <h3><?php the_title() ?></h3>
         
-      <?php include (TEMPLATEPATH . '/partials/masonry_meta.php' ); ?>
+        <?php include (TEMPLATEPATH . '/partials/masonry_meta.php' ); ?>
       </div>
   
       <img src="<?php echo $image[0]; ?>" alt="" />

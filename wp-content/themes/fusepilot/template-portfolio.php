@@ -41,6 +41,10 @@ Template Name: Portfolio
     if(!empty($order_by)) {
       $args['orderby'] = $order_by;
     };
+    
+    if($style == 'masonry' || empty($style)) {
+      $args['posts_per_page'] = -1;
+    };
   
     query_posts($args);
 	  
