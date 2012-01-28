@@ -48,15 +48,31 @@ $(document).ready(function (){
   
   // add overlay to masonry
   
-  $("#masonry .masonry_col").hover(function() {
-    var $col, $overlay, title;
+  $("#masonry .masonry_col").each(function() {
+    var $col, $overlay;
     $col = $(this);
-    title = $col.data("title");
     $overlay = $(".masonry_col_overlay", $col);
     $overlay.css('width', $col.width());
     $overlay.css('height', $col.height() - 1);
-    $overlay.toggle();
+    
+    $col.hover(function() {
+      $overlay.clearQueue().show().css({
+        top: -160,
+        opacity: 0
+      }).animate({
+        top: 0,
+        opacity: .9
+      }, 150);
+    }, function() {
+      $overlay.clearQueue().animate({
+        top: -160,
+        opacity: 0,
+      }, 150, function() {
+        $overlay.hide();
+      });
+    });
   });
+  
   
   
   
