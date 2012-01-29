@@ -67,6 +67,9 @@ $site_width: 1000px
   padding: 10px
   border: border(transparent)
   
+  +transition(all)
+  +transition-duration(.25s)
+  
   &:focus
     outline: none
     border: border($highlight)
@@ -90,6 +93,9 @@ $site_width: 1000px
   cursor: pointer
   display: inline-block
   margin-top: 3px
+  
+  +transition(background)
+  +transition-duration(.25s)
 
   &:hover
     background: $highlight
