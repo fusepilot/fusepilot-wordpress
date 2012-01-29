@@ -92,12 +92,16 @@ $(document).ready(function (){
   
   max_width = category_list_width - widest_link - 20;
   
-  $(".category", $category_list).each(function() {
+  $(".category", $category_list).each(function(index) {
     $category = $(this);
     $meter = $(".category_meter", $category);
     count = $category.data("count");
     percent = count / max_count;
-    $meter.width(percent * max_width);
+    $meter.delay((max_count - index) * 100).animate({
+      opacity: 1,
+      width: percent * max_width,
+    }, 1000)
+    //$meter.width(percent * max_width);
   })
   
   
