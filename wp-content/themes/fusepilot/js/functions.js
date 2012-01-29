@@ -62,12 +62,12 @@ $(document).ready(function (){
       }).animate({
         top: 0,
         opacity: .9
-      }, 150);
+      }, 100);
     }, function() {
       $overlay.clearQueue().animate({
-        top: -160,
+        //top: 160,
         opacity: 0,
-      }, 150, function() {
+      }, 300, function() {
         $overlay.hide();
       });
     });
