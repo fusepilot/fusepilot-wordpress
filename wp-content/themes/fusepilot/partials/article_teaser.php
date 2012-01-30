@@ -9,7 +9,7 @@
   
   
   
-  <?php if(get_content()): ?>
+  <?php if(get_content() || get_field('teaser')):?>
     <div class="entry-content">
       <?php if(get_field('teaser')): ?>
         <?php $image_id = get_field('teaser');
