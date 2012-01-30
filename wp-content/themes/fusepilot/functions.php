@@ -26,7 +26,7 @@ add_theme_support('automatic-feed-links');
 // get nivo gallery ready for use
 function fusepilot_enqueue_scripts()
 {
-    wp_register_script('nivo', get_template_directory_uri() . "/js/jquery.nivo.slider.pack.js");
+    wp_register_script('flex', get_template_directory_uri() . "/js/jquery.flexslider-min.js");
 }
 add_action('wp_enqueue_scripts', 'fusepilot_enqueue_scripts');
 

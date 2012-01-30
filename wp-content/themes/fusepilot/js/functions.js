@@ -2,10 +2,6 @@
 
 $(document).ready(function (){
   
-  
-  
-  
-  
   // replace fonts
   
 	Cufon.replace('h1, h2, h3, h4, #content .links, .pagination a, #sidebar #menu, .submit_button, blockquote, .message, a.back', {
@@ -104,40 +100,7 @@ $(document).ready(function (){
   })
   
   
-  
-  // nivo galleries
-  
-  if($.fn.nivoSlider) {
-    $("#gallery").nivoSlider({
-      effect: "boxRainGrow",
-      directionNavHide: false,
-      boxCols: 6,
-      boxRows: 3,
-      captionOpacity: 0.0
-    });
-  }
-  
-  
-  
-  
-  
-  
-  
-  // collect nivo controls into a div to be styled
-  
-  
-  $(".nivoSlider").each(function() {
-    var $controls, $slider;
-    $slider = $(this);
-    $controls = $('<div/>', {
-      "class": 'nivo-controls'
-    });
-    $slider.append($controls);
-    $(".nivo-directionNav, .nivo-controlNav", $slider).each(function() {
-      $controls.append($(this));
-    });
-  });
-  
+
   
   
   
@@ -169,6 +132,42 @@ $(document).ready(function (){
 });
 
 $(window).load(function() {
+  // flex galleries
+  
+  if($.fn.flexslider) {
+    
+    $("#gallery").flexslider({
+      animation: "slide",
+      slideDirection: "vertical",
+      slideshowSpeed: 4000, 
+    });
+    
+    
+    
+    // collect nivo controls into a div to be styled
+
+
+    $("#gallery").each(function() {
+      var $controls, $slider;
+      $slider = $(this);
+      $controls = $('<div/>', {
+        "class": 'flex-controls'
+      });
+      $slider.append($controls);
+      $($(".flex-direction-nav, .flex-control-nav", $slider).get().reverse()).each(function() {
+        $controls.append($(this));
+      });
+
+      $controls.css("bottom", -40);
+      $controls.delay(1000).animate({
+        bottom: 0,
+      });
+    });
+    
+    
+    $("img:", "#gallery").delay(500).show();
+  }
+  
   placeFooter();
 });
 
