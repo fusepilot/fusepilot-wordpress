@@ -2,17 +2,39 @@
 /*
 Template Name: Portfolio
 */
+
 ?>
 
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
 
+<?php
+
+$style = $_GET['style'];
+
+c($paged);
+
+$args = array('post_type'=> 'project', 'paged'=>$paged);
+
+$order_by = $_GET['order_by'];
+if(!empty($order_by)) {
+  $args['orderby'] = $order_by;
+};
+
+if($style == 'masonry' || empty($style)) {
+  $args['posts_per_page'] = -1;
+};
+
+query_posts($args);
+
+?>
+
 <section id="content" class="index">
   
   <?php
-    $params = $_GET;
-    $urls['masonry'] = get_permalink() . '?' . http_build_query( array_merge($params, array('style' => 'masonry')) );
-    $urls['list'] = get_permalink() . '?' . http_build_query( array_merge($params, array('style' => 'list')) );
+    
+    $urls['masonry'] = get_permalink() . '?' . http_build_query( array_merge($_GET, array('style' => 'masonry')) );
+    $urls['list'] = get_permalink() . '?' . http_build_query( array_merge($_GET, array('style' => 'list')) );
     //$urls['name'] = get_permalink() . '?' . http_build_query( array_merge($params, array('order_by' => 'title')) );
     //$urls['date'] = get_permalink() . '?' . http_build_query( array_merge($params, array('order_by' => 'date')) );
   ?>
@@ -32,21 +54,7 @@ Template Name: Portfolio
 	<?php endif; ?>
 
   
-  <?php 
-    $style = $_GET['style'];
-	
-  	$args = array('post_type'=> 'project', 'paged'=>$paged);
-	
-  	$order_by = $_GET['order_by'];
-    if(!empty($order_by)) {
-      $args['orderby'] = $order_by;
-    };
-    
-    if($style == 'masonry' || empty($style)) {
-      $args['posts_per_page'] = -1;
-    };
-  
-    query_posts($args);
+  <?php
 	  
 	  switch($style) {
 	    case 'masonry':

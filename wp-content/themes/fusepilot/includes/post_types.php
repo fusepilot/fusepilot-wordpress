@@ -16,4 +16,6 @@ function create_post_type() {
     );
 }
 
+add_rewrite_rule( 'work/page/([0-9]+)/?$', 'index.php?pagename=work&paged=$matches[1]', 'top' );
+
 ?>
