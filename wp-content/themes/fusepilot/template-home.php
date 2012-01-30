@@ -20,8 +20,9 @@ Template Name: Home
 	//query posts
 	query_posts(
 		array(
-		'post_type'=> 'project',
-		'paged'=>$paged
+		'post_type' => 'project',
+		'post_status' => 'publish',
+		'posts_per_page' => 8
 	));
 	?>
 	
