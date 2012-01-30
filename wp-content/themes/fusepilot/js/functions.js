@@ -9,7 +9,6 @@ $(document).ready(function (){
   // replace fonts
   
 	Cufon.replace('h1, h2, h3, h4, #content .links, .pagination a, #sidebar #menu, .submit_button, blockquote, .message, a.back', {
-    autoDetect: true,
     hover: true,
     fontFamily: "Forza Light"
   });
