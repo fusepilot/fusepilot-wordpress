@@ -6,6 +6,6 @@
 
 <?php else : ?>
 
-	<h2>Not Found</h2>
+	<h2 class="header">Not Found</h2>
 
 <?php endif; ?>
