@@ -7,8 +7,6 @@
     <?php include (TEMPLATEPATH . '/partials/meta.php' ); ?>
   </header>
   
-  
-  
   <?php if(get_content() || get_field('teaser')):?>
     <div class="entry-content">
       <?php if(get_field('teaser')): ?>
@@ -17,7 +15,10 @@
         <img class="teaser" src="<?php echo $image_src[0]; ?>" />
       <?php endif; ?>
       
-      <?php the_excerpt(); ?>
+      <?php
+        global $more; //enables more tag
+        $more = 0;
+        the_content("Read More"); ?>
     </div>  
   <?php endif; ?>
 	
