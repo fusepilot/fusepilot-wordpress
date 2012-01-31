@@ -12,8 +12,6 @@ Template Name: Portfolio
 
 $style = $_GET['style'];
 
-c($paged);
-
 $args = array('post_type'=> 'project', 'paged'=>$paged);
 
 $order_by = $_GET['order_by'];
